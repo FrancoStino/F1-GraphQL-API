@@ -144,24 +144,3 @@ workflows:
   test-eval-workflow:
     jobs:
       - evals-test-assertions-job
-
-  nightly-f1-db-update:
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only: main
-    jobs:
-      - update-f1-database:
-          context:
-            - DB Password AIVEN
-
-  push-f1-db-update:
-    jobs:
-      - update-f1-database:
-          context:
-            - DB Password AIVEN
-          filters:
-            branches:
-              only: main
