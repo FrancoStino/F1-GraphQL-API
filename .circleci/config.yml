@@ -139,7 +139,7 @@ workflows:
     jobs:
       - build-node:
           context:
-            - Mistral-context
+            - DB Password AIVEN
 
   test-eval-workflow:
     jobs:
@@ -155,13 +155,13 @@ workflows:
     jobs:
       - update-f1-database:
           context:
-            - Mistral-context
+            - DB Password AIVEN
 
   push-f1-db-update:
     jobs:
       - update-f1-database:
           context:
-            - Mistral-context
+            - DB Password AIVEN
           filters:
             branches:
               only: main
