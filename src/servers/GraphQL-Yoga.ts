@@ -7,7 +7,17 @@ import { getExpressApp } from './Express'
 function customRenderGraphiQL() {
   const html = renderGraphiQL({
     title: 'F1 GraphQL Yoga',
-    defaultQuery: 'query Drivers {\n      findManyDriver(take: 10) {\n        id\n        firstName\n        lastName\n        name\n        fullName\n        gender\n      }\n    }'
+    defaultQuery: `query Drivers {
+  findManyDriver(take: 10) {
+    id
+    firstName
+    lastName
+    name
+    fullName
+    gender
+    dateOfBirth
+  }
+}`
   })
   // Modify CSS and add custom logo
   return html.replace(
