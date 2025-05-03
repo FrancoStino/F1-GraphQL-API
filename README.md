@@ -47,7 +47,7 @@
 <!-- TOC --><a name="prerequisites"></a>
 ### Prerequisites
 
-- Node.js (v18+)
+- Node.js (v22+)
 - Yarn package manager
 - PostgreSQL database
 
