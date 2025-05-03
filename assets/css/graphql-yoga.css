@@ -1,0 +1,35 @@
+@import url("/assets/css/fonts.css");
+
+body:not(.graphiql-light) .graphiql-container {
+  --color-primary: 0, 100%, 47%;
+  --color-tertiary: 196, 100%, 47%;
+  --color-base: 0, 0%, 12%;
+  --color-info: 0, 0%, 95%;
+  --color-neutral: var(--color-info);
+}
+
+body:not(.graphiql-dark) .graphiql-container {
+  --color-primary: 0, 100%, 47%;
+}
+
+.graphiql-logo div {
+  gap: 20px;
+}
+
+/* Hide original SVG */
+.graphiql-logo div div svg {
+  visibility: hidden;
+}
+
+.graphiql-logo div span {
+  font-family: 'F1', sans-serif;
+}
+
+/* Add new SVG using CSS content in the background */
+.graphiql-logo div div {
+  width: 120px !important;
+  background-image: url("/assets/images/f1-original-logo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}

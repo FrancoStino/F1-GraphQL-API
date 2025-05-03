@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>F1 GraphQL API</title>
+  <link rel="icon" href="/assets/images/f1-graphql-logo.svg" />
+  <link rel="stylesheet" href="/assets/css/landing.css" />
+</head>
+<body>
+  <div class="header">
+    <img src="/assets/images/f1-graphql-logo.svg" alt="F1 GraphQL Logo" class="logo">
+    <h1>F1 GraphQL API</h1>
+    <p class="subtitle">Historical and real-time Formula 1 data accessible via GraphQL</p>
+  </div>
+
+  <div class="container">
+    <div class="card">
+      <img src="/assets/images/graphql-yoga-logo.svg" alt="GraphQL Yoga Logo" class="card-logo" />
+      <h2>GraphQL Yoga</h2>
+      <p>Integrated GraphiQL interface to execute and test your GraphQL queries in real time.</p>
+      <a href="/graphql" class="btn">Open GraphiQL</a>
+    </div>
+
+    <div class="card">
+      <img src="/assets/images/apollo-logo.svg" alt="Apollo Logo" class="card-logo" />
+      <h2>Apollo Server</h2>
+      <p>Apollo Sandbox interface with introspection and advanced developer tools.</p>
+      <a href="/apollo" class="btn">Open Apollo</a>
+    </div>
+  </div>
+
+  <footer>
+    <span id="year"></span> - F1 GraphQL API. Created by Davide Ladisa.
+  </footer>
+
+  <script>
+    // Automatically insert the current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
