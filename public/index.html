@@ -6,6 +6,8 @@
   <title>F1 GraphQL API</title>
   <link rel="icon" href="/assets/images/f1-graphql-logo.svg" />
   <link rel="stylesheet" href="/assets/css/landing.css" />
+  <!-- Font Awesome CDN per le icone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="header">
@@ -30,12 +32,23 @@
     </div>
   </div>
 
+  <!-- Social Icon -->
+  <div class="social-icons">
+    <a href="https://github.com/FrancoStino/F1-GraphQL" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/davide-ladisa/" target="_blank" aria-label="LinkedIn">
+      <i class="fab fa-linkedin fa-lg"></i>
+    </a>
+  </div>
+
+
   <footer>
-    <span id="year"></span> - F1 GraphQL API. Created by Davide Ladisa.
+    <!-- Current year inserted dynamically -->
+    <span id="year"></span> - F1 GraphQL API. Created by <a href="davideladisa.it" target="_blank">Davide Ladisa</a>.
   </footer>
 
   <script>
-    // Automatically insert the current year
+  // Automatically inserts the current year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

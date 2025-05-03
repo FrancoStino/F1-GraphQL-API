@@ -1,13 +1,13 @@
 @import url("/assets/css/fonts.css");
 
 body {
+  min-height: 100vh;
   font-family: 'Inter', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #0f0f0f;
   color: #f1f1f1;
   max-width: 900px;
   margin: 0 auto;
   padding: 40px 20px;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,6 +29,10 @@ h1 {
   margin: 0;
   color: #e10600;
   font-size: 2.8rem;
+}
+
+a {
+  color: white;
 }
 
 .subtitle {
@@ -90,6 +94,16 @@ h1 {
 
 .btn:hover {
   background-color: #b40400;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.social-icons a {
+  font-size: 2em;
 }
 
 footer {
