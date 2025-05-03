@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.0.5] - 2025-05-03
+### Other Changes
+- [`937e117`](https://github.com/FrancoStino/F1-GraphQL/commit/937e117f9b5157acf3dd8206caadb77776f52a05) - Remove nightly and push F1 DB update workflows *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`87f7382`](https://github.com/FrancoStino/F1-GraphQL/commit/87f7382615494a4e6ce3ab5454abc55b72fce41d) - v0.0.5 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.0.4] - 2025-05-03
 ### Other Changes
 - [`9710751`](https://github.com/FrancoStino/F1-GraphQL/commit/971075190207122e172740972fc25e4beb73bf60) - Update Node.js requirement to v22+ *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -24,3 +30,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 [v0.0.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.1...v0.0.3
 [v0.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.3...v0.0.4
+[v0.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.4...v0.0.5
