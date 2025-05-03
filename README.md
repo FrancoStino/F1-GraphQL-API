@@ -10,6 +10,7 @@
 [![Open Issues](https://img.shields.io/github/issues/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/issues) -->
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Latest Release](https://img.shields.io/github/v/release/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/F1-GraphQL/releases)
   </div>
 <br/>
 
