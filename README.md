@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/images/f1-graphql-logo.svg" alt="F1 GraphQL Logo" width="180" />
+  <a href="https://f1-graphql.davideladisa.it/" target="_blank"><img src="assets/images/f1-graphql-logo.svg" alt="F1 GraphQL Logo" width="180" /></a>
   <br/>
   <h1>F1 GraphQL</h1>
   <h3>The Ultimate GraphQL API for Formula 1 Data</h3>
