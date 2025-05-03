@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.1.0] - 2025-05-03
+### Other Changes
+- [`cb3e36f`](https://github.com/FrancoStino/F1-GraphQL/commit/cb3e36feb0567850043c01021b56c005c939bd16) - Add nightly F1 database update workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c017542`](https://github.com/FrancoStino/F1-GraphQL/commit/c017542489bf5de377c525770223a85f769f18cb) - Add social icons and update landing page styles *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f8d5da4`](https://github.com/FrancoStino/F1-GraphQL/commit/f8d5da4fe756d03b7769be94595ba847fe49342e) - Add link to logo in README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`6532df7`](https://github.com/FrancoStino/F1-GraphQL/commit/6532df711c348a921425982b60240ce2929b0767) - v0.1.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`53806fe`](https://github.com/FrancoStino/F1-GraphQL/commit/53806fe18f2b661f4d9416efb9f1b6be01c3fa8c) - Merge branch 'main' of github.com:FrancoStino/F1-GraphQL *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.0.6] - 2025-05-03
 ### Other Changes
 - [`3c23cbf`](https://github.com/FrancoStino/F1-GraphQL/commit/3c23cbf1f1d1e11f8cea3b776c36cc968335d1dc) - Add nightly F1 database update workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -39,3 +48,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.3...v0.0.4
 [v0.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.4...v0.0.5
 [v0.0.6]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.5...v0.0.6
+[v0.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.6...v0.1.0
