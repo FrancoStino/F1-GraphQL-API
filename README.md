@@ -101,6 +101,7 @@ query Drivers {
     name
     fullName
     gender
+    dateOfBirth
   }
 }
 ```
