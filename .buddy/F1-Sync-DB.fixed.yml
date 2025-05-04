@@ -1,8 +1,5 @@
 - pipeline: F1 Sync DB
   events:
-    - type: PUSH
-      refs:
-        - refs/heads/azure-pipelines
     - type: SCHEDULE
       refs:
         - refs/heads/azure-pipelines
