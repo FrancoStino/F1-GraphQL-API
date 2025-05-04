@@ -127,37 +127,37 @@ query Race {
   <tr>
     <td align="center" width="96">
       <a href="https://www.typescriptlang.org/" target="_blank">
-        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" width="48" height="48" alt="TypeScript" />
+        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" style="width:50px;min-width: 50px;max-width: none;" alt="TypeScript" />
         <br>TypeScript
       </a>
     </td>
     <td align="center" width="96">
       <a href="https://graphql.org/" target="_blank">
-        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/graphql/graphql.png" width="48" height="48" alt="GraphQL" />
+        <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/graphql/graphql.png" style="width:50px;min-width: 50px;max-width: none;" alt="GraphQL" />
         <br>GraphQL
       </a>
     </td>
     <td align="center" width="96">
       <a href="https://www.prisma.io/" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4" width="48" height="48" alt="Prisma" />
+        <img src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4" style="width:50px;min-width: 50px;max-width: none;" alt="Prisma" />
         <br>Prisma
       </a>
     </td>
     <td align="center" width="96">
       <a href="https://www.apollographql.com/" target="_blank">
-        <img src="https://avatars.githubusercontent.com/u/17189275?s=200&v=4" width="48" height="48" alt="Apollo" />
+        <img src="https://avatars.githubusercontent.com/u/17189275?s=200&v=4" style="width:50px;min-width: 50px;max-width: none;" alt="Apollo" />
         <br>Apollo
       </a>
     </td>
     <td align="center" width="96">
       <a href="https://the-guild.dev/graphql/yoga-server" target="_blank">
-        <img src="https://res.cloudinary.com/apideck/image/upload/v1652998222/icons/graphql-yoga.png" width="48" height="48" alt="GraphQL Yoga" />
+        <img src="https://res.cloudinary.com/apideck/image/upload/v1652998222/icons/graphql-yoga.png" style="width:50px;min-width: 50px;max-width: none;" alt="GraphQL Yoga" />
         <br>Yoga
       </a>
     </td>
     <td align="center" width="96">
       <a href="https://gqloom.dev/" target="_blank">
-        <img src="https://gqloom.dev/gqloom.svg" width="48" height="48" alt="GQLoom" />
+        <img src="https://gqloom.dev/gqloom.svg" style="width:50px;min-width: 50px;max-width: none;" alt="GQLoom" />
         <br>GQLoom
       </a>
     </td>
