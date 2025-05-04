@@ -14,6 +14,7 @@
     settable: ENABLED
     description: Password del database PostgreSQL
   - key: VERCEL_TOKEN
+    value: secure!bmgUNDyh9S0OKZ5/Bp9FkmTm1F8u2e7bUTd2QOZWibI=.+ByQlT+kDmJnybO3XV6h+w==
     type: VAR
     encrypted: true
     settable: ENABLED
