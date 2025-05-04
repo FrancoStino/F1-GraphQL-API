@@ -2,11 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>F1 GraphQL API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 GraphQL API | Access Formula 1 Data via GraphQL</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Access real-time and historical Formula 1 data using the F1 GraphQL API with support for GraphQL Yoga and Apollo Server. Perfect for developers and F1 enthusiasts." />
+  <meta name="keywords" content="F1 API, Formula 1 API, GraphQL API, F1 GraphQL, GraphQL Yoga, Apollo Server, Formula One data, F1 developer API, real-time F1 stats" />
+  <meta name="author" content="Davide Ladisa" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://f1-graphql.davideladisa.it/" />
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="F1 GraphQL API" />
+  <meta property="og:description" content="Historical and real-time Formula 1 data accessible via GraphQL. Try it now with GraphQL Yoga or Apollo Server." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://f1-graphql.davideladisa.it/" />
+  <meta property="og:image" content="/assets/images/og.webp" />
+  <meta property="og:site_name" content="F1 GraphQL API" />
+
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="F1 GraphQL API" />
+  <meta name="twitter:description" content="Access real-time and historical Formula 1 data via GraphQL. Includes GraphiQL and Apollo support." />
+  <meta name="twitter:image" content="/assets/images/twitter.webp" />
+  <meta name="twitter:creator" content="@davide_ladisa" />
+
+  <!-- Favicon -->
   <link rel="icon" href="/assets/images/f1-graphql-logo.svg" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="/assets/css/landing.css" />
-  <!-- Font Awesome CDN per le icone -->
+
+  <!-- Font Awesome per le icone -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -21,7 +49,7 @@
       <img src="/assets/images/graphql-yoga-logo.svg" alt="GraphQL Yoga Logo" class="card-logo" />
       <h2>GraphQL Yoga</h2>
       <p>Integrated GraphiQL interface to execute and test your GraphQL queries in real time.</p>
-      <a href="/graphql" class="btn">Open GraphiQL</a>
+      <a href="/graphql" class="btn">Open GraphQL Yoga</a>
     </div>
 
     <div class="card">
@@ -41,14 +69,12 @@
     </a>
   </div>
 
-
   <footer>
-    <!-- Current year inserted dynamically -->
-    <span id="year"></span> - F1 GraphQL API. Created by <a href="davideladisa.it" target="_blank">Davide Ladisa</a>.
+    <span id="year"></span> - F1 GraphQL API. Created by <a href="https://davideladisa.it" target="_blank">Davide Ladisa</a>.
   </footer>
 
   <script>
-  // Automatically inserts the current year
+    // Inserisce automaticamente l'anno corrente
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
