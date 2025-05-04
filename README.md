@@ -126,6 +126,12 @@ query Race {
 <table>
   <tr>
     <td align="center" width="96">
+      <a href="https://gqloom.dev/" target="_blank">
+        <img src="https://gqloom.dev/gqloom.svg" style="width:50px;min-width: 50px;max-width: none;" alt="GQLoom" />
+        <br>GQLoom
+      </a>
+    </td>
+    <td align="center" width="96">
       <a href="https://www.typescriptlang.org/" target="_blank">
         <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png" style="width:50px;min-width: 50px;max-width: none;" alt="TypeScript" />
         <br>TypeScript
@@ -153,12 +159,6 @@ query Race {
       <a href="https://the-guild.dev/graphql/yoga-server" target="_blank">
         <img src="https://res.cloudinary.com/apideck/image/upload/v1652998222/icons/graphql-yoga.png" style="width:50px;min-width: 50px;max-width: none;" alt="GraphQL Yoga" />
         <br>Yoga
-      </a>
-    </td>
-    <td align="center" width="96">
-      <a href="https://gqloom.dev/" target="_blank">
-        <img src="https://gqloom.dev/gqloom.svg" style="width:50px;min-width: 50px;max-width: none;" alt="GQLoom" />
-        <br>GQLoom
       </a>
     </td>
   </tr>
