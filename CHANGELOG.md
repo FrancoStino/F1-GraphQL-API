@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.2] - 2025-05-04
+### Other Changes
+- [`ef2869b`](https://github.com/FrancoStino/F1-GraphQL/commit/ef2869b97db1f6cf16dbca4987852192edd5541a) - v0.3.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8ee3f0f`](https://github.com/FrancoStino/F1-GraphQL/commit/8ee3f0f120cda3f806ae6cfab6f9cdb4ca8341d4) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.3.1] - 2025-05-04
 ### Other Changes
 - [`7dd35ff`](https://github.com/FrancoStino/F1-GraphQL/commit/7dd35ff65303861db2b82f7457698e4c25d2e552) - Remove PUSH event from F1-Sync-DB pipeline *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -95,3 +101,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.1.0...v0.2.0
 [v0.3.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.2.0...v0.3.0
 [v0.3.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.0...v0.3.1
+[v0.3.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.1...v0.3.2
