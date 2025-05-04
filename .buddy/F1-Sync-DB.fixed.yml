@@ -13,6 +13,11 @@
     encrypted: true
     settable: ENABLED
     description: Password del database PostgreSQL
+  - key: VERCEL_TOKEN
+    type: VAR
+    encrypted: true
+    settable: ENABLED
+    description: Token di accesso per Vercel
   actions:
   - action: Check and Update F1DB
     type: BUILD
@@ -51,6 +56,25 @@
     - echo "FINE ESECUZIONE PSQL"
     - cp latest_release.txt cache/last_release.txt
     - echo "Riferimento alla release aggiornato correttamente"
+    - "echo \"Database aggiornato con successo, procedo con il deployment\""
     setup_commands:
     - apt-get update
     - apt-get install -y postgresql-client unzip curl jq apt-utils
+  - action: Deploy to Vercel
+    type: BUILD
+    working_directory: /buddy/workspace
+    docker_image_name: node
+    docker_image_tag: latest
+    execute_commands:
+    - echo "Installazione delle dipendenze per il deployment..."
+    - npm install -g vercel
+    - echo "Avvio del deployment su Vercel..."
+    - vercel deploy --token "$VERCEL_TOKEN" --prod
+    - echo "Deployment su Vercel completato con successo!"
+    setup_commands:
+    - apt-get update && apt-get install -y curl
+    trigger_conditions:
+    - trigger_condition: ALWAYS
+      timezone: ""
+      trigger_hours: []
+      trigger_days: []
