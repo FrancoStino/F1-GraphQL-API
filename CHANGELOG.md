@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.1] - 2025-05-04
+### Other Changes
+- [`7dd35ff`](https://github.com/FrancoStino/F1-GraphQL/commit/7dd35ff65303861db2b82f7457698e4c25d2e552) - Remove PUSH event from F1-Sync-DB pipeline *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`47b6a57`](https://github.com/FrancoStino/F1-GraphQL/commit/47b6a5745b9d023c044e1569cb995cddc1c8e04c) - Update F1-Sync-DB trigger to main branch *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`6a52dce`](https://github.com/FrancoStino/F1-GraphQL/commit/6a52dce99501fb33a6af4414334396f32b3a5d46) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`2109a8f`](https://github.com/FrancoStino/F1-GraphQL/commit/2109a8fb3991b7bdadb4744b02156bf4686d6b8a) - v0.3.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7da0cdb`](https://github.com/FrancoStino/F1-GraphQL/commit/7da0cdb8dc8d549716be2eec940857e197ca5558) - Update start date and delay in F1-Sync-DB pipeline *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8f35699`](https://github.com/FrancoStino/F1-GraphQL/commit/8f35699e88223f38c8c9fd65e2789eb4873573b0) - Update F1-Sync-DB pipeline schedule and bump package version *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`ae99e79`](https://github.com/FrancoStino/F1-GraphQL/commit/ae99e799e8e1fe58a3d7b8df14fa9c5de4a7fde6) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.3.0] - 2025-05-04
 ### Other Changes
 - [`da6d6e3`](https://github.com/FrancoStino/F1-GraphQL/commit/da6d6e345fe05640b780e6326fa01e3a0b59ee8c) - Add Buddy pipeline for F1 Sync DB *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -83,3 +94,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.6...v0.1.0
 [v0.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.1.0...v0.2.0
 [v0.3.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.2.0...v0.3.0
+[v0.3.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.0...v0.3.1
