@@ -1,7 +1,11 @@
 <div align="center">
   <a href="https://f1-graphql.davideladisa.it/" target="_blank"><img src="assets/images/f1-graphql-logo.svg" alt="F1 GraphQL Logo" width="180" /></a>
   <br/>
-  <h1>[F1 GraphQL](https://f1-graphql.davideladisa.it/)</h1>
+  <h1>
+    <a href="https://f1-graphql.davideladisa.it/" target="_blank" style="text-decoration: none; color: inherit;">
+      F1 GraphQL
+    </a>
+  </h1>
   <h3>The Ultimate GraphQL API for Formula 1 Data</h3>
   <p><i>All F1 history and statistics at your fingertips through GraphQL</i></p>
 <!-- [![GitHub Stars](https://img.shields.io/github/stars/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/stargazers)
