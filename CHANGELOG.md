@@ -4,6 +4,32 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.2.0] - 2025-05-04
+### Other Changes
+- [`3693f05`](https://github.com/FrancoStino/F1-GraphQL/commit/3693f051012352baae3a05e35e892e5594836958) - Wrap F1 GraphQL title in link *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d30d327`](https://github.com/FrancoStino/F1-GraphQL/commit/d30d3274019a6a6f0da8134bd0c3dc6b1dc2fdaf) - Remove Prisma schema and add versioning scripts *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`1eefe4d`](https://github.com/FrancoStino/F1-GraphQL/commit/1eefe4d0adfde98b9e153774aca6a21a20cf92bd) - Update build script to generate Prisma client *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`2c14e52`](https://github.com/FrancoStino/F1-GraphQL/commit/2c14e525b5b2ae8622cd4dbc1da461b4aae10d54) - Improve SEO and add social media meta tags *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9fe9785`](https://github.com/FrancoStino/F1-GraphQL/commit/9fe97853e04156a813f090d81a51ba14e34c507a) - Improve SEO and add social media meta tags *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`2031157`](https://github.com/FrancoStino/F1-GraphQL/commit/203115764516773845044c93dd6c911e1e927674) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c2f334c`](https://github.com/FrancoStino/F1-GraphQL/commit/c2f334cf3b8f08ff0efe3d4439a547a72fda5fba) - Update index.html *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`a321cd8`](https://github.com/FrancoStino/F1-GraphQL/commit/a321cd8f9a14edcc560239b9dfc29063bfdac3cb) - Update image paths to relative URLs *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e62d903`](https://github.com/FrancoStino/F1-GraphQL/commit/e62d90317b58bc75c38451bba936e1e2affa1bcd) - Update image styles for tech stack icons *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0dbcb56`](https://github.com/FrancoStino/F1-GraphQL/commit/0dbcb561368728932a4d5083afb5196b19c067e5) - Add GQLoom to README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7054813`](https://github.com/FrancoStino/F1-GraphQL/commit/70548133779d1d915bb9a3791d05872095fdaeb5) - Make F1 GraphQL title a link *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`078b43e`](https://github.com/FrancoStino/F1-GraphQL/commit/078b43ed8d7594718b52eda3df69fac2e441a732) - Make F1 GraphQL title a link *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f3b861b`](https://github.com/FrancoStino/F1-GraphQL/commit/f3b861b7d5b88224e0a94027e4b8d361b3d4b74b) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`84609ed`](https://github.com/FrancoStino/F1-GraphQL/commit/84609ed1ff9667f35723e12f6118d0e4e7c4d663) - Update README with clickable title *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`4be424f`](https://github.com/FrancoStino/F1-GraphQL/commit/4be424f39f8638e88cafb1b4b913968d23b39b7e) - Update README with clickable title *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f601888`](https://github.com/FrancoStino/F1-GraphQL/commit/f601888b85949acbdcc8889978b5fda627ff2661) - Wrap F1 GraphQL title in link *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f6542d0`](https://github.com/FrancoStino/F1-GraphQL/commit/f6542d06a8eaaba96aaa6eaa4650c4401110fc92) - Merge branch 'origin/develop' into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`998726c`](https://github.com/FrancoStino/F1-GraphQL/commit/998726c08b659e4d91604415e25f04653c8c90b2) - Add demo section to README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`af16815`](https://github.com/FrancoStino/F1-GraphQL/commit/af16815ceb9cce158fa28757ec6ddb7b3de3c143) - Update demo image width *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d1409b2`](https://github.com/FrancoStino/F1-GraphQL/commit/d1409b25150929f898a341816d5a7d39950ff456) - Update demo section heading *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0ff7b61`](https://github.com/FrancoStino/F1-GraphQL/commit/0ff7b61fe586fdddd8d118f7e71b9ab3d3369c48) - v0.2.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`2101723`](https://github.com/FrancoStino/F1-GraphQL/commit/2101723224685b01defa92a0d47e21451001d8d0) - Merge branch 'develop' *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.1.0] - 2025-05-03
 ### Other Changes
 - [`cb3e36f`](https://github.com/FrancoStino/F1-GraphQL/commit/cb3e36feb0567850043c01021b56c005c939bd16) - Add nightly F1 database update workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -49,3 +75,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.4...v0.0.5
 [v0.0.6]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.5...v0.0.6
 [v0.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.6...v0.1.0
+[v0.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.1.0...v0.2.0
