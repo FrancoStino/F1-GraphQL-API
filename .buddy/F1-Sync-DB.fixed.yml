@@ -3,8 +3,8 @@
     - type: SCHEDULE
       refs:
         - refs/heads/main
-      start_date: 2025-05-03T22:00:00Z
-      delay: 5
+      start_date: 2025-05-04T22:00:00Z
+      delay: 1440
   fail_on_prepare_env_warning: true
   variables:
     - key: DB_PASSWORD
