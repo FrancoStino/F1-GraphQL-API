@@ -1,6 +1,6 @@
 {
   "name": "f1-graphql",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A comprehensive and flexible GraphQL API that provides access to historical and real-time Formula 1 data.",
   "author": "Davide Ladisa",
   "main": "index.ts",
