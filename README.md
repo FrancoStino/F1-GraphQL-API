@@ -48,7 +48,7 @@
 - **🧩 Rich Query Options** - Filter, paginate, and explore F1 data with flexible queries
 
 <!-- TOC --><a name="-demo"></a>
-🎬 Demo
+## 🎬 Demo
 <div align="center">
   <img src="assets/images/demo.gif" alt="F1 GraphQL Demo" />
   <p><i>Watch F1 GraphQL in action</i></p>
