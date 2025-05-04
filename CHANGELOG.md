@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.0] - 2025-05-04
+### Other Changes
+- [`da6d6e3`](https://github.com/FrancoStino/F1-GraphQL/commit/da6d6e345fe05640b780e6326fa01e3a0b59ee8c) - Add Buddy pipeline for F1 Sync DB *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8b7e916`](https://github.com/FrancoStino/F1-GraphQL/commit/8b7e91680370ddd16718045033a4403b816e4521) - v0.3.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.2.0] - 2025-05-04
 ### Other Changes
 - [`3693f05`](https://github.com/FrancoStino/F1-GraphQL/commit/3693f051012352baae3a05e35e892e5594836958) - Wrap F1 GraphQL title in link *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -76,3 +82,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.0.6]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.5...v0.0.6
 [v0.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.0.6...v0.1.0
 [v0.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.1.0...v0.2.0
+[v0.3.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.2.0...v0.3.0
