@@ -21,6 +21,7 @@
 <!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
 ## Table of Contents
 - [✨ Features](#-features)
+- [🎬 Demo](#-demo)
 - [🏁 Quick Start](#-quick-start)
    * [Prerequisites](#prerequisites)
    * [Installation](#installation)
@@ -45,6 +46,13 @@
 - **🔄 Automated Updates** - Database refreshed daily with the latest F1 statistics
 - **⚡ High Performance** - Built on modern Node.js with TypeScript and Prisma ORM
 - **🧩 Rich Query Options** - Filter, paginate, and explore F1 data with flexible queries
+
+<!-- TOC --><a name="-demo"></a>
+🎬 Demo
+<div align="center">
+  <img src="assets/images/demo.gif" alt="F1 GraphQL Demo" width="600" />
+  <p><i>Watch F1 GraphQL in action</i></p>
+</div>
 
 <!-- TOC --><a name="-quick-start"></a>
 ## 🏁 Quick Start
