@@ -50,7 +50,7 @@
 <!-- TOC --><a name="-demo"></a>
 🎬 Demo
 <div align="center">
-  <img src="assets/images/demo.gif" alt="F1 GraphQL Demo" width="600" />
+  <img src="assets/images/demo.gif" alt="F1 GraphQL Demo" />
   <p><i>Watch F1 GraphQL in action</i></p>
 </div>
 
