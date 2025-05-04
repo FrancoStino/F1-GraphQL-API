@@ -70,7 +70,7 @@ cp .env.example .env
 # Edit .env with your database connection string
 
 # Generate Prisma client
-yarn generate
+yarn build
 
 # Start development server
 yarn dev
