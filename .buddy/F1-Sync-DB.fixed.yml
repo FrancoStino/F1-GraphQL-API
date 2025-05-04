@@ -13,8 +13,17 @@
     encrypted: true
     settable: ENABLED
     description: Password del database PostgreSQL
+  - key: VERCEL_ORG_ID
+    value: francostinos-projects
+    type: VAR
+    settable: ENABLED
+    description: ID dell'organizzazione/utente Vercel
+  - key: VERCEL_PROJECT_NAME
+    value: f1-graphql
+    type: VAR
+    settable: ENABLED
+    description: Nome del progetto Vercel da deployare
   - key: VERCEL_TOKEN
-    value: secure!bmgUNDyh9S0OKZ5/Bp9FkmTm1F8u2e7bUTd2QOZWibI=.+ByQlT+kDmJnybO3XV6h+w==
     type: VAR
     encrypted: true
     settable: ENABLED
@@ -70,7 +79,7 @@
     - echo "Installazione delle dipendenze per il deployment..."
     - npm install -g vercel
     - echo "Avvio del deployment su Vercel..."
-    - vercel deploy --token "$VERCEL_TOKEN" --prod
+    - vercel deploy --token "$VERCEL_TOKEN" --prod --scope "$VERCEL_ORG_ID" --name "$VERCEL_PROJECT_NAME"
     - echo "Deployment su Vercel completato con successo!"
     setup_commands:
     - apt-get update && apt-get install -y curl
