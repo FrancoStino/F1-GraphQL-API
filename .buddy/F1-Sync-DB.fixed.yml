@@ -89,11 +89,24 @@
         - echo "Installazione delle dipendenze per il deployment..."
         - npm install -g vercel
         - echo "Avvio del deployment su Vercel..."
-        # Use environment variables for Vercel deployment
-        - export VERCEL_ORG_ID="$VERCEL_ORG_ID"
-        - export VERCEL_PROJECT_ID="$VERCEL_PROJECT_ID"
-        # Simplified command that uses the environment variables
-        - vercel deploy --token "$VERCEL_TOKEN" --prod
+        
+        # Create a temporary directory with a minimal project config
+        - mkdir -p vercel-deploy
+        - cd vercel-deploy
+        
+        # Create a simple vercel.json configuration
+        - echo '{
+            "version": 2,
+            "name": "f1-graphql",
+            "scope": "francostinos-projects"
+          }' > vercel.json
+        
+        # Enable debug mode for more verbose output
+        - export VERCEL_DEBUG=1
+        
+        # Use the direct command with specific project name
+        - vercel --token "$VERCEL_TOKEN" --prod --confirm
+        
         - echo "Deployment su Vercel completato con successo!"
       setup_commands:
         - apt-get update && apt-get install -y curl
