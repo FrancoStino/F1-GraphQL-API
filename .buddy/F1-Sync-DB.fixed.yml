@@ -89,8 +89,11 @@
         - echo "Installazione delle dipendenze per il deployment..."
         - npm install -g vercel
         - echo "Avvio del deployment su Vercel..."
-        # Modify this line to include the project ID
-        - vercel deploy --token "$VERCEL_TOKEN" --prod --scope "$VERCEL_ORG_ID" --project "$VERCEL_PROJECT_ID"
+        # Use environment variables for Vercel deployment
+        - export VERCEL_ORG_ID="$VERCEL_ORG_ID"
+        - export VERCEL_PROJECT_ID="$VERCEL_PROJECT_ID"
+        # Simplified command that uses the environment variables
+        - vercel deploy --token "$VERCEL_TOKEN" --prod
         - echo "Deployment su Vercel completato con successo!"
       setup_commands:
         - apt-get update && apt-get install -y curl
