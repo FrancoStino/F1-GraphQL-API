@@ -73,6 +73,7 @@
     - apt-get install -y postgresql-client unzip curl jq apt-utils
   - action: Deploy to Vercel
     type: BUILD
+    disabled: true
     working_directory: /buddy/workspace
     docker_image_name: node
     docker_image_tag: latest
@@ -86,6 +87,5 @@
     - apt-get update && apt-get install -y curl
     trigger_conditions:
     - trigger_condition: ALWAYS
-      timezone: ""
       trigger_hours: []
       trigger_days: []
