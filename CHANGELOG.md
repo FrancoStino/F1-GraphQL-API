@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.4] - 2025-05-05
+### Other Changes
+- [`e998c04`](https://github.com/FrancoStino/F1-GraphQL/commit/e998c04d7fc2bf3e7ed54519fb33751af479d1e3) - v0.3.4 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+
+
 ## [v0.3.3] - 2025-05-04
 ### Other Changes
 - [`921d409`](https://github.com/FrancoStino/F1-GraphQL/commit/921d409d429d0dc27699229b712627e5d62e4d58) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -109,3 +114,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.3.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.0...v0.3.1
 [v0.3.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.1...v0.3.2
 [v0.3.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.2...v0.3.3
+[v0.3.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.3...v0.3.4
