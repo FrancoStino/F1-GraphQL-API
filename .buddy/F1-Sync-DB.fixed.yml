@@ -96,17 +96,21 @@
         
         # Create a simple vercel.json configuration
         - |
-          echo '{
+          cat > vercel.json << 'EOF'
+          {
             "version": 2,
             "name": "f1-graphql",
-            "scope": "francostinos-projects"
-          }' > vercel.json
+            "scope": "francostinos-projects",
+            "project": "prj_1mtU4uLiKdVGfQRLy34QZAl5JD6w"
+          }
+          EOF
+        - cat vercel.json
         
         # Enable debug mode for more verbose output
         - export VERCEL_DEBUG=1
         
-        # Use the direct command with specific project name
-        - vercel --token "$VERCEL_TOKEN" --prod --confirm
+        # Use the direct command with specific project name and organization
+        - vercel --token "$VERCEL_TOKEN" --scope "$VERCEL_ORG_ID" --prod --yes
         
         - echo "Deployment su Vercel completato con successo!"
       setup_commands:
