@@ -95,7 +95,8 @@
         - cd vercel-deploy
         
         # Create a simple vercel.json configuration
-        - echo '{
+        - |
+          echo '{
             "version": 2,
             "name": "f1-graphql",
             "scope": "francostinos-projects"
