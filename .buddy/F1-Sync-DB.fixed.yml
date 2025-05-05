@@ -85,15 +85,6 @@
     - echo "Installazione delle dipendenze per il deployment..."
     - npm install -g vercel
     - echo "Avvio del deployment su Vercel..."
-    - mkdir -p vercel-deploy
-    - cd vercel-deploy
-    - cat > .vercel/project.json << 'EOF'
-    - "{"
-    - "  \"projectId\": \"prj_1mtU4uLiKdVGfQRLy34QZAl5JD6w\","
-    - "  \"orgId\": \"francostinos-projects\""
-    - "}"
-    - EOF
-    - ""
     - vercel --token "$VERCEL_TOKEN" --prod
     - echo "Deployment su Vercel completato con successo!"
     setup_commands:
