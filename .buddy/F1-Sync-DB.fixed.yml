@@ -23,11 +23,6 @@
     type: VAR
     settable: ENABLED
     description: ID del progetto Vercel
-  - key: VERCEL_PROJECT_NAME
-    value: f1-graphql
-    type: VAR
-    settable: ENABLED
-    description: Nome del progetto Vercel da deployare
   - key: VERCEL_TOKEN
     value: secure!sCiWiQas1irMYlYbW6mltKG4WzuZQx2Z84aXcBYTKiI=.3EOGWASQehbWatUH0kb+0Q==
     type: VAR
