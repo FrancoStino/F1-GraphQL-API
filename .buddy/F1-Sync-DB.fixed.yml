@@ -90,7 +90,21 @@
         - npm install -g vercel
         - echo "Avvio del deployment su Vercel..."
         
-        - vercel --prod
+        # Create a temporary directory with a minimal project config
+        - mkdir -p vercel-deploy
+        - cd vercel-deploy
+        
+        # Create a simple vercel.json configuration
+        - |
+          cat > .vercel/project.json << 'EOF'
+          {
+            "projectId": "prj_1mtU4uLiKdVGfQRLy34QZAl5JD6w",
+            "orgId": "francostinos-projects"
+          }
+          EOF
+        
+        # Execute simpler Vercel deployment command
+        - vercel --token "$VERCEL_TOKEN" --prod
         
         - echo "Deployment su Vercel completato con successo!"
       setup_commands:
