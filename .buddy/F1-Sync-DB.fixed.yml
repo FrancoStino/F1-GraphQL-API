@@ -31,6 +31,12 @@
       encrypted: false
       settable: ENABLED
       description: ID dell'organizzazione/utente Vercel
+    - key: VERCEL_PROJECT_ID
+      value: prj_1mtU4uLiKdVGfQRLy34QZAl5JD6w
+      type: VAR
+      encrypted: false
+      settable: ENABLED
+      description: ID del progetto Vercel
   actions:
     - action: Check and Update F1DB
       type: BUILD
@@ -83,11 +89,8 @@
         - echo "Installazione delle dipendenze per il deployment..."
         - npm install -g vercel
         - echo "Avvio del deployment su Vercel..."
-        # Ci sono due modi per specificare il progetto:
-        # Per un progetto esistente su Vercel è meglio usare i parametri --scope e il nome del progetto
-        - vercel deploy --token "$VERCEL_TOKEN" --prod --scope "$VERCEL_ORG_ID" --name "$VERCEL_PROJECT_NAME"
-        # 2. Oppure specificando il percorso del codice sorgente (se la pipeline ha accesso al repository)
-        # - cd /buddy/workspace/path/to/your/project && vercel deploy --token "$VERCEL_TOKEN" --prod
+        # Modify this line to include the project ID
+        - vercel deploy --token "$VERCEL_TOKEN" --prod --scope "$VERCEL_ORG_ID" --project "$VERCEL_PROJECT_ID"
         - echo "Deployment su Vercel completato con successo!"
       setup_commands:
         - apt-get update && apt-get install -y curl
