@@ -14,7 +14,7 @@
     settable: ENABLED
     description: Password del database PostgreSQL
   - key: VERCEL_ORG_ID
-    value: francostinos-projects
+    value: team_mkFgluJQ2JiQ8m23v0VY2nAb
     type: VAR
     settable: ENABLED
     description: ID dell'organizzazione/utente Vercel
