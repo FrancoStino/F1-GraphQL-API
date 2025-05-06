@@ -26,7 +26,7 @@ stages:
   - job: UpdateDatabase
     displayName: 'Check for updates and update PostgreSQL DB'
     pool:
-      name: Default # Nome del tuo pool di agenti self-hosted
+      vmImage: 'ubuntu-latest'
     steps:
     - script: |
         echo "Verifico l'ultima release disponibile..."
@@ -85,7 +85,7 @@ stages:
   - job: VercelDeploy
     displayName: 'Deploy application to Vercel'
     pool:
-      name: Default # Nome del tuo pool di agenti self-hosted
+      vmImage: 'ubuntu-latest'
     steps:
     - task: NodeTool@0
       inputs:
