@@ -1,19 +1,104 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+name: F1 Sync DB
 
-trigger:
-- main
+schedules:
+- cron: "0 22 * * *"  # Ogni giorno alle 22:00 UTC
+  displayName: 'F1 DB Daily Sync'
+  branches:
+    include:
+    - main
+  always: false # L'esecuzione avviene solo se ci sono modifiche nel branch
 
-pool:
-  vmImage: ubuntu-latest
+variables:
+  # Definisci le variabili direttamente nella pipeline
+  # Per le variabili segrete, usa invece la UI di Azure DevOps per configurarle
+  # o un Azure Key Vault collegato
+  - name: VERCEL_ORG_ID
+    value: 'team_mkFgluJQ2JiQ8m23v0VY2nAb'
+  - name: VERCEL_PROJECT_ID
+    value: 'prj_1mtU4uLiKdVGfQRLy34QZAl5JD6w'
+  # Le variabili segrete (DB_PASSWORD e VERCEL_TOKEN) dovrebbero essere configurate 
+  # nella UI di Azure DevOps -> Pipeline -> Edit -> Variables
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+- stage: CheckAndUpdateF1DB
+  displayName: 'Check and Update F1DB'
+  jobs:
+  - job: UpdateDatabase
+    displayName: 'Check for updates and update PostgreSQL DB'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - script: |
+        echo "Verifico l'ultima release disponibile..."
+        mkdir -p $(Pipeline.Workspace)/cache
+        LATEST_RELEASE_TAG=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r .tag_name)
+        echo "Ultima release trovata $LATEST_RELEASE_TAG"
+        echo "$LATEST_RELEASE_TAG" > latest_release.txt
+        
+        if [ -f $(Pipeline.Workspace)/cache/last_release.txt ]; then
+          echo "Ultima release precedente trovata $(cat $(Pipeline.Workspace)/cache/last_release.txt)"
+          if cmp -s $(Pipeline.Workspace)/cache/last_release.txt latest_release.txt; then
+            echo "Nessuna nuova release, aggiornamento saltato"
+            echo "##vso[task.setvariable variable=needsUpdate;isOutput=true]false"
+            exit 0
+          else
+            echo "Trovata nuova release, procedo con l'aggiornamento"
+            echo "##vso[task.setvariable variable=needsUpdate;isOutput=true]true"
+          fi
+        else
+          echo "Nessuna release precedente trovata, procedo..."
+          echo "##vso[task.setvariable variable=needsUpdate;isOutput=true]true"
+        fi
+      displayName: 'Check Latest Release'
+      name: checkRelease
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    - script: |
+        echo "Download della nuova release..."
+        DOWNLOAD_URL=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.assets[] | select(.name == "f1db-sql-postgresql.zip") | .browser_download_url')
+        echo "Scarico da $DOWNLOAD_URL"
+        curl -L "$DOWNLOAD_URL" -o f1db.zip
+        unzip f1db.zip
+        echo "Download e unzip completati"
+      displayName: 'Download F1DB'
+      condition: eq(variables['checkRelease.needsUpdate'], 'true')
+
+    - script: |
+        echo "INIZIO ESECUZIONE PSQL"
+        sudo apt-get update
+        sudo apt-get install -y postgresql-client
+        SQL_FILE=$(find . -name "f1db-sql-postgresql.sql")
+        echo "Trovato file SQL $SQL_FILE"
+        timeout 5 bash -c "</dev/tcp/f1-graphql-db-f1-graphql.c.aivencloud.com/23000" || (echo "❌ Connessione al DB fallita" && exit 1)
+        PGPASSWORD="$(DB_PASSWORD)" psql -w -h f1-graphql-db-f1-graphql.c.aivencloud.com -p 23000 -U avnadmin -d defaultdb -v ON_ERROR_STOP=1 -f "$SQL_FILE"
+        echo "FINE ESECUZIONE PSQL"
+        cp latest_release.txt $(Pipeline.Workspace)/cache/last_release.txt
+        echo "Riferimento alla release aggiornato correttamente"
+        echo "Database aggiornato con successo"
+      displayName: 'Update PostgreSQL Database'
+      condition: eq(variables['checkRelease.needsUpdate'], 'true')
+
+- stage: DeployToVercel
+  displayName: 'Deploy to Vercel'
+  dependsOn: CheckAndUpdateF1DB
+  condition: succeeded('CheckAndUpdateF1DB')
+  jobs:
+  - job: VercelDeploy
+    displayName: 'Deploy application to Vercel'
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '18.x'
+      displayName: 'Install Node.js'
+
+    - script: |
+        echo "Installazione delle dipendenze per il deployment..."
+        npm install -g vercel
+        echo "Avvio del deployment su Vercel..."
+        vercel --token "$(VERCEL_TOKEN)" --preview
+        echo "Deployment su Vercel completato con successo!"
+      displayName: 'Deploy to Vercel'
+      env:
+        VERCEL_ORG_ID: $(VERCEL_ORG_ID)
+        VERCEL_PROJECT_ID: $(VERCEL_PROJECT_ID)
