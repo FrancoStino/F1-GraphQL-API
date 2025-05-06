@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v0.3.3] - 2025-05-06
+### Other Changes
+- [`921d409`](https://github.com/FrancoStino/F1-GraphQL/commit/921d409d429d0dc27699229b712627e5d62e4d58) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8558245`](https://github.com/FrancoStino/F1-GraphQL/commit/8558245b0a47f14d8d53b981a2f8c01ffbeb82f1) - v0.3.3 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d06cfa7`](https://github.com/FrancoStino/F1-GraphQL/commit/d06cfa710f9314ec8b63bd3408763379be768ef2) - Update README.md
+
+my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`291819e`](https://github.com/FrancoStino/F1-GraphQL/commit/291819eeb1a18a23109549831aa953214466463e) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e6bdc9b`](https://github.com/FrancoStino/F1-GraphQL/commit/e6bdc9b8fcb78e8af52ef88da01a82d43cead8bd) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`3a69398`](https://github.com/FrancoStino/F1-GraphQL/commit/3a6939809c30e1ae8ae3959407fecc36676ce3b5) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`1842c4d`](https://github.com/FrancoStino/F1-GraphQL/commit/1842c4d5085474161b978cceec6c0faa7f684be7) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`053e00a`](https://github.com/FrancoStino/F1-GraphQL/commit/053e00aba7b6bdd09dcd801cc5684f1d5e7ce7bf) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`18a2e72`](https://github.com/FrancoStino/F1-GraphQL/commit/18a2e72170400542ee13bc5da94a57788792f77e) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d1d6f17`](https://github.com/FrancoStino/F1-GraphQL/commit/d1d6f1715933c4399ac7a1a542f869135f985c53) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9aaad9b`](https://github.com/FrancoStino/F1-GraphQL/commit/9aaad9bc85a8fc050b7322a9c079041228a9a16d) - Pipeline changed by buddy *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8e5105b`](https://github.com/FrancoStino/F1-GraphQL/commit/8e5105b71bc97d3d04ec691e2c3e868875d5d5ed) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b986f33`](https://github.com/FrancoStino/F1-GraphQL/commit/b986f332dfeeb1586fa6fee6a6e902957354ec8c) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b652e29`](https://github.com/FrancoStino/F1-GraphQL/commit/b652e29bd2575e79406fe4a384dd3cb2692aab14) - Update F1-Sync-DB.fixed.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.3.4] - 2025-05-05
 ### Other Changes
 - [`e998c04`](https://github.com/FrancoStino/F1-GraphQL/commit/e998c04d7fc2bf3e7ed54519fb33751af479d1e3) - v0.3.4 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
@@ -115,3 +135,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [v0.3.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.1...v0.3.2
 [v0.3.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.2...v0.3.3
 [v0.3.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.3...v0.3.4
+[v0.3.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.2...v0.3.3
