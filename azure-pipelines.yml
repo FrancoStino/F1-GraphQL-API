@@ -26,7 +26,7 @@ stages:
   - job: UpdateDatabase
     displayName: 'Check for updates and update PostgreSQL DB'
     pool:
-      vmImage: 'ubuntu-latest'
+      name: Default # Nome del tuo pool di agenti self-hosted
     steps:
     - script: |
         echo "Verifico l'ultima release disponibile..."
@@ -85,7 +85,7 @@ stages:
   - job: VercelDeploy
     displayName: 'Deploy application to Vercel'
     pool:
-      vmImage: 'ubuntu-latest'
+      name: Default # Nome del tuo pool di agenti self-hosted
     steps:
     - task: NodeTool@0
       inputs:
@@ -96,7 +96,7 @@ stages:
         echo "Installazione delle dipendenze per il deployment..."
         npm install -g vercel
         echo "Avvio del deployment su Vercel..."
-        vercel --token "$(VERCEL_TOKEN)" --preview
+        vercel --token "$(VERCEL_TOKEN)" --prod
         echo "Deployment su Vercel completato con successo!"
       displayName: 'Deploy to Vercel'
       env:
