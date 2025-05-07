@@ -1,0 +1,91 @@
+name: F1 Sync DB
+
+on:
+  schedule:
+    - cron: '0 22 * * *' # ogni giorno alle 22:00 UTC (00:00 ora italiana con ora legale)
+  workflow_dispatch:
+
+env:
+  DB_HOST: f1-graphql-db-f1-graphql.c.aivencloud.com
+  DB_PORT: 23000
+  DB_USER: avnadmin
+  DB_NAME: defaultdb
+  SQL_FILENAME: f1db-sql-postgresql.sql
+
+jobs:
+  sync-db:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository (necessario per usare la cache)
+        uses: actions/checkout@v4
+
+      - name: Ripristina cache release precedente
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: .cache
+          key: f1db-last-release
+
+      - name: Installa strumenti necessari
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y postgresql-client unzip curl jq
+
+      - name: Scarica ultima release disponibile
+        run: |
+          mkdir -p .cache
+          LATEST_RELEASE_TAG=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r .tag_name)
+          echo "Ultima release trovata: $LATEST_RELEASE_TAG"
+          echo "$LATEST_RELEASE_TAG" > .cache/latest_release.txt
+          echo "LATEST_RELEASE_TAG=$LATEST_RELEASE_TAG" >> $GITHUB_ENV
+
+      - name: Verifica se la release è nuova
+        id: check_release
+        run: |
+          if [ -f .cache/last_release.txt ]; then
+            echo "Ultima release precedente: $(cat .cache/last_release.txt)"
+            if cmp -s .cache/last_release.txt .cache/latest_release.txt; then
+              echo "❌ Nessuna nuova release. Salto aggiornamento DB."
+              echo "skip_db=true" >> $GITHUB_OUTPUT
+              exit 0
+            fi
+          fi
+          echo "✅ Nuova release trovata!"
+          echo "skip_db=false" >> $GITHUB_OUTPUT
+
+      - name: Scarica e decomprimi SQL
+        if: steps.check_release.outputs.skip_db == 'false'
+        run: |
+          DOWNLOAD_URL=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.assets[] | select(.name == "f1db-sql-postgresql.zip") | .browser_download_url')
+          echo "Scarico da $DOWNLOAD_URL"
+          curl -L "$DOWNLOAD_URL" -o f1db.zip
+          unzip -o f1db.zip
+          echo "Download completato e contenuto estratto"
+
+      - name: Esegui SQL nel database PostgreSQL
+        if: steps.check_release.outputs.skip_db == 'false'
+        env:
+          PGPASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          SQL_FILE=$(find . -name "$SQL_FILENAME")
+          if [ ! -f "$SQL_FILE" ]; then
+            echo "❌ File SQL $SQL_FILENAME non trovato!"
+            exit 1
+          fi
+
+          echo "Verifico la connessione al DB..."
+          timeout 5 bash -c "</dev/tcp/$DB_HOST/$DB_PORT" || {
+            echo "❌ Connessione al DB fallita!"
+            exit 1
+          }
+
+          echo "Importazione in corso..."
+          psql -w -h $DB_HOST -p $DB_PORT -U $DB_USER -d $DB_NAME -v ON_ERROR_STOP=1 -1 -f "$SQL_FILE"
+          echo "✅ Importazione completata!"
+
+      - name: Aggiorna file di cache della release
+        if: steps.check_release.outputs.skip_db == 'false'
+        run: |
+          cp .cache/latest_release.txt .cache/last_release.txt
+          echo "Cache release aggiornata"
