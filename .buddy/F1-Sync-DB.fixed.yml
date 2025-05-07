@@ -62,8 +62,7 @@
     - echo "INIZIO ESECUZIONE PSQL"
     - SQL_FILE=$(find . -name "f1db-sql-postgresql.sql")
     - echo "Trovato file SQL $SQL_FILE"
-    - timeout 5 bash -c "</dev/tcp/f1-graphql-db-f1-graphql.c.aivencloud.com/23000" || (echo "❌ Connessione al DB fallita" && exit 1)
-    - PGPASSWORD="$DB_PASSWORD" psql -w -h f1-graphql-db-f1-graphql.c.aivencloud.com -p 23000 -U avnadmin -d defaultdb -v ON_ERROR_STOP=1 -f "$SQL_FILE"
+    - timeout 5 bash -c "</dev/tcp/f1-graphql-db-f1-graphql.c.aivencloud.com/23000" || (echo "❌ Connessione al DB fallita" && exit 1) PGPASSWORD="$DB_PASSWORD" psql -w -h f1-graphql-db-f1-graphql.c.aivencloud.com -p 23000 -U avnadmin -d defaultdb -v ON_ERROR_STOP=1 -1 -f "$SQL_FILE"
     - echo "FINE ESECUZIONE PSQL"
     - cp latest_release.txt cache/last_release.txt
     - echo "Riferimento alla release aggiornato correttamente"
