@@ -69,7 +69,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/f1-graphql.git
+git clone git@github.com:FrancoStino/F1-GraphQL.git
 
 # Navigate to the project directory
 cd f1-graphql
