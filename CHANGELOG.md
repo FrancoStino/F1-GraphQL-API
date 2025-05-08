@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.1] - 2025-05-08
+### Other Changes
+- [`482f8b2`](https://github.com/FrancoStino/F1-GraphQL/commit/482f8b250999c8c90d41a02a361524d5cc365f0f) - Add helmet and types for security headers *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`21aac77`](https://github.com/FrancoStino/F1-GraphQL/commit/21aac771bddd593c357814f7d454fc28be48283e) - Remove helmet middleware *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8499890`](https://github.com/FrancoStino/F1-GraphQL/commit/8499890346d848b6a824034312ec7554f586a9bd) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7136106`](https://github.com/FrancoStino/F1-GraphQL/commit/713610636d0f37bbfa8808b141f38bdf3b73fd78) - Add rate limiting to landing page route *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`6108b55`](https://github.com/FrancoStino/F1-GraphQL/commit/6108b558ad553cd86d3daa718af4c359b2cd0544) - Remove introspection from ApolloServer config *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`5062771`](https://github.com/FrancoStino/F1-GraphQL/commit/5062771476e6052a1a738a4bbdae2eda617dc6c1) - v1.0.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e99dc5c`](https://github.com/FrancoStino/F1-GraphQL/commit/e99dc5c8f2895aa130ab00245960599582736d07) - Bump version to 1.0.1
+
+Add express-rate-limit dependency *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`2917e76`](https://github.com/FrancoStino/F1-GraphQL/commit/2917e76bcf9009cc25350f389fe76cd29a2a060c) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.0.0] - 2025-05-08
 ### Other Changes
 - [`6646b7b`](https://github.com/FrancoStino/F1-GraphQL/commit/6646b7b56bde9682ce4f0b34e09e43d394649065) - Remove F1 Sync DB pipeline *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -153,3 +167,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v0.3.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.2...v0.3.3
 [v0.3.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.3...v0.3.4
 [v1.0.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.4...v1.0.0
+[v1.0.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.0...v1.0.1
