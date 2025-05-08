@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.3] - 2025-05-08
+### Other Changes
+- [`e3fa684`](https://github.com/FrancoStino/F1-GraphQL/commit/e3fa6845f1a3cee48b4874fab47b8e94de069155) - Enable introspection in ApolloServer. *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c998b7f`](https://github.com/FrancoStino/F1-GraphQL/commit/c998b7fc13ceb45d00f1bdcf5903f6becf6222dd) - v1.0.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f6564fb`](https://github.com/FrancoStino/F1-GraphQL/commit/f6564fba7ef9faba8d5f18882e5803746fb91f6d) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9872e83`](https://github.com/FrancoStino/F1-GraphQL/commit/9872e83cf4494ef11da6f7c14e71e934ff9b26fa) - v1.0.3 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.0.2] - 2025-05-08
 ### Other Changes
 - [`e6b97e9`](https://github.com/FrancoStino/F1-GraphQL/commit/e6b97e91cc2a31b1313df15137eea1919f3dcc1b) - v1.0.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -174,3 +182,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.4...v1.0.0
 [v1.0.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.0...v1.0.1
 [v1.0.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.1...v1.0.2
+[v1.0.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.2...v1.0.3
