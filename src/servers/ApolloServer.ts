@@ -10,7 +10,6 @@ import { getExpressApp } from "./Express";
 // Config ApolloServer
 const serverApollo = new ApolloServer({
   schema,
-  introspection: true,
   plugins: [
     ApolloServerPluginLandingPageLocalDefault({
       embed: true,
