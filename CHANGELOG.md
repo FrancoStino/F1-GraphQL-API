@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.0] - 2025-05-08
+### Other Changes
+- [`6646b7b`](https://github.com/FrancoStino/F1-GraphQL/commit/6646b7b56bde9682ce4f0b34e09e43d394649065) - Remove F1 Sync DB pipeline *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`50b27fd`](https://github.com/FrancoStino/F1-GraphQL/commit/50b27fd55da7ea87a5867db1b8ea4b698752dd40) - Add F1 Sync DB GitHub Actions workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e7462ea`](https://github.com/FrancoStino/F1-GraphQL/commit/e7462eaadae9888794c17941e387314b1efc168d) - v1.0.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`de56e67`](https://github.com/FrancoStino/F1-GraphQL/commit/de56e675c5896494b7e591f30a2f71f36aa937c1) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v0.3.4] - 2025-05-07
 ### Other Changes
 - [`e998c04`](https://github.com/FrancoStino/F1-GraphQL/commit/e998c04d7fc2bf3e7ed54519fb33751af479d1e3) - v0.3.4 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
@@ -144,3 +152,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v0.3.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.3...v0.3.4
 [v0.3.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.2...v0.3.3
 [v0.3.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.3...v0.3.4
+[v1.0.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v0.3.4...v1.0.0
