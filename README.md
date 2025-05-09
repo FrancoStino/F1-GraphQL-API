@@ -14,7 +14,9 @@
 [![Open Issues](https://img.shields.io/github/issues/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/issues) -->
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Latest Release](https://img.shields.io/github/v/release/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/F1-GraphQL/releases)<br/>
+[![Latest Release](https://img.shields.io/github/v/release/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/F1-GraphQL/releases)
+![Codecov](https://img.shields.io/codecov/c/github/FrancoStino/F1-GraphQL?style=for-the-badge&logo=codecov)
+<br/>
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=FrancoStino_F1-GraphQL)
   </div>
 <br/>
