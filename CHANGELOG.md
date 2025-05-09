@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.5] - 2025-05-09
+### Other Changes
+- [`ef453e6`](https://github.com/FrancoStino/F1-GraphQL/commit/ef453e614db6b8a67d59f962db2407b9af3f8985) - Bump version
+
+- Bump version from 1.0.4 to 1.0.5
+- Add jest as a dev dependency *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.0.4] - 2025-05-09
 ### Other Changes
 - [`c9c6d5e`](https://github.com/FrancoStino/F1-GraphQL/commit/c9c6d5eb9549b19d61a4c6f0f0fb0dd42e570091) - Add SonarQube badge to README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -193,3 +201,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.1...v1.0.2
 [v1.0.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.2...v1.0.3
 [v1.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.3...v1.0.4
+[v1.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.4...v1.0.5
