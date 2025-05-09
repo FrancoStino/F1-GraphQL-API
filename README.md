@@ -8,6 +8,7 @@
   </h1>
   <h3>The Ultimate GraphQL API for Formula 1 Data</h3>
   <p><i>All F1 history and statistics at your fingertips through GraphQL</i></p>
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3c36db6085c54916b38d7b95f9a6ef4e)](https://app.codacy.com/gh/FrancoStino/F1-GraphQL?utm_source=github.com&utm_medium=referral&utm_content=FrancoStino/F1-GraphQL&utm_campaign=Badge_Grade)
 <!-- [![GitHub Stars](https://img.shields.io/github/stars/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/stargazers)
 [![GitHub Forks](https://img.shields.io/github/forks/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/network/members)
 [![Last Commit](https://img.shields.io/github/last-commit/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/f1-graphql/commits/main)
