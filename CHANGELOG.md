@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.0.4] - 2025-05-09
+### Other Changes
+- [`c9c6d5e`](https://github.com/FrancoStino/F1-GraphQL/commit/c9c6d5eb9549b19d61a4c6f0f0fb0dd42e570091) - Add SonarQube badge to README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`043daac`](https://github.com/FrancoStino/F1-GraphQL/commit/043daac221a1207254322ac0aafbbcdd9d4cf17c) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`ccd5145`](https://github.com/FrancoStino/F1-GraphQL/commit/ccd5145e00451dd155736da2927daece4ffb89a0) - Add GitHub Actions workflow for Codecov *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`733a6c2`](https://github.com/FrancoStino/F1-GraphQL/commit/733a6c2f646b2f47752447da05b2045f2c3c0e1e) - Add Codecov badge to README *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`47f5242`](https://github.com/FrancoStino/F1-GraphQL/commit/47f5242331e4d86263e6cb49bb76091bda07bb1d) - v1.0.4 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.0.3] - 2025-05-08
 ### Other Changes
 - [`e3fa684`](https://github.com/FrancoStino/F1-GraphQL/commit/e3fa6845f1a3cee48b4874fab47b8e94de069155) - Enable introspection in ApolloServer. *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -183,3 +192,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.0...v1.0.1
 [v1.0.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.1...v1.0.2
 [v1.0.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.2...v1.0.3
+[v1.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.3...v1.0.4
