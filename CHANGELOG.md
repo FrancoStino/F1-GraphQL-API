@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.1] - 2025-05-10
+### Other Changes
+- [`3291601`](https://github.com/FrancoStino/F1-GraphQL/commit/3291601fbea88cef9eca677c303a2375abd15314) - Add security policy *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`798fd11`](https://github.com/FrancoStino/F1-GraphQL/commit/798fd111398c571d4c2e5e0c5d781b64d229790c) - Rename default service to postgres-f1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f45454c`](https://github.com/FrancoStino/F1-GraphQL/commit/f45454c20ee081fb0a0f7c1a59c707193fb5100b) - v1.1.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0016f58`](https://github.com/FrancoStino/F1-GraphQL/commit/0016f584ea2c2755bd504f653a1a8be2c199615f) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.1.0] - 2025-05-10
 ### Other Changes
 - [`2004c57`](https://github.com/FrancoStino/F1-GraphQL/commit/2004c5778df67e23e416222b34dd3993add0e050) - Add link to Codacy badge *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -228,3 +236,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.3...v1.0.4
 [v1.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.4...v1.0.5
 [v1.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.6...v1.1.0
+[v1.1.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.0...v1.1.1
