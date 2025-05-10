@@ -4,6 +4,31 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.0] - 2025-05-10
+### Other Changes
+- [`2004c57`](https://github.com/FrancoStino/F1-GraphQL/commit/2004c5778df67e23e416222b34dd3993add0e050) - Add link to Codacy badge *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`234c554`](https://github.com/FrancoStino/F1-GraphQL/commit/234c5541518ededfe73476357f3f6754d9354096) - Add error type to startApp catch block *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`3b7bb55`](https://github.com/FrancoStino/F1-GraphQL/commit/3b7bb55080f26f1c8e28c6fd92f8c9be3f652fda) - Add lodash dependency *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`df0b60b`](https://github.com/FrancoStino/F1-GraphQL/commit/df0b60b930b0ff413143788e574b1d45f4ef5625) - Add Lando configuration and update database URL *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7317b73`](https://github.com/FrancoStino/F1-GraphQL/commit/7317b73b6699878e8237427159c691a133a240e8) - Remove lodash dependency *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`126b9f9`](https://github.com/FrancoStino/F1-GraphQL/commit/126b9f9aedb6db9aaa3df1a006450a34d3d214e1) - Add .sql to .gitignore *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c981b33`](https://github.com/FrancoStino/F1-GraphQL/commit/c981b3388851a3e55d25fe78719068db97733603) - Add .zip to .gitignore
+
+Add db-export tooling to .lando.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9de3fce`](https://github.com/FrancoStino/F1-GraphQL/commit/9de3fcea55a0cd28ec7b3e44e78d1d536faa4ea8) - Add Lando to README installation instructions *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b731a3d`](https://github.com/FrancoStino/F1-GraphQL/commit/b731a3df63e503168216556fec4fc2a6f7248250) - Update README with Lando setup instructions *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`3f5cf17`](https://github.com/FrancoStino/F1-GraphQL/commit/3f5cf17c759285792efc0226f0028c68b500527a) - Update README with Lando setup instructions *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`ec90227`](https://github.com/FrancoStino/F1-GraphQL/commit/ec90227e0e3b53e7a68964d894d319aa7a874ce5) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop
+
+# Conflicts:
+#	README.md *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c682925`](https://github.com/FrancoStino/F1-GraphQL/commit/c6829256822e6e385154cc5966dc5bb951470c82) - v1.1.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0c098f0`](https://github.com/FrancoStino/F1-GraphQL/commit/0c098f0ff925dcaa7cd9a999de361c8cbb363561) - Merge pull request [#5](https://github.com/FrancoStino/F1-GraphQL/pull/5) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`fc5ba93`](https://github.com/FrancoStino/F1-GraphQL/commit/fc5ba9361d40241e51d7b94fcf0158fe864c3f0f) - Create dependabot.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.0.5] - 2025-05-09
 ### Other Changes
 - [`ef453e6`](https://github.com/FrancoStino/F1-GraphQL/commit/ef453e614db6b8a67d59f962db2407b9af3f8985) - Bump version
@@ -202,3 +227,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.2...v1.0.3
 [v1.0.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.3...v1.0.4
 [v1.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.4...v1.0.5
+[v1.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.6...v1.1.0
