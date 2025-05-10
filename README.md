@@ -15,7 +15,7 @@
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Latest Release](https://img.shields.io/github/v/release/FrancoStino/f1-graphql?style=for-the-badge)](https://github.com/FrancoStino/F1-GraphQL/releases)
-![Codacy grade](https://img.shields.io/codacy/grade/3c36db6085c54916b38d7b95f9a6ef4e?style=for-the-badge&logo=codacy&logoSize=aut)
+![Codacy grade](https://img.shields.io/codacy/grade/3c36db6085c54916b38d7b95f9a6ef4e?style=for-the-badge&logo=codacy&logoSize=aut&link=https%3A%2F%2Fapp.codacy.com%2Fgh%2FFrancoStino%2FF1-GraphQL%3Futm_source%3Dgithub.com%26utm_medium%3Dreferral%26utm_content%3DFrancoStino%2FF1-GraphQL%26utm_campaign%3DBadge_Grade)
 <br/>
 [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=FrancoStino_F1-GraphQL)
   </div>
@@ -66,6 +66,7 @@
 - Node.js (v22+)
 - Yarn package manager
 - PostgreSQL database
+- [Lando](https://lando.dev/)
 
 <!-- TOC --><a name="installation"></a>
 ### Installation
@@ -75,14 +76,20 @@
 git clone git@github.com:FrancoStino/F1-GraphQL.git
 
 # Navigate to the project directory
-cd f1-graphql
-
-# Install dependencies
-yarn install
+cd F1-GraphQL
 
 # Configure your environment
 cp .env.example .env
 # Edit .env with your database connection string
+
+# Start Lando
+lando start
+
+# Import from ZIP archive
+lando db-import db/f1db-sql-postgresql-single-inserts.zip
+
+# Install dependencies
+yarn install
 
 # Generate Prisma client
 yarn build
@@ -90,6 +97,12 @@ yarn build
 # Start development server
 yarn dev
 ```
+
+### Export database to ZIP file
+```bash
+lando db-export
+```
+# Creates f1-database-YYYYMMDD.zip in the db/ directory
 
 <!-- TOC --><a name="-api-endpoints"></a>
 ## 🌐 API Endpoints
@@ -174,6 +187,12 @@ query Race {
       <a href="https://the-guild.dev/graphql/yoga-server" target="_blank">
         <img src="https://res.cloudinary.com/apideck/image/upload/v1652998222/icons/graphql-yoga.png" style="width:50px;min-width: 50px;max-width: none;" alt="GraphQL Yoga" />
         <br>Yoga
+      </a>
+    </td>
+    <td align="center" width="96">
+      <a href="https://lando.dev/" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/31605584?s=200&v=4" style="width:50px;min-width: 50px;max-width: none;" alt="Lando" />
+        <br>Lando
       </a>
     </td>
   </tr>

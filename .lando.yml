@@ -1,0 +1,64 @@
+name: f1-graphql
+services:
+  defaults:
+    type: postgres
+    portforward: 5433
+
+tooling:
+  db-import:
+    service: defaults
+    user: root
+    cmd: |
+      apt-get update && apt-get install -y unzip
+      if [ -f "$1" ]; then
+        echo "Found file: $1"
+        case "$1" in
+          *.zip)
+            unzip "$1" -d /tmp/sql
+            FILE=$(find /tmp/sql -name "*.sql" | head -n 1)
+            if [ -f "$FILE" ]; then
+              echo "Importing $FILE into PostgreSQL database..."
+              psql -h localhost -U postgres -d database < "$FILE"
+              echo "Import completed!"
+            else
+              echo "No SQL file found in zip!"
+              exit 1
+            fi
+            ;;
+          *.sql)
+            echo "Importing SQL file $1..."
+            psql -h localhost -U postgres -d database < "$1"
+            echo "Import completed!"
+            ;;
+          *)
+            echo "Unsupported file format!"
+            exit 1
+            ;;
+        esac
+      else
+        echo "Error: File $1 not found!"
+        exit 1
+      fi
+  db-export:
+    service: defaults
+    user: root
+    cmd: |
+      apt-get update && apt-get install -y zip
+      DATE=$(date +"%Y%m%d")
+      EXPORT_DIR="/tmp/export"
+      SQL_FILE="$EXPORT_DIR/f1-database.sql"
+      ZIP_FILE="f1-database.zip"
+
+      mkdir -p $EXPORT_DIR
+
+      echo "Exporting PostgreSQL database to $SQL_FILE..."
+      pg_dump -h localhost -U postgres database > $SQL_FILE
+
+      # Make sure the /db directory exists
+      mkdir -p /app/db
+
+      echo "Creating zip archive $ZIP_FILE..."
+      cd $EXPORT_DIR && zip -j /app/db/$ZIP_FILE f1-database.sql
+
+      echo "Export completed! File saved to db/$ZIP_FILE"
+      echo "You can find the exported file in the db/ directory."

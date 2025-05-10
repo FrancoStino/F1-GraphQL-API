@@ -22,7 +22,7 @@ async function startApp() {
 }
 
 // Start the application
-startApp().catch(err => {
+startApp().catch((err: unknown) => {
   console.error("Failed to start servers:", err);
   process.exit(1);
 });
