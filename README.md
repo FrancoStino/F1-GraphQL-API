@@ -76,17 +76,20 @@
 git clone git@github.com:FrancoStino/F1-GraphQL.git
 
 # Navigate to the project directory
-cd f1-graphql
-
-# Install dependencies
-yarn install
+cd F1-GraphQL
 
 # Configure your environment
 cp .env.example .env
 # Edit .env with your database connection string
 
+# Start Lando
+lando start
+
 # Import from ZIP archive
 lando db-import db/f1db-sql-postgresql-single-inserts.zip
+
+# Install dependencies
+yarn install
 
 # Generate Prisma client
 yarn build
@@ -183,6 +186,12 @@ query Race {
     <td align="center" width="96">
       <a href="https://the-guild.dev/graphql/yoga-server" target="_blank">
         <img src="https://res.cloudinary.com/apideck/image/upload/v1652998222/icons/graphql-yoga.png" style="width:50px;min-width: 50px;max-width: none;" alt="GraphQL Yoga" />
+        <br>Yoga
+      </a>
+    </td>
+    <td align="center" width="96">
+      <a href="https://lando.dev/" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/31605584?s=200&v=4" style="width:50px;min-width: 50px;max-width: none;" alt="Lando" />
         <br>Yoga
       </a>
     </td>
