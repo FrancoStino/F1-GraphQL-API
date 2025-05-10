@@ -66,6 +66,7 @@
 - Node.js (v22+)
 - Yarn package manager
 - PostgreSQL database
+- [Lando](https://lando.dev/)
 
 <!-- TOC --><a name="installation"></a>
 ### Installation
@@ -84,12 +85,21 @@ yarn install
 cp .env.example .env
 # Edit .env with your database connection string
 
+# Import from ZIP archive
+lando db-import db/f1db-sql-postgresql-single-inserts.zip
+
 # Generate Prisma client
 yarn build
 
 # Start development server
 yarn dev
 ```
+
+### Export database to ZIP file
+```bash
+lando db-export
+```
+# Creates f1-database-YYYYMMDD.zip in the db/ directory
 
 <!-- TOC --><a name="-api-endpoints"></a>
 ## 🌐 API Endpoints
