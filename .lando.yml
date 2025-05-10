@@ -1,12 +1,12 @@
 name: f1-graphql
 services:
-  defaults:
+  postgres-f1:
     type: postgres
     portforward: 5433
 
 tooling:
   db-import:
-    service: defaults
+    service: postgres-f1
     user: root
     cmd: |
       apt-get update && apt-get install -y unzip
@@ -40,7 +40,7 @@ tooling:
         exit 1
       fi
   db-export:
-    service: defaults
+    service: postgres-f1
     user: root
     cmd: |
       apt-get update && apt-get install -y zip
