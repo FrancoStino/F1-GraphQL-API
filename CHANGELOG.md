@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.2] - 2025-05-10
+### Other Changes
+- [`1e269b8`](https://github.com/FrancoStino/F1-GraphQL/commit/1e269b86f9ab3866df733839947c48df4c408231) - Update Dependabot config for npm ecosystem
+
+Update F1DB workflow:
+- Add permissions for pull requests
+- Set branch name for new branch
+- Download and unzip F1DB release
+- Update files and create PR
+- Approve and enable auto-merge for PR
+
+Update changelog workflow:
+- Add permissions for pull requests
+- Create PR with updated CHANGELOG
+- Auto-approve and enable auto-merge for PR *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`349c59b`](https://github.com/FrancoStino/F1-GraphQL/commit/349c59b7917aebc60eb47e9f5f404faf852f54b8) - v1.1.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8d5b2ad`](https://github.com/FrancoStino/F1-GraphQL/commit/8d5b2ad6541676c8fc19a31a32c010c4a0d8203f) - Add pull-request-number to auto-approve PR step *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`6882b11`](https://github.com/FrancoStino/F1-GraphQL/commit/6882b11a98cbc74837d7ebe30f4a7656d513528e) - Merge pull request [#8](https://github.com/FrancoStino/F1-GraphQL/pull/8) from FrancoStino/changelog/update-v1.1.1
+
+docs: update CHANGELOG.md for v1.1.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.1.1] - 2025-05-10
 ### Other Changes
 - [`3291601`](https://github.com/FrancoStino/F1-GraphQL/commit/3291601fbea88cef9eca677c303a2375abd15314) - Add security policy *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -237,3 +259,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.0.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.4...v1.0.5
 [v1.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.6...v1.1.0
 [v1.1.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.0...v1.1.1
+[v1.1.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.1...v1.1.2
