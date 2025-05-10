@@ -1,0 +1,41 @@
+name: f1-graphql
+services:
+  defaults:
+    type: postgres
+    portforward: 5433
+
+tooling:
+  db-import:
+    service: defaults
+    user: root
+    cmd: |
+      apt-get update && apt-get install -y unzip
+      if [ -f "$1" ]; then
+        echo "Found file: $1"
+        case "$1" in
+          *.zip)
+            unzip "$1" -d /tmp/sql
+            FILE=$(find /tmp/sql -name "*.sql" | head -n 1)
+            if [ -f "$FILE" ]; then
+              echo "Importing $FILE into PostgreSQL database..."
+              psql -h localhost -U postgres -d database < "$FILE"
+              echo "Import completed!"
+            else
+              echo "No SQL file found in zip!"
+              exit 1
+            fi
+            ;;
+          *.sql)
+            echo "Importing SQL file $1..."
+            psql -h localhost -U postgres -d database < "$1"
+            echo "Import completed!"
+            ;;
+          *)
+            echo "Unsupported file format!"
+            exit 1
+            ;;
+        esac
+      else
+        echo "Error: File $1 not found!"
+        exit 1
+      fi

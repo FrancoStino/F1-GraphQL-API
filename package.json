@@ -18,8 +18,8 @@
   "license": "ISC",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && prisma generate",
     "pull": "prisma db pull",
+    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && prisma generate",
     "generate-schema.graphql": "tsx src/schema/schemaGenerator.ts",
     "vercel-build": "yarn build",
     "patch": "yarn version --patch",
