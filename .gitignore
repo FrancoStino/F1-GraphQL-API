@@ -5,3 +5,4 @@ migrations
 generated
 *.graphql
 schema.prisma
+.sql
