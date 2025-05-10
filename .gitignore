@@ -6,3 +6,4 @@ generated
 *.graphql
 schema.prisma
 .sql
+.zip
