@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.3] - 2025-05-11
+### Other Changes
+- [`0c108ef`](https://github.com/FrancoStino/F1-GraphQL/commit/0c108ef22f59d80c3d8801a22b74ccfa10600231) - Update target branch to develop *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`b911921`](https://github.com/FrancoStino/F1-GraphQL/commit/b911921257a72643fa7cec206ddfee8bd65bf582) - v1.1.3 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+
+
 ## [v1.1.2] - 2025-05-10
 ### Other Changes
 - [`1e269b8`](https://github.com/FrancoStino/F1-GraphQL/commit/1e269b86f9ab3866df733839947c48df4c408231) - Update Dependabot config for npm ecosystem
@@ -260,3 +266,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.0.6...v1.1.0
 [v1.1.1]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.0...v1.1.1
 [v1.1.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.1...v1.1.2
+[v1.1.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.2...v1.1.3
