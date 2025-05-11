@@ -102,7 +102,6 @@ yarn dev
 ```bash
 lando db-export
 ```
-# Creates f1-database-YYYYMMDD.zip in the db/ directory
 
 <!-- TOC --><a name="-api-endpoints"></a>
 ## 🌐 API Endpoints
