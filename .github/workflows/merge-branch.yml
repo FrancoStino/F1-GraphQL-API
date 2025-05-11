@@ -8,7 +8,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
   merge-main-to-develop:
@@ -24,46 +23,10 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
 
-      - name: Get latest tag
-        id: latestTag
+      - name: Merge main to develop
         run: |
-          latest_tag=$(git describe --tags --abbrev=0)
-          echo "latestTag=$latest_tag" >> $GITHUB_ENV
-
-      - name: Create branch for changes
-        run: |
-          git checkout -b sync/main-to-develop-${{ env.latestTag }}
+          git checkout develop
           git merge origin/main
 
-      - name: Push changes to new branch
-        run: git push origin sync/main-to-develop-${{ env.latestTag }}
-
-      - name: Create Pull Request
-        id: create_pr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.PAT_APPROVE_PR }}
-          base: develop
-          branch: sync/main-to-develop-${{ env.latestTag }}
-          title: "chore: sync main to develop for ${{ env.latestTag }}"
-          body: "Syncing changes from main to develop for version ${{ env.latestTag }}"
-          draft: false
-
-      - name: Print PR URL
-        if: steps.create_pr.outputs.pull-request-number
-        run: |
-          echo "Pull Request URL: ${{ steps.create_pr.outputs.pull-request-url }}"
-
-      - name: Auto-approve PR
-        if: steps.create_pr.outputs.pull-request-number
-        run: |
-          gh pr review ${{ steps.create_pr.outputs.pull-request-url }} --approve
-        env:
-          GH_TOKEN: ${{ secrets.PAT_APPROVE_PR }}
-
-      - name: Enable auto-merge
-        if: steps.create_pr.outputs.pull-request-number
-        run: |
-          gh pr merge ${{ steps.create_pr.outputs.pull-request-url }} --merge --auto
-        env:
-          GH_TOKEN: ${{ secrets.PAT_APPROVE_PR }}
+      - name: Push changes
+        run: git push origin develop

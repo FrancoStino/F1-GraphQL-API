@@ -11,9 +11,9 @@ jobs:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     permissions:
+      # Give the default GITHUB_TOKEN write permission to commit and push the
+      # added or changed files to the repository.
       contents: write
-      pull-requests: write
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -23,12 +23,14 @@ jobs:
       - name: Get latest tag
         id: latestTag
         run: |
+          # Ottieni il tag più recente
           latest_tag=$(git describe --tags --abbrev=0)
           echo "latestTag=$latest_tag" >> $GITHUB_ENV
 
       - name: Get previous tag
         id: previousTag
         run: |
+          # Ottieni il tag precedente al tag più recente
           previous_tag=$(git tag --sort=creatordate | grep -B1 "${{ env.latestTag }}" | head -1)
           echo "previousTag=$previous_tag" >> $GITHUB_ENV
 
@@ -61,13 +63,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ env.latestTag }}
 
-      - name: Create PR with updated CHANGELOG
-        id: changelog_pr
-        uses: peter-evans/create-pull-request@v5
+      - name: Commit CHANGELOG.md
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
-          branch: changelog/update-${{ env.latestTag }}
-          title: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
-          body: "This PR updates the CHANGELOG for tag `${{ env.latestTag }}`."
-          base: main
+          branch: main
+          commit_message: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
+          file_pattern: CHANGELOG.md

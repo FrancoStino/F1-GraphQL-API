@@ -3,17 +3,13 @@ name: F1 Sync DB
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # Ogni giorno a mezzanotte
+    - cron: "0 0 * * *" # Every Day at midnight
 
 jobs:
   update-database:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pull-requests: write
-
-    env:
-      BRANCH_NAME: chore/db-sync
 
     steps:
       - name: Checkout code
@@ -31,7 +27,7 @@ jobs:
           sudo apt-get update && sudo apt-get install -y postgresql postgresql-contrib unzip curl jq
           yarn install
 
-      - name: Configure Git
+      - name: Configure Git for yarn version
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
@@ -43,29 +39,38 @@ jobs:
           LATEST_RELEASE_TAG=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.tag_name')
           echo "download_url=$LATEST_RELEASE_URL" >> "$GITHUB_OUTPUT"
           echo "latest_tag=$LATEST_RELEASE_TAG" >> "$GITHUB_OUTPUT"
+          echo "Download URL: $LATEST_RELEASE_URL"
+          echo "Latest Tag: $LATEST_RELEASE_TAG"
 
-      - name: Check if release exists
+      - name: Check if release exists in last-release.txt
         id: check_release
         run: |
           LATEST_TAG="${{ steps.get_latest_release.outputs.latest_tag }}"
 
           if [ ! -s "db/last-release.txt" ]; then
+            echo "Last release file is empty, populating with latest release"
             echo "$LATEST_TAG" > db/last-release.txt
             echo "is_new_release=true" >> "$GITHUB_OUTPUT"
           else
             CURRENT_RELEASE=$(cat db/last-release.txt)
+            echo "Current stored release: $CURRENT_RELEASE"
+            echo "Latest release: $LATEST_TAG"
+
             if [ "$CURRENT_RELEASE" != "$LATEST_TAG" ]; then
+              echo "New release detected"
               echo "is_new_release=true" >> "$GITHUB_OUTPUT"
             else
+              echo "No new release detected"
               echo "is_new_release=false" >> "$GITHUB_OUTPUT"
             fi
           fi
 
-      - name: Download and unzip F1DB release
+      - name: Download F1DB release
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           curl -L ${{ steps.get_latest_release.outputs.download_url }} -o f1db.zip
           unzip f1db.zip
+          ls -la
 
       - name: Apply SQL to database
         if: steps.check_release.outputs.is_new_release == 'true'
@@ -76,7 +81,10 @@ jobs:
           DB_USER: avnadmin
           DB_NAME: defaultdb
         run: |
+          echo "👉 INIZIO ESECUZIONE PSQL"
           SQL_FILE=$(find . -name "f1db-sql-postgresql-single-inserts.sql")
+          echo "Trovato file SQL: $SQL_FILE"
+
           PGPASSWORD=$PGPASSWORD psql \
             -h $DB_HOST \
             -p $DB_PORT \
@@ -85,43 +93,26 @@ jobs:
             -v sslmode=require \
             -f "$SQL_FILE"
 
-      - name: Update files
+          echo "✅ FINE ESECUZIONE PSQL"
+
+      - name: Update last-release.txt
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           echo "${{ steps.get_latest_release.outputs.latest_tag }}" > db/last-release.txt
+          echo "Updated last-release.txt with new version"
+
+      - name: Update package.json version with yarn
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          # Run yarn patch without git hooks
           yarn version --patch --no-git-tag-version
-          echo "✅ Files aggiornati"
+          NEW_VERSION=$(node -p "require('./package.json').version")
+          echo "Updated package.json to version $NEW_VERSION"
 
-      - name: Create new branch and push
+      - name: Add & Commit changes
         if: steps.check_release.outputs.is_new_release == 'true'
-        run: |
-          git checkout -b $BRANCH_NAME
-          git add db/last-release.txt package.json
-          git commit -m "chore: update DB to ${{ steps.get_latest_release.outputs.latest_tag }}"
-          git push origin $BRANCH_NAME
-
-      - name: Create Pull Request
-        if: steps.check_release.outputs.is_new_release == 'true'
-        id: create_pr
-        uses: peter-evans/create-pull-request@v5
+        uses: EndBug/add-and-commit@v9
         with:
-          token: ${{ secrets.PAT_APPROVE_PR }}
-          branch: ${{ env.BRANCH_NAME }}
-          base: main
-          title: "chore: DB sync with ${{ steps.get_latest_release.outputs.latest_tag }}"
-          body: "Aggiornamento automatico del database alla versione ${{ steps.get_latest_release.outputs.latest_tag }}"
-          draft: false
-
-      - name: Approve Pull Request
-        if: steps.check_release.outputs.is_new_release == 'true'
-        run: |
-          gh pr review ${{ steps.create_pr.outputs.pull-request-url }} --approve
-        env:
-          GH_TOKEN: ${{ secrets.PAT_APPROVE_PR }}
-
-      - name: Enable auto-merge
-        if: steps.check_release.outputs.is_new_release == 'true'
-        run: |
-          gh pr merge ${{ steps.create_pr.outputs.pull-request-url }} --merge --auto
-        env:
-          GH_TOKEN: ${{ secrets.PAT_APPROVE_PR }}
+          add: "db/last-release.txt package.json"
+          message: "chore: update last-release.txt and bump version after DB sync"
+          default_author: github_actions
