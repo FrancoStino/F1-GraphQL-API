@@ -322,10 +322,10 @@
   resolved "https://registry.npmjs.org/@fastify/busboy/-/busboy-3.1.1.tgz"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
-"@gqloom/core@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.npmjs.org/@gqloom/core/-/core-0.8.4.tgz"
-  integrity sha512-pRogXmgHyZkqXz7m7PONrHmkyBuJT07nd4YZaHZaHYT6GQ/UVMnoHp1Iw+0RiYpB/ZWy65BsNReFVF8oyyK9VQ==
+"@gqloom/core@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.9.0.tgz#05da39017d319c93c56264dd3e13e261a1a537cb"
+  integrity sha512-Gyp3Uv9XEd6k/D2xsyKzTvJ0dq3yjKAByMI1He5qRUqJCGBhFh6C3fFhsD4F8sWeOq1wGclANKcG5pO72RFw6g==
 
 "@gqloom/prisma@^0.8.0":
   version "0.8.0"
@@ -1052,7 +1052,7 @@ bl@^4.0.3:
     inherits "^2.0.4"
     readable-stream "^3.4.0"
 
-body-parser@1.20.3, body-parser@^1.20.2:
+body-parser@1.20.3:
   version "1.20.3"
   resolved "https://registry.npmjs.org/body-parser/-/body-parser-1.20.3.tgz"
   integrity sha512-7rAxByjUMqQ3/bHJy7D6OGXvx/MMc4IqBn/X0fcM1QUcAItpZrBEYhWGem+tzXH90c+G01ypMcYJBO9Y30203g==
