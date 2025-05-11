@@ -63,4 +63,11 @@ jobs:
 
       - name: Create PR with updated CHANGELOG
         id: changelog_pr
-        uses: peter-evans/create-pull-request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
+          branch: changelog/update-${{ env.latestTag }}
+          title: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
+          body: "This PR updates the CHANGELOG for tag `${{ env.latestTag }}`."
+          base: main
