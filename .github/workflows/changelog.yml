@@ -63,26 +63,4 @@ jobs:
 
       - name: Create PR with updated CHANGELOG
         id: changelog_pr
-        uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
-          branch: changelog/update-${{ env.latestTag }}
-          title: "docs: update CHANGELOG.md for ${{ env.latestTag }}"
-          body: "This PR updates the CHANGELOG for tag `${{ env.latestTag }}`."
-          base: main
-
-      - name: Auto-approve PR
-        if: steps.create_pr.outputs.pull-request-number != ''
-        uses: hmarr/auto-approve-action@v3
-        with:
-          github-token: ${{ secrets.PAT_APPROVE_PR }}
-          pull-request-number: ${{ steps.create_pr.outputs.pull-request-number }}
-
-      - name: Enable auto-merge
-        if: ${{ steps.changelog_pr.outputs.pull-request-number }}
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          token: ${{ secrets.PAT_APPROVE_PR }}
-          pull-request-number: ${{ steps.changelog_pr.outputs.pull-request-number }}
-          merge-method: squash
+        uses: peter-evans/create-pull-request
