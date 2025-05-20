@@ -65,7 +65,7 @@
 
 - Node.js (v22+)
 - Yarn package manager
-- PostgreSQL database
+- MariaDB/MySQL database
 - [Lando](https://lando.dev/)
 
 <!-- TOC --><a name="installation"></a>
@@ -86,7 +86,7 @@ cp .env.example .env
 lando start
 
 # Import from ZIP archive
-lando db-import db/f1db-sql-postgresql-single-inserts.zip
+lando db-import db/f1db-sql-mysql-single-inserts.zip
 
 # Install dependencies
 yarn install
