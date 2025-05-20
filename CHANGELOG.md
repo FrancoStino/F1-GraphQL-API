@@ -4,6 +4,91 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.0] - 2025-05-20
+### Other Changes
+- [`473ee75`](https://github.com/FrancoStino/F1-GraphQL/commit/473ee75de935dbcb24665a20c592ee59bfbc297f) - Bump @apollo/server from 4.12.0 to 4.12.1
+
+Bumps [@apollo/server](https://github.com/apollographql/apollo-server/tree/HEAD/packages/server) from 4.12.0 to 4.12.1.
+- [Release notes](https://github.com/apollographql/apollo-server/releases)
+- [Changelog](https://github.com/apollographql/apollo-server/blob/main/packages/server/CHANGELOG.md)
+- [Commits](https://github.com/apollographql/apollo-server/commits/@apollo/server@4.12.1/packages/server)
+
+---
+updated-dependencies:
+- dependency-name: "@apollo/server"
+  dependency-version: 4.12.1
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`0933647`](https://github.com/FrancoStino/F1-GraphQL/commit/0933647f82d81306d5e1aaf3d9f2cdbf94d96f0a) - Bump prisma from 6.7.0 to 6.8.2
+
+Bumps [prisma](https://github.com/prisma/prisma/tree/HEAD/packages/cli) from 6.7.0 to 6.8.2.
+- [Release notes](https://github.com/prisma/prisma/releases)
+- [Commits](https://github.com/prisma/prisma/commits/6.8.2/packages/cli)
+
+---
+updated-dependencies:
+- dependency-name: prisma
+  dependency-version: 6.8.2
+  dependency-type: direct:development
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`ddfd40b`](https://github.com/FrancoStino/F1-GraphQL/commit/ddfd40b6fc9b491ab3af8041f6450e2665106df3) - Bump @prisma/client from 6.7.0 to 6.8.2
+
+Bumps [@prisma/client](https://github.com/prisma/prisma/tree/HEAD/packages/client) from 6.7.0 to 6.8.2.
+- [Release notes](https://github.com/prisma/prisma/releases)
+- [Commits](https://github.com/prisma/prisma/commits/6.8.2/packages/client)
+
+---
+updated-dependencies:
+- dependency-name: "@prisma/client"
+  dependency-version: 6.8.2
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`dc5a6a9`](https://github.com/FrancoStino/F1-GraphQL/commit/dc5a6a93d53c8dbc475d6c45699507cd8e84e762) - Bump @gqloom/prisma from 0.9.0 to 0.9.1
+
+Bumps [@gqloom/prisma](https://github.com/modevol-com/gqloom/tree/HEAD/packages/prisma) from 0.9.0 to 0.9.1.
+- [Release notes](https://github.com/modevol-com/gqloom/releases)
+- [Changelog](https://github.com/modevol-com/gqloom/blob/main/packages/prisma/CHANGELOG.md)
+- [Commits](https://github.com/modevol-com/gqloom/commits/HEAD/packages/prisma)
+
+---
+updated-dependencies:
+- dependency-name: "@gqloom/prisma"
+  dependency-version: 0.9.1
+  dependency-type: direct:production
+  update-type: version-update:semver-patch
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`4a8151d`](https://github.com/FrancoStino/F1-GraphQL/commit/4a8151d3e3928d79d6714fe4cc4b7b06829706ca) - Merge pull request [#17](https://github.com/FrancoStino/F1-GraphQL/pull/17) from FrancoStino/dependabot/npm_and_yarn/develop/gqloom/prisma-0.9.1
+
+Bump @gqloom/prisma from 0.9.0 to 0.9.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`4a18b6d`](https://github.com/FrancoStino/F1-GraphQL/commit/4a18b6df7c73212a2a0a8c510618b8d43fc4b7a3) - Merge pull request [#16](https://github.com/FrancoStino/F1-GraphQL/pull/16) from FrancoStino/dependabot/npm_and_yarn/develop/prisma/client-6.8.2
+
+Bump @prisma/client from 6.7.0 to 6.8.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7a6241c`](https://github.com/FrancoStino/F1-GraphQL/commit/7a6241ca109a6dac47dde36826401f349a012358) - Merge pull request [#15](https://github.com/FrancoStino/F1-GraphQL/pull/15) from FrancoStino/dependabot/npm_and_yarn/develop/prisma-6.8.2
+
+Bump prisma from 6.7.0 to 6.8.2 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`4fe7520`](https://github.com/FrancoStino/F1-GraphQL/commit/4fe752074eae6bd0a0754f2aab7df3af7f6edc81) - Merge pull request [#14](https://github.com/FrancoStino/F1-GraphQL/pull/14) from FrancoStino/dependabot/npm_and_yarn/develop/apollo/server-4.12.1
+
+Bump @apollo/server from 4.12.0 to 4.12.1 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`cffaeeb`](https://github.com/FrancoStino/F1-GraphQL/commit/cffaeeb30d8777e47b6c9da41393fe07bc1ef9f7) - Update CHANGELOG.md *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b53d13b`](https://github.com/FrancoStino/F1-GraphQL/commit/b53d13b4ed9ba95a1820ad83a5f28e9a40265f9e) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`8731d40`](https://github.com/FrancoStino/F1-GraphQL/commit/8731d40b17f032794daac4734d5d98921b125ef8) - Update package dependencies *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`861d4f3`](https://github.com/FrancoStino/F1-GraphQL/commit/861d4f3f0224ff89451e9a953c9920377431b883) - Update yarn.lock *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`88542d9`](https://github.com/FrancoStino/F1-GraphQL/commit/88542d98885ebcef9ea879d47a2c0a2bfdcfe845) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`602fab3`](https://github.com/FrancoStino/F1-GraphQL/commit/602fab3a7b9b4c3db8e819fa9bd3b77c018635c5) - Update README.md *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b342017`](https://github.com/FrancoStino/F1-GraphQL/commit/b34201755454eca07e158d3ff90f41d020ff8f6a) - v1.2.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.1.5] - 2025-05-19
 ### Chores
 - [`7ee6aef`](https://github.com/FrancoStino/F1-GraphQL/commit/7ee6aefd221daa41e9c6e863dcb0d8526edfaafc) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
@@ -283,3 +368,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.2...v1.1.3
 [v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
 [v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
+[v1.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.5...v1.2.0
