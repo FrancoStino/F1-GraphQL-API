@@ -30,16 +30,16 @@
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "body-parser": "^2.2.0",
-    "prisma": "^6.7.0",
+    "prisma": "^6.8.2",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@apollo/server": "^4.12.0",
-    "@gqloom/core": "^0.9.0",
-    "@gqloom/prisma": "^0.9.0",
+    "@apollo/server": "^4.12.1",
+    "@gqloom/core": "^0.9.1",
+    "@gqloom/prisma": "^0.9.1",
     "@graphql-yoga/render-graphiql": "^5.13.4",
-    "@prisma/client": "^6.7.0",
+    "@prisma/client": "^6.8.2",
     "express": "^5.1.0",
     "express-rate-limit": "^7.5.0",
     "graphql": "^16.11.0",
