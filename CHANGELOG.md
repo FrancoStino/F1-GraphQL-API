@@ -4,6 +4,46 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.1.5] - 2025-05-20
+### Chores
+- [`7ee6aef`](https://github.com/FrancoStino/F1-GraphQL/commit/7ee6aefd221daa41e9c6e863dcb0d8526edfaafc) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
+
+### Other Changes
+- [`69af065`](https://github.com/FrancoStino/F1-GraphQL/commit/69af065c06d4c83b5fd2562bdfb00ea71a64909d) - Update README to remove outdated *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`e65a824`](https://github.com/FrancoStino/F1-GraphQL/commit/e65a824577be82f988bead76bc64011598016664) - Bump @gqloom/prisma from 0.8.0 to 0.9.0
+
+Bumps [@gqloom/prisma](https://github.com/modevol-com/gqloom/tree/HEAD/packages/prisma) from 0.8.0 to 0.9.0.
+- [Release notes](https://github.com/modevol-com/gqloom/releases)
+- [Changelog](https://github.com/modevol-com/gqloom/blob/main/packages/prisma/CHANGELOG.md)
+- [Commits](https://github.com/modevol-com/gqloom/commits/0.9.0/packages/prisma)
+
+---
+updated-dependencies:
+- dependency-name: "@gqloom/prisma"
+  dependency-version: 0.9.0
+  dependency-type: direct:production
+  update-type: version-update:semver-minor
+...
+
+Signed-off-by: dependabot[bot] <support@github.com> *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`117a85b`](https://github.com/FrancoStino/F1-GraphQL/commit/117a85b74f64a160e3beb714b475e7eec0eb45af) - Merge pull request [#12](https://github.com/FrancoStino/F1-GraphQL/pull/12) from FrancoStino/dependabot/npm_and_yarn/develop/gqloom/prisma-0.9.0
+
+Bump @gqloom/prisma from 0.8.0 to 0.9.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`1a554cf`](https://github.com/FrancoStino/F1-GraphQL/commit/1a554cf0ea0c6d92c27bb173f27b40c7daf21d06) - Update tag.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`610d6a3`](https://github.com/FrancoStino/F1-GraphQL/commit/610d6a39a0c089e27edd6d61f085a4421867bdbe) - Merge remote-tracking branch 'origin/main' into develop *(commit by [@invalid-email-address](https://github.com/invalid-email-address))*
+- [`ff87277`](https://github.com/FrancoStino/F1-GraphQL/commit/ff872777640cf8535c7a92820a57f4c925869b66) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`cba43a6`](https://github.com/FrancoStino/F1-GraphQL/commit/cba43a66bc7dd033e1e93eccad3b400a2d585790) - Change database provider from PostgreSQL to MySQL *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`6784555`](https://github.com/FrancoStino/F1-GraphQL/commit/678455545bb9cff651ab105dafdb675f090493fb) - Switch from PostgreSQL to MySQL
+
+Update configuration in .env.example and .lando.yml with MySQL connection
+details and commands. Remove PostgreSQL SQL dump file. *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`22c248d`](https://github.com/FrancoStino/F1-GraphQL/commit/22c248d8131f5cb6b897bede4b5846f300912984) - Create f1db-sql-mysql-single-inserts.zip *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`d178346`](https://github.com/FrancoStino/F1-GraphQL/commit/d1783468f7908dbeeb0501b2474305880ac188c4) - Merge remote-tracking branch 'origin/main' into develop *(commit by [@invalid-email-address](https://github.com/invalid-email-address))*
+- [`130a022`](https://github.com/FrancoStino/F1-GraphQL/commit/130a02277c986e2795eacbc932b289b7d5f7f5ed) - Merge pull request [#18](https://github.com/FrancoStino/F1-GraphQL/pull/18) from FrancoStino/develop
+
+Update dependencies *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.1.4] - 2025-05-20
 ### Other Changes
 - [`578671c`](https://github.com/FrancoStino/F1-GraphQL/commit/578671c5e6f502add8aa34ef92909b0aebd08d61) - Update F1DB.yml workflow for better logging and versioning *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
@@ -290,3 +330,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
 [v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
 [v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
+[v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
