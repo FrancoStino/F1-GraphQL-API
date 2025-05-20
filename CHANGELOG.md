@@ -4,12 +4,6 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [v1.1.4] - 2025-05-20
-### Other Changes
-- [`578671c`](https://github.com/FrancoStino/F1-GraphQL/commit/578671c5e6f502add8aa34ef92909b0aebd08d61) - Update F1DB.yml workflow for better logging and versioning *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
-- [`49f5349`](https://github.com/FrancoStino/F1-GraphQL/commit/49f53493fdcb6eb55a35bc6adafdfe72171ae319) - v1.1.4 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
-
-
 ## [v1.1.5] - 2025-05-19
 ### Chores
 - [`7ee6aef`](https://github.com/FrancoStino/F1-GraphQL/commit/7ee6aefd221daa41e9c6e863dcb0d8526edfaafc) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
