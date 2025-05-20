@@ -30,7 +30,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "body-parser": "^2.2.0",
-    "prisma": "^6.7.0",
+    "prisma": "^6.8.2",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   },
