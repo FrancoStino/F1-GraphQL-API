@@ -283,4 +283,3 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.2...v1.1.3
 [v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
 [v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
-[v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
