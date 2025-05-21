@@ -34,7 +34,9 @@ export async function initApolloServer() {
     '/apollo',
     cors<cors.CorsRequest>(),
     express.json(),
-    expressMiddleware(serverApollo),
+    expressMiddleware(serverApollo, {
+      context: async ({ req }) => ({ req }),
+    }),
   );
 
   console.info(`🚀 Apollo Server ready at: /apollo`);
