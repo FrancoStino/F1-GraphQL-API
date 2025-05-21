@@ -1,11 +1,11 @@
-import { ApolloServer } from "@apollo/server";
+import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginCacheControl } from '@apollo/server/plugin/cacheControl';
 import { ApolloServerPluginLandingPageLocalDefault } from '@apollo/server/plugin/landingPage/default';
-import bodyParser from 'body-parser';
 import cors from 'cors';
-import { schema } from "../resolvers/resolvers";
-import { getExpressApp } from "./Express";
+import express from 'express';
+import { schema } from '../resolvers/resolvers';
+import { getExpressApp } from './Express';
 
 // Config ApolloServer
 const serverApollo = new ApolloServer({
@@ -18,7 +18,7 @@ const serverApollo = new ApolloServer({
     }),
     ApolloServerPluginCacheControl({
       defaultMaxAge: 5,
-    })
+    }),
   ],
 });
 
@@ -33,8 +33,10 @@ export async function initApolloServer() {
   app.use(
     '/apollo',
     cors<cors.CorsRequest>(),
-    bodyParser.json(),
-    expressMiddleware(serverApollo)
+    express.json(),
+    expressMiddleware(serverApollo, {
+      context: ({ req }) => ({ req }),
+    }),
   );
 
   console.info(`🚀 Apollo Server ready at: /apollo`);
