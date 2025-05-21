@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.2] - 2025-05-21
+### Other Changes
+- [`90375ca`](https://github.com/FrancoStino/F1-GraphQL/commit/90375ca7d4aec5934e368ba01888a10616c5dc20) - v1.2.2 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`2201298`](https://github.com/FrancoStino/F1-GraphQL/commit/2201298d29bdf13002531901a0ea83caf64777b5) - Update src/servers/ApolloServer.ts
+
+Co-authored-by: codacy-production[bot] <61871480+codacy-production[bot]@users.noreply.github.com> *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0a6f8e5`](https://github.com/FrancoStino/F1-GraphQL/commit/0a6f8e5cc0cb43df6a72934fe6b479d0e6a4bc51) - Merge pull request [#20](https://github.com/FrancoStino/F1-GraphQL/pull/20) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.2.0] - 2025-05-20
 ### Other Changes
 - [`473ee75`](https://github.com/FrancoStino/F1-GraphQL/commit/473ee75de935dbcb24665a20c592ee59bfbc297f) - Bump @apollo/server from 4.12.0 to 4.12.1
@@ -369,3 +380,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.3...v1.1.4
 [v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
 [v1.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.5...v1.2.0
+[v1.2.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.1...v1.2.2
