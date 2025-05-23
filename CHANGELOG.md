@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.3] - 2025-05-23
+### Other Changes
+- [`631a2e4`](https://github.com/FrancoStino/F1-GraphQL/commit/631a2e4c498147e08c6697779170f9c0c5d3a6f8) - Update yarn.lock *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`c59c610`](https://github.com/FrancoStino/F1-GraphQL/commit/c59c6104baaa91191a14c6f058c4608f5816febb) - Update ApolloServer.ts *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`16cec3d`](https://github.com/FrancoStino/F1-GraphQL/commit/16cec3d7d4db216e8864c26be63589fbab9f1126) - v1.2.3 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
+- [`270db60`](https://github.com/FrancoStino/F1-GraphQL/commit/270db607255ec375382dfe6d6ac6134699fc23c7) - Merge pull request [#21](https://github.com/FrancoStino/F1-GraphQL/pull/21) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.2.2] - 2025-05-21
 ### Other Changes
 - [`90375ca`](https://github.com/FrancoStino/F1-GraphQL/commit/90375ca7d4aec5934e368ba01888a10616c5dc20) - v1.2.2 *(commit by [@DavideLadisaSidea](https://github.com/DavideLadisaSidea))*
@@ -381,3 +391,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.1.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.4...v1.1.5
 [v1.2.0]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.1.5...v1.2.0
 [v1.2.2]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.1...v1.2.2
+[v1.2.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.2...v1.2.3
