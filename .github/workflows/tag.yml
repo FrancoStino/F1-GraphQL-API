@@ -8,6 +8,10 @@ on:
   pull_request:
     branches:
       - main
+  workflow_run:
+    workflows: ["F1 Sync DB"]
+    types:
+      - completed
 
 jobs:
   Tag:
