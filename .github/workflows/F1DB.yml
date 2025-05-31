@@ -65,6 +65,13 @@ jobs:
             fi
           fi
 
+      # Exit early if no new release
+      - name: Exit if no new release
+        if: steps.check_release.outputs.is_new_release == 'false'
+        run: |
+          echo "No new release found. Exiting workflow."
+          exit 1
+
       - name: Download F1DB release
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
