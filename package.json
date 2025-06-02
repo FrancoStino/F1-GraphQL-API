@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@apollo/server": "^4.12.1",
-    "@gqloom/core": "^0.9.1",
+    "@gqloom/core": "^0.9.4",
     "@gqloom/prisma": "^0.9.1",
     "@graphql-yoga/render-graphiql": "^5.13.4",
     "@prisma/client": "^6.8.2",
