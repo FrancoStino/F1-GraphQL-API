@@ -322,10 +322,10 @@
   resolved "https://registry.yarnpkg.com/@fastify/busboy/-/busboy-3.1.1.tgz#af3aea7f1e52ec916d8b5c9dcc0f09d4c060a3fc"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
-"@gqloom/core@^0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.9.1.tgz#675016340fdbf3fda860318658817aefa964b9ab"
-  integrity sha512-P0mcR4eWRbb+yMKPcDYxv5haK+spaRC3mLnFJy0J8P/1AlyunjtgsZI25ihZPTXfSWmFlU+BPoDMXrSNeSDQGQ==
+"@gqloom/core@^0.9.7":
+  version "0.9.7"
+  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.9.7.tgz#a3a35a7231d5a84a022535c2020d8817b372268d"
+  integrity sha512-0nzH+sXgtrkcuj+3XCQGWmiLIaJ6w7HTDhHhGQTInq0OHUyBVzwsFuEDZ9wO1ZjBmLkBn3kPxooumuJmZabD3w==
 
 "@gqloom/prisma@^0.9.1":
   version "0.9.1"
