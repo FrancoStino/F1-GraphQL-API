@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.2.6] - 2025-06-17
+### Chores
+- [`8a61d60`](https://github.com/FrancoStino/F1-GraphQL/commit/8a61d60fa0096c22d831ccb17a730c6f26d66c73) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
+
+
 ## [v1.2.5] - 2025-06-02
 ### Chores
 - [`0b78937`](https://github.com/FrancoStino/F1-GraphQL/commit/0b78937681318c06983a131b7f960373f0a689bc) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
@@ -404,3 +409,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.2.3]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.2...v1.2.3
 [v1.2.4]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.3...v1.2.4
 [v1.2.5]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.4...v1.2.5
+[v1.2.6]: https://github.com/FrancoStino/F1-GraphQL/compare/v1.2.5...v1.2.6
