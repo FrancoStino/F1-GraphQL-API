@@ -4,7 +4,7 @@ import * as Resolvers from "../../prisma/generated/gqloom";
 import db from "../providers/prismaClient";
 import { prismaWeaverConfig } from "../utils/PrismaWeaver.config";
 
-// Usa queriesResolver di PrismaResolverFactory per esporre solo le query resolver per ogni modello
+// Use queriesResolver from PrismaResolverFactory to expose only the query resolvers for each model
 export const schema = weave(
   ...Object.values(Resolvers).map(model =>
     new PrismaResolverFactory(model, db).queriesResolver()
