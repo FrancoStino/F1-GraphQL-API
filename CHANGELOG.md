@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.4.0] - 2025-07-01
+### Other Changes
+- [`79a7913`](https://github.com/FrancoStino/F1-GraphQL-API/commit/79a7913aa12dc8196d966918209320412586549a) - Remove extractQuery function and use queriesResolver *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`f7081bb`](https://github.com/FrancoStino/F1-GraphQL-API/commit/f7081bba733f6a541d732f3433a8eb0f8a012eae) - Merge branch 'develop' of github.com:FrancoStino/F1-GraphQL into develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e04410d`](https://github.com/FrancoStino/F1-GraphQL-API/commit/e04410d5b00c8a1910f4d9b7b1b655ca48ff26e2) - Use queriesResolver from PrismaResolverFactory to expose only the query
+resolvers for each model *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`e3c777c`](https://github.com/FrancoStino/F1-GraphQL-API/commit/e3c777c67a7620b4609e51fbfc8a5d122c37f89c) - v1.4.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`bf42112`](https://github.com/FrancoStino/F1-GraphQL-API/commit/bf421124531733535ff9ad6bd6597eeed1803334) - Merge pull request [#39](https://github.com/FrancoStino/F1-GraphQL-API/pull/39) from FrancoStino/develop
+
+Use queriesResolver *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.3.2] - 2025-07-01
 ### Other Changes
 - [`b00e144`](https://github.com/FrancoStino/F1-GraphQL-API/commit/b00e144609cb16ed07d1945cb14edf70e33430f1) - Update dependencies *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -436,3 +448,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.3.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.2.6...v1.3.0
 [v1.3.1]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.3.0...v1.3.1
 [v1.3.2]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.3.1...v1.3.2
+[v1.4.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.3.2...v1.4.0
