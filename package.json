@@ -43,7 +43,7 @@
     "express-rate-limit": "^7.5.1",
     "graphql": "^16.11.0",
     "graphql-scalars": "^1.24.2",
-    "graphql-yoga": "5.13.5",
+    "graphql-yoga": "5.15.1",
     "prisma-case-format": "^2.2.1"
   }
 }
