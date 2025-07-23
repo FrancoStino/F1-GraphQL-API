@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.4.1] - 2025-07-23
+### Chores
+- [`cd7440d`](https://github.com/FrancoStino/F1-GraphQL-API/commit/cd7440d3c7e0c0d6912ef5b814af8c473d110ac4) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
+
+
 ## [v1.4.0] - 2025-07-22
 ### Other Changes
 - [`79a7913`](https://github.com/FrancoStino/F1-GraphQL-API/commit/79a7913aa12dc8196d966918209320412586549a) - Remove extractQuery function and use queriesResolver *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -468,3 +473,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.4.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.3.2...v1.4.0
 [v1.4.1]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.0...v1.4.1
 [v1.4.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.3.2...v1.4.0
+[v1.4.1]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.0...v1.4.1
