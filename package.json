@@ -38,7 +38,7 @@
     "@gqloom/core": "^0.10.1",
     "@gqloom/prisma": "^0.10.0",
     "@graphql-yoga/render-graphiql": "^5.13.5",
-    "@prisma/client": "^6.11.0",
+    "@prisma/client": "^6.14.0",
     "express": "^4.18.2",
     "express-rate-limit": "^7.5.1",
     "graphql": "^16.11.0",
