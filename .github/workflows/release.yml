@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "23"
+      - name: Get version from package.json
+        id: get_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
+            echo "Tag v${{ steps.get_version.outputs.version }} already exists"
+            echo "::set-output name=should_tag::false"
+          else
+            echo "Tag v${{ steps.get_version.outputs.version }} does not exist"
+            echo "::set-output name=should_tag::true"
+          fi
+      - name: Create Tag and Release
+        if: steps.check_tag.outputs.should_tag == 'true'
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ steps.get_version.outputs.version }}
+          name: Release v${{ steps.get_version.outputs.version }}
+          body: "New release v${{ steps.get_version.outputs.version }}"
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
