@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *" # Every Day at midnight
+  push:
+    branches:
+      - main
 
 jobs:
   update-database:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
