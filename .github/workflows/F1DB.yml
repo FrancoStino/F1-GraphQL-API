@@ -39,6 +39,7 @@ jobs:
       contents: write
     outputs:
       is_new_release: ${{ steps.check_release.outputs.is_new_release }}
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -85,6 +86,7 @@ jobs:
               echo "is_new_release=false" >> "$GITHUB_OUTPUT"
             fi
           fi
+
       - name: Download F1DB release
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
@@ -128,12 +130,8 @@ jobs:
           default_author: github_actions
 
   Tag:
-    needs: [check-version, update-database]
-    if: |
-      always() && (
-        (needs.update-database.result == 'success' && needs.update-database.outputs.is_new_release == 'true') ||
-        (needs.check-version.result == 'success' && needs.check-version.outputs.should_tag == 'true')
-      )
+    needs: update-database
+    if: needs.update-database.outputs.is_new_release == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -141,13 +139,29 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: "0"
+
       - name: Configure git identity
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
+
       - name: Get version from package.json
         id: get_version
         run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+
+      - name: Check if tag exists
+        run: |
+          if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
+            echo "Tag v${{ steps.get_version.outputs.version }} already exists"
+          fi
+
+      - name: Remove existing tag if exists
+        run: |
+          if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
+            git push --delete origin v${{ steps.get_version.outputs.version }}
+            git tag -d v${{ steps.get_version.outputs.version }}
+          fi
+
       - name: Create tag
         run: |
           git tag -a v${{ steps.get_version.outputs.version }} -m "Version ${{ steps.get_version.outputs.version }}"
