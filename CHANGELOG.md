@@ -4,6 +4,48 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.4.13] - 2025-10-23
+### New Features
+- [`6386bdd`](https://github.com/FrancoStino/F1-GraphQL-API/commit/6386bdd1584c5d457ceea6bf86d085cf8975b25e) - Conditionally trigger release workflow *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
+- [`a37eb92`](https://github.com/FrancoStino/F1-GraphQL-API/commit/a37eb92d743094a26ef7645f12e3cb29d5528649) - Conditionally trigger release workflow *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
+
+### Bug Fixes
+- [`edcc4a4`](https://github.com/FrancoStino/F1-GraphQL-API/commit/edcc4a42dddf7123ab8458c091b247dd50f67e30) - Correct release workflow logic *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
+
+### Other Changes
+- [`b01edb5`](https://github.com/FrancoStino/F1-GraphQL-API/commit/b01edb51002bc9e7ed044e6bb56273a31c82f5dc) - Merge pull request [#66](https://github.com/FrancoStino/F1-GraphQL-API/pull/66) from FrancoStino/fix/conditional-release
+
+Pull request for issue [#65](https://github.com/FrancoStino/F1-GraphQL-API/pull/65) *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`73ea8ca`](https://github.com/FrancoStino/F1-GraphQL-API/commit/73ea8ca25cf0e637f10362588fa9c504f296babb) - Update package.json *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c458102`](https://github.com/FrancoStino/F1-GraphQL-API/commit/c458102c52f6fbbabbb93057a14fe77ff3b3de93) - Merge pull request [#67](https://github.com/FrancoStino/F1-GraphQL-API/pull/67) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b60b4bb`](https://github.com/FrancoStino/F1-GraphQL-API/commit/b60b4bb97cfa027d17158e5575189c7997b3f5f2) - Merge branch 'develop' into feat/new-conditional-release-trigger *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`dd5479b`](https://github.com/FrancoStino/F1-GraphQL-API/commit/dd5479b4c5473ba1dbb6633bda3b732152add097) - Merge pull request [#68](https://github.com/FrancoStino/F1-GraphQL-API/pull/68) from FrancoStino/feat/new-conditional-release-trigger
+
+feat: Conditionally trigger release workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`579025a`](https://github.com/FrancoStino/F1-GraphQL-API/commit/579025a5da16cf200b54ad6ea8c43e7d09cae803) - Merge pull request [#69](https://github.com/FrancoStino/F1-GraphQL-API/pull/69) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`538cf1e`](https://github.com/FrancoStino/F1-GraphQL-API/commit/538cf1ed5c5a879d1142ad73051f3625425536f6) - Merge branch 'main' into fix/release-workflow-logic *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`41bbccc`](https://github.com/FrancoStino/F1-GraphQL-API/commit/41bbccc24c884ae2b3d4a8f9a410515443dcbeb9) - Merge pull request [#70](https://github.com/FrancoStino/F1-GraphQL-API/pull/70) from FrancoStino/fix/release-workflow-logic
+
+fix: Correct Release Workflow Logic *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9df4fdf`](https://github.com/FrancoStino/F1-GraphQL-API/commit/9df4fdf7cae0dce242891a1be95a6ac07d57ff61) - Merge pull request [#71](https://github.com/FrancoStino/F1-GraphQL-API/pull/71) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d362ca8`](https://github.com/FrancoStino/F1-GraphQL-API/commit/d362ca856157805d88a78040ca7262622c851250) - Update package.json *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`9828016`](https://github.com/FrancoStino/F1-GraphQL-API/commit/98280163139d3886213020a03cebb7c968441d90) - Merge pull request [#72](https://github.com/FrancoStino/F1-GraphQL-API/pull/72) from FrancoStino/develop
+
+Update package.json *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b5d2ccd`](https://github.com/FrancoStino/F1-GraphQL-API/commit/b5d2ccd8179cde93231f72955317dc7d040da2c5) - Update F1DB.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`5270d64`](https://github.com/FrancoStino/F1-GraphQL-API/commit/5270d6477d0fe482cda2581cc141fb06f0346bc2) - Create release.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`bc73d67`](https://github.com/FrancoStino/F1-GraphQL-API/commit/bc73d6780abd1be940aa6cc83fb8bd6d15c73d45) - Update changelog.yml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`7e7f5d3`](https://github.com/FrancoStino/F1-GraphQL-API/commit/7e7f5d398a0c716ebd35feaedcaf0d6d0d9b90e0) - Merge pull request [#74](https://github.com/FrancoStino/F1-GraphQL-API/pull/74) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.4.11] - 2025-10-20
 ### Chores
 - [`92a80c2`](https://github.com/FrancoStino/F1-GraphQL-API/commit/92a80c2b8e51d462905e6c2fc774b4aace784f7d) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
@@ -534,3 +576,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.4.9]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.8...v1.4.9
 [v1.4.10]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.9...v1.4.10
 [v1.4.11]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.10...v1.4.11
+[v1.4.13]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.11...v1.4.13
