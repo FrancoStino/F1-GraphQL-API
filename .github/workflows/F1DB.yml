@@ -4,34 +4,58 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "0 0 * * *" # Every Day at midnight
+  push:
+    branches:
+      - main
 
 jobs:
+  check-version:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      should_tag: ${{ steps.check_tag.outputs.should_tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Get version from package.json
+        id: get_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+      - name: Check if tag exists
+        id: check_tag
+        run: |
+          if git rev-parse v${{ steps.get_version.outputs.version }} >/dev/null 2>&1; then
+            echo "Tag v${{ steps.get_version.outputs.version }} already exists"
+            echo "::set-output name=should_tag::false"
+          else
+            echo "Tag v${{ steps.get_version.outputs.version }} does not exist"
+            echo "::set-output name=should_tag::true"
+          fi
+
   update-database:
+    if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     permissions:
       contents: write
-
+    outputs:
+      is_new_release: ${{ steps.check_release.outputs.is_new_release }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "23"
-
       - name: Install dependencies
         run: |
           sudo apt-get update && sudo apt-get install -y mariadb-client unzip curl jq pv
           yarn install
-
       - name: Configure Git for yarn version
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-
       - name: Get latest F1DB release
         id: get_latest_release
         run: |
@@ -41,12 +65,10 @@ jobs:
           echo "latest_tag=$LATEST_RELEASE_TAG" >> "$GITHUB_OUTPUT"
           echo "Download URL: $LATEST_RELEASE_URL"
           echo "Latest Tag: $LATEST_RELEASE_TAG"
-
       - name: Check if release exists in last-release.txt
         id: check_release
         run: |
           LATEST_TAG="${{ steps.get_latest_release.outputs.latest_tag }}"
-
           if [ ! -s "db/last-release.txt" ]; then
             echo "Last release file is empty, populating with latest release"
             echo "$LATEST_TAG" > db/last-release.txt
@@ -55,7 +77,6 @@ jobs:
             CURRENT_RELEASE=$(cat db/last-release.txt)
             echo "Current stored release: $CURRENT_RELEASE"
             echo "Latest release: $LATEST_TAG"
-
             if [ "$CURRENT_RELEASE" != "$LATEST_TAG" ]; then
               echo "New release detected"
               echo "is_new_release=true" >> "$GITHUB_OUTPUT"
@@ -64,21 +85,12 @@ jobs:
               echo "is_new_release=false" >> "$GITHUB_OUTPUT"
             fi
           fi
-
-      # Exit early if no new release
-      - name: Exit if no new release
-        if: steps.check_release.outputs.is_new_release == 'false'
-        run: |
-          echo "No new release found. Exiting workflow."
-          exit 1
-
       - name: Download F1DB release
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           curl -L ${{ steps.get_latest_release.outputs.download_url }} -o f1db.zip
           unzip f1db.zip
           ls -la
-
       - name: Apply SQL to database
         if: steps.check_release.outputs.is_new_release == 'true'
         env:
@@ -90,29 +102,23 @@ jobs:
           echo "👉 Start MARIADB"
           SQL_FILE=$(find . -name "f1db-sql-mysql-single-inserts.sql")
           echo "Find SQL file: $SQL_FILE"
-
           pv "$SQL_FILE" | mariadb --skip-ssl \
             -h $DB_HOST \
             -u $DB_USER \
             -p"$DB_PASSWORD" \
             $DB_NAME
-
           echo "✅ Exit Execution MARIADB"
-
       - name: Update last-release.txt
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           echo "${{ steps.get_latest_release.outputs.latest_tag }}" > db/last-release.txt
           echo "Updated last-release.txt with new version"
-
       - name: Update package.json version with yarn
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
-          # Run yarn patch without git hooks
           yarn version --patch --no-git-tag-version
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "Updated package.json to version $NEW_VERSION"
-
       - name: Add & Commit changes
         if: steps.check_release.outputs.is_new_release == 'true'
         uses: EndBug/add-and-commit@v9
@@ -120,3 +126,29 @@ jobs:
           add: "db/last-release.txt package.json"
           message: "chore: update last-release.txt and bump version after DB sync"
           default_author: github_actions
+
+  Tag:
+    needs: [check-version, update-database]
+    if: |
+      always() && (
+        (needs.update-database.result == 'success' && needs.update-database.outputs.is_new_release == 'true') ||
+        (needs.check-version.result == 'success' && needs.check-version.outputs.should_tag == 'true')
+      )
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: "0"
+      - name: Configure git identity
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+      - name: Get version from package.json
+        id: get_version
+        run: echo "::set-output name=version::$(node -p "require('./package.json').version")"
+      - name: Create tag
+        run: |
+          git tag -a v${{ steps.get_version.outputs.version }} -m "Version ${{ steps.get_version.outputs.version }}"
+          git push origin v${{ steps.get_version.outputs.version }}
