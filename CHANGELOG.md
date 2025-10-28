@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.4.14] - 2025-10-28
+### Bug Fixes
+- [`880c997`](https://github.com/FrancoStino/F1-GraphQL-API/commit/880c997967d9702f3d6d6c922bc4d47c02e881a0) - Resolve workflow trigger and commit errors *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
+
+### Chores
+- [`7cca83e`](https://github.com/FrancoStino/F1-GraphQL-API/commit/7cca83e37af3a1f71b8b9c4ac1969a360939ec82) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
+
+### Other Changes
+- [`3e63ca6`](https://github.com/FrancoStino/F1-GraphQL-API/commit/3e63ca6c240fc901d3f429f04aa29f95a3deb84b) - Merge branch 'main' into fix-final-release-workflow *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`acd13de`](https://github.com/FrancoStino/F1-GraphQL-API/commit/acd13de9f8eace6b6fc86a5abc0f95d632ca978d) - Merge pull request [#77](https://github.com/FrancoStino/F1-GraphQL-API/pull/77) from FrancoStino/fix-final-release-workflow
+
+fix: Resolve Workflow Trigger and Commit Errors *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.4.13] - 2025-10-23
 ### New Features
 - [`6386bdd`](https://github.com/FrancoStino/F1-GraphQL-API/commit/6386bdd1584c5d457ceea6bf86d085cf8975b25e) - Conditionally trigger release workflow *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
@@ -577,3 +591,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.4.10]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.9...v1.4.10
 [v1.4.11]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.10...v1.4.11
 [v1.4.13]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.11...v1.4.13
+[v1.4.14]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.13...v1.4.14
