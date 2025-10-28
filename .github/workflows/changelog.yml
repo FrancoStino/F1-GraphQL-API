@@ -2,7 +2,7 @@ name: Changelog
 
 on:
   workflow_run:
-    workflows: ["Tag"]
+    workflows: ["Release"]
     types:
       - completed
 
