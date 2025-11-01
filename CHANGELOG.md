@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.5.0] - 2025-11-01
+### New Features
+- [`0728452`](https://github.com/FrancoStino/F1-GraphQL-API/commit/07284529f1efa7318cd9de78117be08c9307c6e6) - **graphql-yoga**: update GraphiQL title and enable custom styles *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`0eec790`](https://github.com/FrancoStino/F1-GraphQL-API/commit/0eec79048a2cf7afb944fa6ef30aa6ce2261717a) - **package**: increment version to 1.5.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+### Bug Fixes
+- [`9afe760`](https://github.com/FrancoStino/F1-GraphQL-API/commit/9afe760e8b6dbf4e250c2cf784340e2ec607e7bc) - **deps**: update apollo server integration path *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+### Build System
+- [`197821b`](https://github.com/FrancoStino/F1-GraphQL-API/commit/197821bae4f833a65cb527d44999e967eb484d5a) - **deps**: update dependencies in yarn.lock *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+### Chores
+- [`5eba846`](https://github.com/FrancoStino/F1-GraphQL-API/commit/5eba8465ad0b446983a97f1424a5b409fa3e258e) - **deps**: update package dependencies *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`92071da`](https://github.com/FrancoStino/F1-GraphQL-API/commit/92071da6a4cded45daf3ab9b09a73d5eece28733) - **.genkit**: initialize genkit metadata *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`517312a`](https://github.com/FrancoStino/F1-GraphQL-API/commit/517312a2b0c81d9e5b1ab39c46aad00cbe93e01b) - **.idea**: Initialize project configuration files *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`b549f91`](https://github.com/FrancoStino/F1-GraphQL-API/commit/b549f913e71b6cad095adf0f8b4a80bddc0f1c8a) - **git**: enable commit message validation *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.4.14] - 2025-10-28
 ### Bug Fixes
 - [`880c997`](https://github.com/FrancoStino/F1-GraphQL-API/commit/880c997967d9702f3d6d6c922bc4d47c02e881a0) - Resolve workflow trigger and commit errors *(commit by [@google-labs-jules[bot]](https://github.com/apps/google-labs-jules))*
@@ -592,3 +610,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.4.11]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.10...v1.4.11
 [v1.4.13]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.11...v1.4.13
 [v1.4.14]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.13...v1.4.14
+[v1.5.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.14...v1.5.0

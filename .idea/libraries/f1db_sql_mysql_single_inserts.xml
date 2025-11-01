@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="f1db-sql-mysql-single-inserts">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/db/f1db-sql-mysql-single-inserts.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
