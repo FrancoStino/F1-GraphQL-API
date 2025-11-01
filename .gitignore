@@ -7,3 +7,4 @@ generated
 schema.prisma
 .sql
 .zip
+package-lock.json
