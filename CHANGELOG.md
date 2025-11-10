@@ -4,6 +4,40 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v1.5.1] - 2025-11-10
+### Build System
+- [`501f1df`](https://github.com/FrancoStino/F1-GraphQL-API/commit/501f1df2062e3d64dc30c8886e9cdf16a58954f1) - **deps**: bump graphql from 16.11.0 to 16.12.0 *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+- [`643e543`](https://github.com/FrancoStino/F1-GraphQL-API/commit/643e5437fcb9cc0e5f14421b503b8cbdd59322f6) - **deps**: bump sha.js in the npm_and_yarn group across 1 directory *(commit by [@dependabot[bot]](https://github.com/apps/dependabot))*
+
+### Chores
+- [`8cbd893`](https://github.com/FrancoStino/F1-GraphQL-API/commit/8cbd893b9b525055d5a5a9da77453fc5f601c014) - **.idea**: add gitignore and inspection profiles *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`c70a5c1`](https://github.com/FrancoStino/F1-GraphQL-API/commit/c70a5c1be3039ca65c5e878654d0372e2296cade) - **.gitignore**: add package-lock.json *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`6eee6d1`](https://github.com/FrancoStino/F1-GraphQL-API/commit/6eee6d1361eb0616487f58ca0933130cf4cb1060) - update last-release.txt and bump version after DB sync *(commit by [@github-actions[bot]](https://github.com/apps/github-actions))*
+
+### Other Changes
+- [`3ee461a`](https://github.com/FrancoStino/F1-GraphQL-API/commit/3ee461a08f305c54be4c8b58eeb763fd8bfad09d) - Merge remote-tracking branch 'origin/develop' into develop
+
+# Conflicts:
+#	.idea/inspectionProfiles/Project_Default.xml *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`460b21c`](https://github.com/FrancoStino/F1-GraphQL-API/commit/460b21c3a8bf6b94bda3aab9f6f865897a79fd13) - Merge pull request [#78](https://github.com/FrancoStino/F1-GraphQL-API/pull/78) from FrancoStino/develop
+
+Add IDE-specific files and lock files to .gitignore *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`efe3984`](https://github.com/FrancoStino/F1-GraphQL-API/commit/efe39843c9ee6a9bc82bddd01a97baeaac31371a) - Merge pull request [#79](https://github.com/FrancoStino/F1-GraphQL-API/pull/79) from FrancoStino/dependabot/npm_and_yarn/develop/graphql-16.12.0
+
+build(deps): bump graphql from 16.11.0 to 16.12.0 *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`181992a`](https://github.com/FrancoStino/F1-GraphQL-API/commit/181992ab2a3e509c48eaef2faaf6b1e184c768fc) - Merge pull request [#80](https://github.com/FrancoStino/F1-GraphQL-API/pull/80) from FrancoStino/develop
+
+Develop *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`bf98f91`](https://github.com/FrancoStino/F1-GraphQL-API/commit/bf98f919a3d24fb24363b328cbacef3fa98cccb4) - Merge pull request [#81](https://github.com/FrancoStino/F1-GraphQL-API/pull/81) from FrancoStino/dependabot/npm_and_yarn/npm_and_yarn-c9524f1fab
+
+build(deps): bump sha.js from 2.4.11 to 2.4.12 in the npm_and_yarn group across 1 directory *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+- [`d0fa027`](https://github.com/FrancoStino/F1-GraphQL-API/commit/d0fa027c04b6f227dc0bc06e917cd7a3bf5468d8) - Merge pull request [#82](https://github.com/FrancoStino/F1-GraphQL-API/pull/82) from FrancoStino/develop
+
+Merge pull request [#81](https://github.com/FrancoStino/F1-GraphQL-API/pull/81) from FrancoStino/dependabot/npm_and_yarn/npm_and_yarn-c9524f1fab
+
+build(deps): bump sha.js from 2.4.11 to 2.4.12 in the npm_and_yarn group across 1 directory *(commit by [@FrancoStino](https://github.com/FrancoStino))*
+
+
 ## [v1.5.0] - 2025-11-01
 ### New Features
 - [`0728452`](https://github.com/FrancoStino/F1-GraphQL-API/commit/07284529f1efa7318cd9de78117be08c9307c6e6) - **graphql-yoga**: update GraphiQL title and enable custom styles *(commit by [@FrancoStino](https://github.com/FrancoStino))*
@@ -611,3 +645,4 @@ my bad *(commit by [@FrancoStino](https://github.com/FrancoStino))*
 [v1.4.13]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.11...v1.4.13
 [v1.4.14]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.13...v1.4.14
 [v1.5.0]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.4.14...v1.5.0
+[v1.5.1]: https://github.com/FrancoStino/F1-GraphQL-API/compare/v1.5.0...v1.5.1
