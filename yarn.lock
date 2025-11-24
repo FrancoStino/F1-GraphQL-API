@@ -40,10 +40,10 @@
     "@apollo/utils.keyvaluecache" "^4.0.0"
     "@apollo/utils.logger" "^3.0.0"
 
-"@apollo/server@^5.1.0":
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/@apollo/server/-/server-5.1.0.tgz#49b337b9870199ad18b2751511a33c86cc126bb5"
-  integrity sha512-azqwwmKp23TMFQkjE66622sdY2Ao9d+LrebW++b3rFCNxU6XAl/vRwInOh9ejNgShDQzVS+bdCIFQnH9+r+N1A==
+"@apollo/server@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@apollo/server/-/server-5.2.0.tgz#0be9e77e523da58b7ffb4ad21ddf9c5277112d5a"
+  integrity sha512-OEAl5bwVitkvVkmZlgWksSnQ10FUr6q2qJMdkexs83lsvOGmd/y81X5LoETmKZux8UiQsy/A/xzP00b8hTHH/w==
   dependencies:
     "@apollo/cache-control-types" "^1.0.3"
     "@apollo/server-gateway-interface" "^2.0.0"
@@ -348,14 +348,6 @@
     "@whatwg-node/promise-helpers" "^1.0.0"
     tslib "^2.4.0"
 
-"@graphql-tools/merge@^9.0.24":
-  version "9.0.24"
-  resolved "https://registry.npmjs.org/@graphql-tools/merge/-/merge-9.0.24.tgz"
-  integrity sha512-NzWx/Afl/1qHT3Nm1bghGG2l4jub28AdvtG11PoUlmjcIjnFBJMv4vqL0qnxWe8A82peWo4/TkVdjJRLXwgGEw==
-  dependencies:
-    "@graphql-tools/utils" "^10.8.6"
-    tslib "^2.4.0"
-
 "@graphql-tools/merge@^9.1.2":
   version "9.1.2"
   resolved "https://registry.yarnpkg.com/@graphql-tools/merge/-/merge-9.1.2.tgz#87df125621c207e0dbcb05d206757d921cd1c314"
@@ -364,22 +356,13 @@
     "@graphql-tools/utils" "^10.10.0"
     tslib "^2.4.0"
 
-"@graphql-tools/schema@^10.0.0":
+"@graphql-tools/schema@^10.0.0", "@graphql-tools/schema@^10.0.11":
   version "10.0.26"
   resolved "https://registry.yarnpkg.com/@graphql-tools/schema/-/schema-10.0.26.tgz#ecc29b0d31a6a53c8c4ec7ecffbc56602e5fe2f4"
   integrity sha512-KOmjuiWa9poP/Lza4HV0ZBPYGJI3VE3QzXA/8e0+wjcsRuEmxMLP82re1PUg0QRzp2UzifAB/gd7DoXmVGG9Fg==
   dependencies:
     "@graphql-tools/merge" "^9.1.2"
     "@graphql-tools/utils" "^10.10.0"
-    tslib "^2.4.0"
-
-"@graphql-tools/schema@^10.0.11":
-  version "10.0.23"
-  resolved "https://registry.npmjs.org/@graphql-tools/schema/-/schema-10.0.23.tgz"
-  integrity sha512-aEGVpd1PCuGEwqTXCStpEkmheTHNdMayiIKH1xDWqYp9i8yKv9FRDgkGrY4RD8TNxnf7iII+6KOBGaJ3ygH95A==
-  dependencies:
-    "@graphql-tools/merge" "^9.0.24"
-    "@graphql-tools/utils" "^10.8.6"
     tslib "^2.4.0"
 
 "@graphql-tools/utils@^10.10.0":
