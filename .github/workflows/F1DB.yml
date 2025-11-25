@@ -86,17 +86,49 @@ jobs:
         run: |
           echo "${{ steps.get_latest_release.outputs.latest_tag }}" > db/last-release.txt
           echo "Updated last-release.txt with new version"
+      - name: Get previous tag
+        id: previousTag
+        run: |
+          # Ottieni il tag precedente al tag più recente
+          previous_tag=$(git describe --tags --abbrev=0)
+          echo "previousTag=$previous_tag" >> $GITHUB_ENV
       - name: Update package.json version with yarn
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
-          yarn version --patch --no-git-tag-version
+          yarn version --patch
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "Updated package.json to version $NEW_VERSION"
+      - name: Get latest tag
+        id: latestTag
+        run: |
+          # Ottieni il tag più recente
+          latest_tag=$(git describe --tags --abbrev=0)
+          echo "latestTag=$latest_tag" >> $GITHUB_ENV
+      - name: Update CHANGELOG
+        id: changelog
+        uses: requarks/changelog-action@v1.10.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fromTag: ${{ env.previousTag }}
+          toTag: ${{ env.latestTag }}
+          useGitmojis: false
+          includeInvalidCommits: true
+          excludeTypes: docs
       - name: Add & Commit changes
         if: steps.check_release.outputs.is_new_release == 'true'
         uses: EndBug/add-and-commit@v9
         with:
-          add: "db/last-release.txt package.json"
+          add: "db/last-release.txt package.json CHANGELOG.md"
           message: "chore: update last-release.txt and bump version after DB sync"
           token: ${{ secrets.GH_PAT }}
           pull: "--rebase --autostash"
+      - name: Create Release
+        uses: ncipollo/release-action@v1.16.0
+        with:
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: ${{ env.latestTag }}
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ env.latestTag }}
