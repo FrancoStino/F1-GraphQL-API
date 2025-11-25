@@ -100,6 +100,7 @@ jobs:
             PREVIOUS_TAG=$(git rev-list --max-parents=0 HEAD)
           fi
           echo "previousTag=$PREVIOUS_TAG" >> "$GITHUB_OUTPUT"
+          echo "Previous tag: $PREVIOUS_TAG"
       - name: Update package.json version with yarn
         id: update_version
         if: steps.check_release.outputs.is_new_release == 'true'
@@ -107,35 +108,42 @@ jobs:
           yarn version --patch
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "new_version=v$NEW_VERSION" >> "$GITHUB_OUTPUT"
-      - name: First commit - Update files
+          echo "New version: v$NEW_VERSION"
+      - name: Commit changes (without tag)
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           git add db/last-release.txt package.json
-          git commit -m "chore(release): update F1DB to ${{ steps.get_latest_release.outputs.latest_tag }}"
-          echo "✅ Initial commit created"
+          git commit -m "chore(release): ${{ steps.update_version.outputs.new_version }}"
+          git push origin main
+          echo "✅ Changes committed and pushed"
+      - name: Create and push tag
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git tag ${{ steps.update_version.outputs.new_version }}
+          git push origin ${{ steps.update_version.outputs.new_version }}
+          echo "✅ Tag created and pushed"
+      - name: Fetch tags to ensure changelog can see new tag
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git fetch --tags
+          echo "✅ Tags fetched"
       - name: Update CHANGELOG
         id: changelog
         if: steps.check_release.outputs.is_new_release == 'true'
         uses: requarks/changelog-action@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_PAT }}
           fromTag: ${{ steps.previousTag.outputs.previousTag }}
-          toTag: HEAD
+          toTag: ${{ steps.update_version.outputs.new_version }}
           writeToFile: true
           useGitmojis: false
-      - name: Amend commit with changelog and tag
+      - name: Commit CHANGELOG
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           git add CHANGELOG.md
-          git commit --amend --no-edit
-          git tag ${{ steps.update_version.outputs.new_version }}
-          echo "✅ Changelog added and tag created"
-      - name: Push changes
-        if: steps.check_release.outputs.is_new_release == 'true'
-        run: |
-          git push origin main --force-with-lease
-          git push origin ${{ steps.update_version.outputs.new_version }}
-          echo "✅ Changes and tags pushed to remote"
+          git commit -m "docs: update CHANGELOG for ${{ steps.update_version.outputs.new_version }}"
+          git push origin main
+          echo "✅ CHANGELOG committed and pushed"
       - name: Create Release
         if: steps.check_release.outputs.is_new_release == 'true'
         uses: ncipollo/release-action@v1
