@@ -128,6 +128,21 @@ jobs:
           git fetch --all --tags --prune
           git pull origin main --rebase
           echo "✅ Repository synced with remote"
+      - name: Debug - Show git history
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          echo "📊 Previous tag: ${{ steps.previousTag.outputs.previousTag }}"
+          echo "📊 New tag: ${{ steps.update_version.outputs.new_version }}"
+          echo ""
+          echo "📊 All tags:"
+          git tag -l
+          echo ""
+          echo "📊 Commits between tags:"
+          git log ${{ steps.previousTag.outputs.previousTag }}..${{ steps.update_version.outputs.new_version }} --oneline || echo "No commits found"
+          echo ""
+          echo "📊 Tag details:"
+          git show ${{ steps.previousTag.outputs.previousTag }} --no-patch
+          git show ${{ steps.update_version.outputs.new_version }} --no-patch
       - name: Update CHANGELOG
         id: changelog
         if: steps.check_release.outputs.is_new_release == 'true'
