@@ -107,6 +107,12 @@ jobs:
           yarn version --patch
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "new_version=v$NEW_VERSION" >> "$GITHUB_OUTPUT"
+      - name: First commit - Update files
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git add db/last-release.txt package.json
+          git commit -m "chore(release): update F1DB to ${{ steps.get_latest_release.outputs.latest_tag }}"
+          echo "✅ Initial commit created"
       - name: Update CHANGELOG
         id: changelog
         if: steps.check_release.outputs.is_new_release == 'true'
@@ -114,18 +120,22 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fromTag: ${{ steps.previousTag.outputs.previousTag }}
-          toTag: ${{ github.sha }}
+          toTag: HEAD
           writeToFile: true
           useGitmojis: false
-      - name: Add & Commit changes
+      - name: Amend commit with changelog and tag
         if: steps.check_release.outputs.is_new_release == 'true'
-        uses: EndBug/add-and-commit@v9
-        with:
-          add: "db/last-release.txt package.json CHANGELOG.md"
-          message: "chore(release): ${{ steps.update_version.outputs.new_version }}"
-          token: ${{ secrets.GH_PAT }}
-          pull: "--rebase --autostash"
-          tag: ${{ steps.update_version.outputs.new_version }}
+        run: |
+          git add CHANGELOG.md
+          git commit --amend --no-edit
+          git tag ${{ steps.update_version.outputs.new_version }}
+          echo "✅ Changelog added and tag created"
+      - name: Push changes
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git push origin main --force-with-lease
+          git push origin ${{ steps.update_version.outputs.new_version }}
+          echo "✅ Changes and tags pushed to remote"
       - name: Create Release
         if: steps.check_release.outputs.is_new_release == 'true'
         uses: ncipollo/release-action@v1
