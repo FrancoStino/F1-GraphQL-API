@@ -100,7 +100,7 @@ jobs:
         id: update_version
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
-          yarn version --patch --no-git-tag-version
+          yarn version --patch
           NEW_VERSION=$(node -p "require('./package.json').version")
           echo "new_version=v$NEW_VERSION" >> "$GITHUB_OUTPUT"
       - name: Update CHANGELOG
