@@ -122,11 +122,12 @@ jobs:
           git tag ${{ steps.update_version.outputs.new_version }}
           git push origin ${{ steps.update_version.outputs.new_version }}
           echo "✅ Tag created and pushed"
-      - name: Fetch tags to ensure changelog can see new tag
+      - name: Fetch all to sync local repo with remote
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
-          git fetch --tags
-          echo "✅ Tags fetched"
+          git fetch --all --tags --prune
+          git pull origin main --rebase
+          echo "✅ Repository synced with remote"
       - name: Update CHANGELOG
         id: changelog
         if: steps.check_release.outputs.is_new_release == 'true'
