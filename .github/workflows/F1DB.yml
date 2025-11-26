@@ -24,6 +24,10 @@ jobs:
         run: |
           sudo apt-get update && sudo apt-get install -y mariadb-client unzip curl jq pv
           yarn install
+      - name: Configure Git
+        run: |
+          git config --global user.name "Davide Ladisa"
+          git config --global user.email "info@davideladisa.it"
       - name: Get latest F1DB release
         id: get_latest_release
         run: |
@@ -86,17 +90,107 @@ jobs:
         run: |
           echo "${{ steps.get_latest_release.outputs.latest_tag }}" > db/last-release.txt
           echo "Updated last-release.txt with new version"
+      - name: Get previous tag
+        id: previousTag
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          if git describe --tags --abbrev=0 >/dev/null 2>&1; then
+            PREVIOUS_TAG=$(git describe --tags --abbrev=0)
+          else
+            PREVIOUS_TAG=$(git rev-list --max-parents=0 HEAD)
+          fi
+          echo "previousTag=$PREVIOUS_TAG" >> "$GITHUB_OUTPUT"
+          echo "Previous tag: $PREVIOUS_TAG"
       - name: Update package.json version with yarn
+        id: update_version
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
           yarn version --patch --no-git-tag-version
           NEW_VERSION=$(node -p "require('./package.json').version")
-          echo "Updated package.json to version $NEW_VERSION"
-      - name: Add & Commit changes
+          echo "new_version=v$NEW_VERSION" >> "$GITHUB_OUTPUT"
+          echo "New version: v$NEW_VERSION"
+      - name: Commit changes (without tag)
         if: steps.check_release.outputs.is_new_release == 'true'
-        uses: EndBug/add-and-commit@v9
+        run: |
+          git add db/last-release.txt package.json
+          git commit -m "chore(release): ${{ steps.update_version.outputs.new_version }}"
+          git push origin main
+          echo "✅ Changes committed and pushed"
+      - name: Create and push tag
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git tag ${{ steps.update_version.outputs.new_version }}
+          git push origin ${{ steps.update_version.outputs.new_version }}
+          echo "✅ Tag created and pushed"
+      - name: Fetch all to sync local repo with remote
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git fetch --all --tags --prune
+          git pull origin main --rebase
+          echo "✅ Repository synced with remote"
+      - name: Debug - Show git history
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          echo "📊 Previous tag: ${{ steps.previousTag.outputs.previousTag }}"
+          echo "📊 New tag: ${{ steps.update_version.outputs.new_version }}"
+          echo ""
+          echo "📊 All tags:"
+          git tag -l
+          echo ""
+          echo "📊 Commits between tags:"
+          git log ${{ steps.previousTag.outputs.previousTag }}..${{ steps.update_version.outputs.new_version }} --oneline || echo "No commits found"
+          echo ""
+          echo "📊 Tag details:"
+          git show ${{ steps.previousTag.outputs.previousTag }} --no-patch
+          git show ${{ steps.update_version.outputs.new_version }} --no-patch
+      - name: Generate CHANGELOG
+        id: changelog
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          # Ottieni i commit tra i due tag
+          COMMITS=$(git log ${{ steps.previousTag.outputs.previousTag }}..${{ steps.update_version.outputs.new_version }} --pretty=format:"- %s (%h)" --no-merges)
+          
+          # Crea l'entry del changelog
+          CHANGELOG_ENTRY="## ${{ steps.update_version.outputs.new_version }} ($(date +%Y-%m-%d))
+
+          ### Database Update
+          - Updated F1DB to \`${{ steps.get_latest_release.outputs.latest_tag }}\`
+          
+          ### Changes
+          $COMMITS
+          "
+          
+          # Prepend al CHANGELOG esistente
+          if [ -f "CHANGELOG.md" ]; then
+            echo "$CHANGELOG_ENTRY" | cat - CHANGELOG.md > CHANGELOG.tmp
+            mv CHANGELOG.tmp CHANGELOG.md
+          else
+            echo "$CHANGELOG_ENTRY" > CHANGELOG.md
+          fi
+          
+          echo "✅ CHANGELOG generated"
+          
+          # Set output for release notes
+          {
+            echo "changes<<EOF"
+            echo "$CHANGELOG_ENTRY"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+      - name: Commit CHANGELOG
+        if: steps.check_release.outputs.is_new_release == 'true'
+        run: |
+          git add CHANGELOG.md
+          git commit -m "docs: update CHANGELOG for ${{ steps.update_version.outputs.new_version }}"
+          git push origin main
+          echo "✅ CHANGELOG committed and pushed"
+      - name: Create Release
+        if: steps.check_release.outputs.is_new_release == 'true'
+        uses: ncipollo/release-action@v1
         with:
-          add: "db/last-release.txt package.json"
-          message: "chore: update last-release.txt and bump version after DB sync"
-          token: ${{ secrets.GH_PAT }}
-          pull: "--rebase --autostash"
+          allowUpdates: true
+          draft: false
+          makeLatest: true
+          name: ${{ steps.update_version.outputs.new_version }}
+          body: ${{ steps.changelog.outputs.changes }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.update_version.outputs.new_version }}
