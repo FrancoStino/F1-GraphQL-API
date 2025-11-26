@@ -153,6 +153,8 @@ jobs:
           toTag: ${{ steps.update_version.outputs.new_version }}
           writeToFile: true
           useGitmojis: false
+          excludeTypes: ''
+          includeInvalidCommits: true
       - name: Commit CHANGELOG
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
