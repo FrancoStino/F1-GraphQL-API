@@ -143,18 +143,39 @@ jobs:
           echo "📊 Tag details:"
           git show ${{ steps.previousTag.outputs.previousTag }} --no-patch
           git show ${{ steps.update_version.outputs.new_version }} --no-patch
-      - name: Update CHANGELOG
+      - name: Generate CHANGELOG
         id: changelog
         if: steps.check_release.outputs.is_new_release == 'true'
-        uses: requarks/changelog-action@v1
-        with:
-          token: ${{ secrets.GH_PAT }}
-          fromTag: ${{ steps.previousTag.outputs.previousTag }}
-          toTag: ${{ steps.update_version.outputs.new_version }}
-          writeToFile: true
-          useGitmojis: false
-          excludeTypes: ''
-          includeInvalidCommits: true
+        run: |
+          # Ottieni i commit tra i due tag
+          COMMITS=$(git log ${{ steps.previousTag.outputs.previousTag }}..${{ steps.update_version.outputs.new_version }} --pretty=format:"- %s (%h)" --no-merges)
+          
+          # Crea l'entry del changelog
+          CHANGELOG_ENTRY="## ${{ steps.update_version.outputs.new_version }} ($(date +%Y-%m-%d))
+
+          ### Database Update
+          - Updated F1DB to \`${{ steps.get_latest_release.outputs.latest_tag }}\`
+          
+          ### Changes
+          $COMMITS
+          "
+          
+          # Prepend al CHANGELOG esistente
+          if [ -f "CHANGELOG.md" ]; then
+            echo "$CHANGELOG_ENTRY" | cat - CHANGELOG.md > CHANGELOG.tmp
+            mv CHANGELOG.tmp CHANGELOG.md
+          else
+            echo "$CHANGELOG_ENTRY" > CHANGELOG.md
+          fi
+          
+          echo "✅ CHANGELOG generated"
+          
+          # Set output for release notes
+          {
+            echo "changes<<EOF"
+            echo "$CHANGELOG_ENTRY"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
       - name: Commit CHANGELOG
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
