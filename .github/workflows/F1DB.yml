@@ -3,7 +3,7 @@ name: F1 Sync DB
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *" # Every Day at midnight
+    - cron: "*/30 * * * *" # At every 30th minute.
 
 jobs:
   update-database:
