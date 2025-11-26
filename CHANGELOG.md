@@ -1,3 +1,46 @@
+## v1.5.11 (2025-11-26)
+
+### Database Update
+- Updated F1DB to `v2025.22.0`
+
+### Changes
+- chore(release): v1.5.11 (63007a6)
+- Update last release version to v2025.21.0 (a1fdc8c)
+- Generate CHANGELOG based on commit history (453e6f5)
+- chore(release): v1.5.10 (aa2f065)
+- Update F1DB.yml to include invalid commits (cbfcda0)
+- Update last release version to v2025.21.0 (0420075)
+- chore(release): v1.5.9 (7ef6b28)
+- Update last-release.txt (262b166)
+- chore(release): v1.5.8 (082413c)
+- Update last-release.txt (ad0e099)
+- chore(release): v1.5.7 (ed5d6dc)
+- Update last-release.txt (19a8ec6)
+- Update F1DB.yml (40ea6fe)
+- chore(release): v1.5.6 (48991e5)
+- Update F1DB.yml (1efba70)
+- Update last-release.txt (cc90526)
+- chore(release): v1.5.5 (3c3390a)
+- Update last-release.txt (a581d4a)
+- Modify yarn version command in workflow (bbc455a)
+- chore(release): v1.5.4 (b3ff4c9)
+- v1.5.4 (aeba7ba)
+- Refactor F1DB workflow for version updates and commits (0c05546)
+- Update workflow trigger for merge-branch.yml (677ae78)
+- Refactor F1DB workflow for versioning and changelog (31373ec)
+- Create CONTRIBUTING.md (76c8fe0)
+- feat: automate release workflow with custom author (df9ecc2)
+- fix: implement final automated release workflow (f440d70)
+- Update last release version to v2025.21.0 (546e078)
+- feat: implement robust automated release workflow (3caaf03)
+- feat: automate release creation with a single workflow (33247a9)
+- chore: update last-release.txt and bump version after DB sync (e51f840)
+- chore: update last-release.txt and bump version after DB sync (667916b)
+- Create CODEOWNERS (8a87912)
+- Fix: Correctly trigger release workflow from DB sync (48c5b86)
+- Fix: Trigger release workflow from F1DB sync (3e02d37)
+- docs: update CHANGELOG.md for v1.5.1 (3b41cac)
+
 # Changelog
 All notable changes to this project will be documented in this file.
 
