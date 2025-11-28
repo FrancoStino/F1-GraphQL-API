@@ -6,11 +6,11 @@ import { getExpressApp } from "../src/servers/Express.js";
 // Global state for Vercel serverless
 declare global {
   var appInitialized: boolean;
-  var app: any;
+  var app: unknown;
 }
 
 // Vercel serverless function handler
-export default async function handler(req: any, res: any) {
+export default async function handler(req: unknown, res: any) {
   console.log("🚀 Request received:", req.method, req.url);
   
   try {

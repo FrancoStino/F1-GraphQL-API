@@ -1,5 +1,4 @@
 {
-  "version": 2,
   "rewrites": [
     {
       "source": "/apollo",
@@ -18,8 +17,15 @@
       "destination": "/api/index"
     },
     {
-      "source": "/((?!assets/|favicon\\.ico).*)",
-      "destination": "/api/index"
+      "source": "/(.*)",
+      "destination": "/api/index",
+      "has": [
+        {
+          "type": "header",
+          "key": "accept",
+          "value": "text/html"
+        }
+      ]
     }
   ]
 }

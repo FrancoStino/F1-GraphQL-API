@@ -20,8 +20,8 @@ export function setupLandingPage() {
     message: 'Too many attempts, try again later.',
     keyGenerator: (req) => {
       // Use API key or other identifier if available
-      if (req.headers['authorization']) {
-        return req.headers['authorization'] as string
+      if (req.headers.authorization) {
+        return req.headers.authorization as string
       }
       
       // Use the helper function to properly handle IPv6
