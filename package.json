@@ -4,6 +4,7 @@
   "description": "A comprehensive and flexible GraphQL API that provides access to historical and real-time Formula 1 data.",
   "author": "Davide Ladisa",
   "main": "index.ts",
+  "type": "module",
   "keywords": [
     "graphql",
     "f1",
@@ -19,7 +20,9 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "pull": "prisma db pull",
-    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && prisma generate",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && yarn generate",
     "generate-schema.graphql": "tsx src/schema/schemaGenerator.ts",
     "vercel-build": "yarn build",
     "patch": "yarn version --patch",
@@ -40,12 +43,15 @@
     "@gqloom/core": "^0.13.0",
     "@gqloom/prisma": "^0.12.2",
     "@graphql-yoga/render-graphiql": "^5.16.0",
+    "@prisma/adapter-mariadb": "^7.0.1",
+    "@prisma/adapter-planetscale": "^7.0.1",
     "@prisma/client": "^7.0.0",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
     "graphql": "^16.12.0",
     "graphql-scalars": "^1.25.0",
     "graphql-yoga": "5.16.2",
+    "mariadb": "^3.4.5",
     "prisma-case-format": "^2.2.1"
   }
 }
