@@ -1,5 +1,5 @@
 import rateLimit from 'express-rate-limit'
-import { getExpressApp } from './Express'
+import { getExpressApp } from './Express.js'
 
 /**
  * Auto-sets up landing page with zero manual path configuration

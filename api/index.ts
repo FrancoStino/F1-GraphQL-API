@@ -1,7 +1,7 @@
-import { initApolloServer } from "../src/servers/ApolloServer";
-import { initYogaServer } from "../src/servers/GraphQL-Yoga";
-import { setupLandingPage } from "../src/servers/LandingPage";
-import { getExpressApp } from "../src/servers/Express";
+import { initApolloServer } from "../src/servers/ApolloServer.js";
+import { initYogaServer } from "../src/servers/GraphQL-Yoga.js";
+import { setupLandingPage } from "../src/servers/LandingPage.js";
+import { getExpressApp } from "../src/servers/Express.js";
 
 // Global state for Vercel serverless
 declare global {

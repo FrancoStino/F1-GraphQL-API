@@ -1,8 +1,8 @@
 // Import server initializers
-import { initApolloServer } from "./servers/ApolloServer";
-import { startServer } from "./servers/Express";
-import { initYogaServer } from "./servers/GraphQL-Yoga";
-import { setupLandingPage } from "./servers/LandingPage";
+import { initApolloServer } from "./servers/ApolloServer.js";
+import { startServer } from "./servers/Express.js";
+import { initYogaServer } from "./servers/GraphQL-Yoga.js";
+import { setupLandingPage } from "./servers/LandingPage.js";
 
 // Port to use (from env or default to 4000)
 const PORT = process.env.PORT ? parseInt(process.env.PORT) : 4000;

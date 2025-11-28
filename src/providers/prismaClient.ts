@@ -1,5 +1,5 @@
 import 'dotenv/config'
-import { PrismaClient } from "../../prisma/generated/client/client"
+import { PrismaClient } from "../../prisma/generated/client/client.js"
 import { PrismaMariaDb } from '@prisma/adapter-mariadb'
 
 // Parse DATABASE_URL to extract connection details
