@@ -1,37 +1,21 @@
 import rateLimit from 'express-rate-limit'
-import fs from 'fs'
-import path from 'path'
 import { getExpressApp } from './Express'
 
 /**
- * Initializes the main landing page
+ * Auto-sets up landing page with zero manual path configuration
  */
 export function setupLandingPage() {
   const { app } = getExpressApp()
 
-  // Rate limiting configuration
   const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 10, // Limit of 100 requests per window
+    windowMs: 15 * 60 * 1000,
+    max: 10,
     message: 'Too many attempts, try again later.'
   })
 
-  // Route for the landing page with rate limiting
-  app.get('/', limiter, (req, res) => {
-    const filePath = path.join('public/index.html')
-
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        console.error('Error reading index.html:', err)
-        return res.status(500).send('Error loading the page')
-      }
-
-      // Dynamic year replacement
-      const html = data.replace('<!--YEAR-->', new Date().getFullYear().toString())
-
-      res.setHeader('Content-Type', 'text/html')
-      res.send(html)
-    })
+  // Auto-serve landing page (Express handles path resolution)
+  app.get('/', limiter, (_, res) => {
+    res.sendFile('public/index.html', { root: '.' })
   })
 
   console.info(`🏠 Landing page setup at: /`)

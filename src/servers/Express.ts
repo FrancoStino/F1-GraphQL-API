@@ -1,16 +1,15 @@
 import express from 'express'
 import { createServer } from 'node:http'
-import path from 'path'
 
-// Create Express App
+// Auto-create Express app
 const app = express()
 
-// Disable X-Powered-By header
+// Auto-disable headers
 app.disable('x-powered-by')
 
-// Use express to serve static files
-app.use('/assets', express.static(path.join(__dirname, '../../assets')))
-app.use('/public', express.static(path.join(__dirname, '../../public')))
+// Auto-serve static files (Express handles paths automatically)
+app.use('/assets', express.static('assets'))
+app.use('/public', express.static('public'))
 
 // Create HTTP server
 const server = createServer(app)
