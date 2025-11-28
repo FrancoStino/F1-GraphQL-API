@@ -9,12 +9,6 @@ declare global {
   var app: any;
 }
 
-// Use globalThis instead of global
-declare const globalThis: typeof global & {
-  appInitialized?: boolean;
-  app?: any;
-};
-
 // Vercel serverless function handler
 export default async function handler(req: any, res: any) {
   console.log("🚀 Request received:", req.method, req.url);
