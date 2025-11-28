@@ -1,5 +1,5 @@
 generator client {
-  provider = "prisma-client-js"
+  provider = "prisma-client"
   output   = "../prisma/generated/client"
 }
 
@@ -10,5 +10,4 @@ generator gqloom {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
 }
