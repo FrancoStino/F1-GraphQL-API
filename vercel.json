@@ -20,10 +20,5 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "functions": {
-    "api/index.ts": {
-      "runtime": "nodejs24.x"
-    }
   }
 }
