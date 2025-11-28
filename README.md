@@ -47,7 +47,7 @@
 - **🚀 Dual GraphQL Engines** - Choose between Apollo Server and GraphQL Yoga interfaces
 - **📊 Complete F1 Database** - Access comprehensive Formula 1 historical data
 - **🔄 Automated Updates** - Database refreshed daily with the latest F1 statistics
-- **⚡ High Performance** - Built on modern Node.js with TypeScript and Prisma ORM
+- **⚡ High Performance** - Built on modern Node.js with TypeScript and Prisma v7 ORM (Direct TCP)
 - **🧩 Rich Query Options** - Filter, paginate, and explore F1 data with flexible queries
 
 <!-- TOC --><a name="-demo"></a>
@@ -63,7 +63,7 @@
 <!-- TOC --><a name="prerequisites"></a>
 ### Prerequisites
 
-- Node.js (v22+)
+- Node.js (v22.12+ or v24.0+)
 - Yarn package manager
 - MariaDB/MySQL database
 - [Lando](https://lando.dev/)
@@ -91,8 +91,8 @@ lando db-import db/f1db-sql-mysql-single-inserts.zip
 # Install dependencies
 yarn install
 
-# Generate Prisma client
-yarn build
+# Generate Prisma client (v7 with Direct TCP)
+yarn generate
 
 # Start development server
 yarn dev
@@ -150,6 +150,8 @@ query Race {
 <!-- TOC --><a name="-tech-stack"></a>
 ## 🛠️ Tech Stack
 
+**🔄 Updated to Prisma v7 with Direct TCP connectivity for optimal performance**
+
 <table>
   <tr>
     <td align="center" width="96">
@@ -173,7 +175,7 @@ query Race {
     <td align="center" width="96">
       <a href="https://www.prisma.io/" target="_blank">
         <img src="https://avatars.githubusercontent.com/u/17219288?s=200&v=4" style="width:50px;min-width: 50px;max-width: none;" alt="Prisma" />
-        <br>Prisma
+        <br>Prisma v7
       </a>
     </td>
     <td align="center" width="96">
