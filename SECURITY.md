@@ -23,4 +23,4 @@ This policy applies to:
 
 ## Thank You
 
-We appreciate your efforts in helping us maintain the security and integrity of F1-GraphQL.
+We appreciate your efforts in helping us maintain the security and integrity of F1-GraphQL-API.
