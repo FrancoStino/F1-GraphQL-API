@@ -2,15 +2,16 @@ import { initApolloServer } from "../src/servers/ApolloServer.js";
 import { initYogaServer } from "../src/servers/GraphQL-Yoga.js";
 import { setupLandingPage } from "../src/servers/LandingPage.js";
 import { getExpressApp } from "../src/servers/Express.js";
+import type { Request, Response } from "express";
 
 // Global state for Vercel serverless
 declare global {
   var appInitialized: boolean;
-  var app: unknown;
+  var app: ((req: Request, res: Response) => void) | undefined;
 }
 
 // Vercel serverless function handler
-export default async function handler(req: unknown, res: any) {
+export default async function handler(req: Request, res: Response) {
   console.log("🚀 Request received:", req.method, req.url);
   
   try {
@@ -31,7 +32,9 @@ export default async function handler(req: unknown, res: any) {
     }
     
     // Handle the request with Express app
-    globalThis.app(req, res);
+    if (globalThis.app) {
+      globalThis.app(req, res);
+    }
   } catch (error) {
     console.error("Server initialization error:", error);
     res.status(500).send("Internal Server Error: " + (error instanceof Error ? error.message : 'Unknown error'));

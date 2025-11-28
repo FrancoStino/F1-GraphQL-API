@@ -1,24 +1,26 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/apollo",
-      "destination": "/api/index"
-    },
-    {
-      "source": "/apollo/(.*)",
-      "destination": "/api/index"
-    },
-    {
-      "source": "/graphql",
-      "destination": "/api/index"
-    },
-    {
-      "source": "/graphql/(.*)",
-      "destination": "/api/index"
-    },
-    {
-      "source": "/",
-      "destination": "/api/index"
+      "src": "src/index.ts",
+      "use": "@vercel/node"
     }
-  ]
+  ],
+  "routes": [
+    {
+      "src": "/apollo(/?.*)",
+      "dest": "src/index.ts"
+    },
+    {
+      "src": "/graphql(/?.*)",
+      "dest": "src/index.ts"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "src/index.ts"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
