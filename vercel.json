@@ -1,24 +1,25 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/apollo(/?.*)",
-      "dest": "/api/index.ts"
+      "source": "/apollo",
+      "destination": "/api/index.ts"
     },
     {
-      "src": "/graphql(/?.*)",
-      "dest": "/api/index.ts"
+      "source": "/apollo/(.*)",
+      "destination": "/api/index.ts"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "source": "/graphql",
+      "destination": "/api/index.ts"
     },
     {
-      "src": "/(.*)",
-      "dest": "/api/index.ts"
+      "source": "/graphql/(.*)",
+      "destination": "/api/index.ts"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/api/index.ts"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }

@@ -11,6 +11,8 @@ declare global {
 
 // Vercel serverless function handler
 export default async function handler(req: any, res: any) {
+  console.log("🚀 Request received:", req.method, req.url);
+  
   try {
     // Initialize servers only once
     if (!global.appInitialized) {
@@ -32,6 +34,6 @@ export default async function handler(req: any, res: any) {
     global.app(req, res);
   } catch (error) {
     console.error("Server initialization error:", error);
-    res.status(500).send("Internal Server Error");
+    res.status(500).send("Internal Server Error: " + error.message);
   }
 }
