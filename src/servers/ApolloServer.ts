@@ -4,8 +4,8 @@ import {ApolloServerPluginCacheControl} from '@apollo/server/plugin/cacheControl
 import {ApolloServerPluginLandingPageLocalDefault} from '@apollo/server/plugin/landingPage/default';
 import cors from 'cors';
 import express from 'express';
-import {schema} from '../resolvers/resolvers';
-import {getExpressApp} from './Express';
+import {schema} from '../resolvers/resolvers.js';
+import {getExpressApp} from './Express.js';
 
 // Config ApolloServer
 const serverApollo = new ApolloServer({

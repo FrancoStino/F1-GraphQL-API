@@ -1,18 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "CommonJS",
-    "lib": [
-      "ES2020"
-    ],
-    "strict": true,
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
     "moduleResolution": "node",
-    "outDir": "dist",
-    "resolveJsonModule": true,
+    "target": "ES2023",
+    "strict": true,
+    "esModuleInterop": true
   }
 }

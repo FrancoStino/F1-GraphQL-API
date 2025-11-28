@@ -1,7 +1,7 @@
 import {renderGraphiQL} from "@graphql-yoga/render-graphiql"
 import {createYoga} from "graphql-yoga"
-import {schema} from "../resolvers/resolvers"
-import {getExpressApp} from './Express'
+import {schema} from "../resolvers/resolvers.js"
+import {getExpressApp} from './Express.js'
 
 // Function to customize GraphiQL rendering
 function customRenderGraphiQL() {

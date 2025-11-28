@@ -1,9 +1,10 @@
 {
   "name": "f1-graphql",
-  "version": "1.5.11",
+  "version": "1.6.0",
   "description": "A comprehensive and flexible GraphQL API that provides access to historical and real-time Formula 1 data.",
   "author": "Davide Ladisa",
   "main": "index.ts",
+  "type": "module",
   "keywords": [
     "graphql",
     "f1",
@@ -19,7 +20,9 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "pull": "prisma db pull",
-    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && prisma generate",
+    "generate": "prisma generate",
+    "migrate": "prisma migrate dev",
+    "build": "cp prisma/schema.prisma.example prisma/schema.prisma && yarn pull && prisma-case-format --file=prisma/schema.prisma && yarn generate",
     "generate-schema.graphql": "tsx src/schema/schemaGenerator.ts",
     "vercel-build": "yarn build",
     "patch": "yarn version --patch",
@@ -27,10 +30,13 @@
     "major": "yarn version --major"
   },
   "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": "24.x"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
-    "prisma": "^6.11.1",
+    "prisma": "^7.0.1",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   },
@@ -40,7 +46,8 @@
     "@gqloom/core": "^0.13.0",
     "@gqloom/prisma": "^0.12.2",
     "@graphql-yoga/render-graphiql": "^5.16.0",
-    "@prisma/client": "^6.11.1",
+    "@prisma/adapter-mariadb": "^7.0.1",
+    "@prisma/client": "^7.0.0",
     "express": "^5.1.0",
     "express-rate-limit": "^8.2.1",
     "graphql": "^16.12.0",
