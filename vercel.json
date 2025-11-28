@@ -2,6 +2,21 @@
   "version": 2,
   "routes": [
     {
+      "src": "/assets/css/(.*\\.css)",
+      "headers": { "Content-Type": "text/css" },
+      "dest": "/assets/css/$1"
+    },
+    {
+      "src": "/assets/images/(.*)",
+      "headers": { "Content-Type": "image/svg+xml" },
+      "dest": "/assets/images/$1"
+    },
+    {
+      "src": "/assets/fonts/(.*)",
+      "headers": { "Content-Type": "font/woff2" },
+      "dest": "/assets/fonts/$1"
+    },
+    {
       "src": "/assets/(.*)",
       "dest": "/assets/$1"
     },

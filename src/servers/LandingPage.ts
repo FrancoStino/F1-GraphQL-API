@@ -17,7 +17,10 @@ export function setupLandingPage() {
   const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 10,
-    message: 'Too many attempts, try again later.'
+    message: 'Too many attempts, try again later.',
+    keyGenerator: (req) => {
+      return req.headers['x-forwarded-for'] as string || req.ip || 'unknown'
+    }
   })
 
   // Serve landing page from file
