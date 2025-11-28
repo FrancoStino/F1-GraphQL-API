@@ -2,7 +2,7 @@ import rateLimit, { ipKeyGenerator } from 'express-rate-limit'
 import { getExpressApp } from './Express.js'
 import fs from 'fs'
 import path from 'path'
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'node:url'
 
 // ESM equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url)

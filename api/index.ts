@@ -9,13 +9,19 @@ declare global {
   var app: any;
 }
 
+// Use globalThis instead of global
+declare const globalThis: typeof global & {
+  appInitialized?: boolean;
+  app?: any;
+};
+
 // Vercel serverless function handler
 export default async function handler(req: any, res: any) {
   console.log("🚀 Request received:", req.method, req.url);
   
   try {
     // Initialize servers only once
-    if (!global.appInitialized) {
+    if (!globalThis.appInitialized) {
       console.info("✨ Initializing F1 GraphQL Servers for Vercel...");
       
       setupLandingPage();
@@ -24,14 +30,14 @@ export default async function handler(req: any, res: any) {
       
       // Get the Express app
       const { app } = getExpressApp();
-      global.app = app;
-      global.appInitialized = true;
+      globalThis.app = app;
+      globalThis.appInitialized = true;
       
       console.info("🚀 F1 GraphQL Servers ready on Vercel");
     }
     
     // Handle the request with Express app
-    global.app(req, res);
+    globalThis.app(req, res);
   } catch (error) {
     console.error("Server initialization error:", error);
     res.status(500).send("Internal Server Error: " + (error instanceof Error ? error.message : 'Unknown error'));
