@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@apollo/server": "^5.2.0",
+    "@as-integrations/express5": "^1.1.2",
     "@gqloom/core": "^0.13.0",
     "@gqloom/prisma": "^0.12.2",
     "@graphql-yoga/render-graphiql": "^5.16.0",
