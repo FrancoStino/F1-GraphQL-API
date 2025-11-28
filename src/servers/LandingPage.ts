@@ -1,4 +1,4 @@
-import rateLimit from 'express-rate-limit'
+import rateLimit, { ipKeyGenerator } from 'express-rate-limit'
 import { getExpressApp } from './Express.js'
 import fs from 'fs'
 import path from 'path'
@@ -19,7 +19,20 @@ export function setupLandingPage() {
     max: 10,
     message: 'Too many attempts, try again later.',
     keyGenerator: (req) => {
-      return req.headers['x-forwarded-for'] as string || req.ip || 'unknown'
+      // Use API key or other identifier if available
+      if (req.headers['authorization']) {
+        return req.headers['authorization'] as string
+      }
+      
+      // Use the helper function to properly handle IPv6
+      const forwarded = req.headers['x-forwarded-for'] as string
+      let ip = req.ip || '127.0.0.1'
+      
+      if (forwarded) {
+        ip = forwarded.split(',')[0].trim()
+      }
+      
+      return ipKeyGenerator(ip)
     }
   })
 
