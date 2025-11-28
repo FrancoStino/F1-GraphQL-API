@@ -17,15 +17,8 @@
       "destination": "/api/index"
     },
     {
-      "source": "/(.*)",
-      "destination": "/api/index",
-      "has": [
-        {
-          "type": "header",
-          "key": "accept",
-          "value": "text/html"
-        }
-      ]
+      "source": "/",
+      "destination": "/api/index"
     }
   ]
 }
