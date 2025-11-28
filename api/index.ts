@@ -34,6 +34,6 @@ export default async function handler(req: any, res: any) {
     global.app(req, res);
   } catch (error) {
     console.error("Server initialization error:", error);
-    res.status(500).send("Internal Server Error: " + error.message);
+    res.status(500).send("Internal Server Error: " + (error instanceof Error ? error.message : 'Unknown error'));
   }
 }
