@@ -1,40 +1,25 @@
 {
   "version": 2,
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/css/(.*\\.css)",
-      "headers": { "Content-Type": "text/css" },
-      "dest": "/assets/css/$1"
+      "source": "/apollo",
+      "destination": "/api/index"
     },
     {
-      "src": "/assets/images/(.*)",
-      "headers": { "Content-Type": "image/svg+xml" },
-      "dest": "/assets/images/$1"
+      "source": "/apollo/(.*)",
+      "destination": "/api/index"
     },
     {
-      "src": "/assets/fonts/(.*)",
-      "headers": { "Content-Type": "font/woff2" },
-      "dest": "/assets/fonts/$1"
+      "source": "/graphql",
+      "destination": "/api/index"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
+      "source": "/graphql/(.*)",
+      "destination": "/api/index"
     },
     {
-      "src": "/favicon.ico",
-      "dest": "/favicon.ico"
-    },
-    {
-      "src": "/apollo(/?.*)",
-      "dest": "/api/index.ts"
-    },
-    {
-      "src": "/graphql(/?.*)",
-      "dest": "/api/index.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.ts"
+      "source": "/((?!assets/|favicon\\.ico).*)",
+      "destination": "/api/index"
     }
   ]
 }
