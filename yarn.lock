@@ -449,10 +449,17 @@
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.4.1.tgz"
   integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
 
-"@prisma/client@^6.11.1":
-  version "6.18.0"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-6.18.0.tgz#95f0efe03b5827d9bf5c80b6b7298e46094b5fbf"
-  integrity sha512-jnL2I9gDnPnw4A+4h5SuNn8Gc+1mL1Z79U/3I9eE2gbxJG1oSA+62ByPW4xkeDgwE0fqMzzpAZ7IHxYnLZ4iQA==
+"@prisma/client-runtime-utils@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client-runtime-utils/-/client-runtime-utils-7.0.0.tgz#cf1057e2b1206a63a2c64f902a0fbd8fcad08d89"
+  integrity sha512-PAiFgMBPrLSaakBwUpML5NevipuKSL3rtNr8pZ8CZ3OBXo0BFcdeGcBIKw/CxJP6H4GNa4+l5bzJPrk8Iq6tDw==
+
+"@prisma/client@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-7.0.0.tgz#fe9f1711a5143c7f3e41210982d73f00ddf66c49"
+  integrity sha512-FM1NtJezl0zH3CybLxcbJwShJt7xFGSRg+1tGhy3sCB8goUDnxnBR+RC/P35EAW8gjkzx7kgz7bvb0MerY2VSw==
+  dependencies:
+    "@prisma/client-runtime-utils" "7.0.0"
 
 "@prisma/config@6.18.0":
   version "6.18.0"
