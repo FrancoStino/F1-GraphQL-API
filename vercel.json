@@ -2,25 +2,34 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/index.ts",
+      "src": "api/index.ts",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/apollo(/?.*)",
-      "dest": "src/index.ts"
+      "dest": "/api/index.ts"
     },
     {
       "src": "/graphql(/?.*)",
-      "dest": "src/index.ts"
+      "dest": "/api/index.ts"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "src/index.ts"
+      "dest": "/api/index.ts"
     }
   ],
   "env": {
     "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/index.ts": {
+      "runtime": "nodejs24.x"
+    }
   }
 }

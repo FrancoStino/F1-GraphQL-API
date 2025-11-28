@@ -1,0 +1,37 @@
+import { initApolloServer } from "../src/servers/ApolloServer";
+import { initYogaServer } from "../src/servers/GraphQL-Yoga";
+import { setupLandingPage } from "../src/servers/LandingPage";
+import { getExpressApp } from "../src/servers/Express";
+
+// Global state for Vercel serverless
+declare global {
+  var appInitialized: boolean;
+  var app: any;
+}
+
+// Vercel serverless function handler
+export default async function handler(req: any, res: any) {
+  try {
+    // Initialize servers only once
+    if (!global.appInitialized) {
+      console.info("✨ Initializing F1 GraphQL Servers for Vercel...");
+      
+      setupLandingPage();
+      await initApolloServer();
+      initYogaServer();
+      
+      // Get the Express app
+      const { app } = getExpressApp();
+      global.app = app;
+      global.appInitialized = true;
+      
+      console.info("🚀 F1 GraphQL Servers ready on Vercel");
+    }
+    
+    // Handle the request with Express app
+    global.app(req, res);
+  } catch (error) {
+    console.error("Server initialization error:", error);
+    res.status(500).send("Internal Server Error");
+  }
+}
