@@ -1,3 +1,12 @@
+## v1.6.1 (2025-12-01)
+
+### Database Update
+- Updated F1DB to `v2025.23.0`
+
+### Changes
+- chore(release): v1.6.1 (748dee6)
+- Update F1DB.yml (fe254cb)
+
 ## v1.5.11 (2025-11-26)
 
 ### Database Update
