@@ -1,3 +1,18 @@
+## v1.6.2 (2025-12-07)
+
+### Database Update
+- Updated F1DB to `v2025.24.0`
+
+### Changes
+- chore(release): v1.6.2 (3b66994)
+- build(deps): bump @prisma/client from 7.0.0 to 7.0.1 (7f4908c)
+- build(deps): bump express and @types/express (a127495)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.16.0 to 5.16.2 (f9b2e93)
+- build(deps): bump graphql-yoga from 5.16.2 to 5.17.0 (18ce716)
+- build(deps-dev): bump tsx from 4.20.6 to 4.21.0 (3efe1bb)
+- build(deps): bump express in the npm_and_yarn group across 1 directory (378d95b)
+- docs: update CHANGELOG for v1.6.1 (c8f3562)
+
 ## v1.6.1 (2025-12-01)
 
 ### Database Update
