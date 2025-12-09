@@ -370,10 +370,10 @@
   resolved "https://registry.npmjs.org/@fastify/busboy/-/busboy-3.1.1.tgz"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
-"@gqloom/core@^0.13.0":
-  version "0.13.0"
-  resolved "https://registry.npmjs.org/@gqloom/core/-/core-0.13.0.tgz"
-  integrity sha512-Q9HKioKnKZEci7YSytWtmKoWa1bzdx7cY8p8cDQ9DnPyH0HYqTD/V11hMQ/TxCIwyWjzBEgTIa2fZHc64oQglw==
+"@gqloom/core@^0.14.1":
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.14.1.tgz#96b79c62a80e850762be51fdc581d2bfdd858985"
+  integrity sha512-Glin1mf/P5BTJX90indArEPAWWrBwzkUqcjZOSIECXAVHUxrCen2yUnLBYy3NRK5TncCCBux5QmR8qgL3Flwaw==
 
 "@gqloom/prisma@^0.12.2":
   version "0.12.2"
@@ -434,10 +434,10 @@
   dependencies:
     tslib "^2.8.1"
 
-"@graphql-yoga/render-graphiql@^5.16.2":
-  version "5.16.2"
-  resolved "https://registry.yarnpkg.com/@graphql-yoga/render-graphiql/-/render-graphiql-5.16.2.tgz#f518ebc4e96aca500d8ada22d2191f1b34005160"
-  integrity sha512-QTxmGZR/sZODnMZdsXpyoFEoIjzx5dRvqtW8XRiLq8TN+nCwVujmEehxPw9Fd6bu8pBbjs4dOgGCVss6OjOByw==
+"@graphql-yoga/render-graphiql@^5.17.0":
+  version "5.17.0"
+  resolved "https://registry.yarnpkg.com/@graphql-yoga/render-graphiql/-/render-graphiql-5.17.0.tgz#051366e955dcf0dc987b551f41e2f124d2585590"
+  integrity sha512-Y0gMgQZWpF3uCAPFn9foYjc2dSWJrNcVQ8JVbdr7g4/7VIrXSrU/67nikeY5mbE3ja4g5acCfMS7VoCEZ6vICQ==
 
 "@graphql-yoga/subscription@^5.0.5":
   version "5.0.5"
@@ -508,25 +508,25 @@
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.4.1.tgz"
   integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
 
-"@prisma/adapter-mariadb@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/@prisma/adapter-mariadb/-/adapter-mariadb-7.0.1.tgz"
-  integrity sha512-IbGl6ShwSflwGpN4PtA1UlMnEqSordU05WbKRWLj+5JeL3+c8wkfzG9WZIuOFOyxqkYBY6whrRWZsHt4VuSYJQ==
+"@prisma/adapter-mariadb@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@prisma/adapter-mariadb/-/adapter-mariadb-7.1.0.tgz#7dafd5516b6489d020969856a34547ccd9a3b71c"
+  integrity sha512-my5vKT6J4zRi5nNmLxosMafdQCk7tZgQHZ11mfaeFKh8xrJSEjFn0TFa1py8khHvFMvnadKUWdctjPpoJuxSBQ==
   dependencies:
-    "@prisma/driver-adapter-utils" "7.0.1"
+    "@prisma/driver-adapter-utils" "7.1.0"
     mariadb "3.4.5"
 
-"@prisma/client-runtime-utils@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client-runtime-utils/-/client-runtime-utils-7.0.1.tgz#db5e9e0e48224693e6b89d5d3cd10a1ff1799ba2"
-  integrity sha512-R26BVX9D/iw4toUmZKZf3jniM/9pMGHHdZN5LVP2L7HNiCQKNQQx/9LuMtjepbgRqSqQO3oHN0yzojHLnKTGEw==
+"@prisma/client-runtime-utils@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client-runtime-utils/-/client-runtime-utils-7.1.0.tgz#eb8cbc6641f11de87225c61d12c0cba28e10d3ab"
+  integrity sha512-39xmeBrNTN40FzF34aJMjfX1PowVCqoT3UKUWBBSP3aXV05NRqGBC3x2wCDs96ti6ZgdiVzqnRDHtbzU8X+lPQ==
 
-"@prisma/client@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-7.0.1.tgz#a48edb13851b1e496e22c4799383560fa85e662c"
-  integrity sha512-O74T6xcfaGAq5gXwCAvfTLvI6fmC3and2g5yLRMkNjri1K8mSpEgclDNuUWs9xj5AwNEMQ88NeD3asI+sovm1g==
+"@prisma/client@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-7.1.0.tgz#7d0f9257bb06cd570bc3c0ce1966485592c30393"
+  integrity sha512-qf7GPYHmS/xybNiSOpzv9wBo+UwqfL2PeyX+08v+KVHDI0AlSCQIh5bBySkH3alu06NX9wy98JEnckhMHoMFfA==
   dependencies:
-    "@prisma/client-runtime-utils" "7.0.1"
+    "@prisma/client-runtime-utils" "7.1.0"
 
 "@prisma/config@7.0.1":
   version "7.0.1"
@@ -562,6 +562,11 @@
   resolved "https://registry.npmjs.org/@prisma/debug/-/debug-7.0.1.tgz"
   integrity sha512-5+25XokVeAK2Z2C9W457AFw7Hk032Q3QI3G58KYKXPlpgxy+9FvV1+S1jqfJ2d4Nmq9LP/uACrM6OVhpJMSr8w==
 
+"@prisma/debug@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.1.0.tgz#09b202381fc37f7ed9f6332f13b4ecc7ceb1d1ab"
+  integrity sha512-pPAckG6etgAsEBusmZiFwM9bldLSNkn++YuC4jCTJACdK5hLOVnOzX7eSL2FgaU6Gomd6wIw21snUX2dYroMZQ==
+
 "@prisma/dev@0.13.0":
   version "0.13.0"
   resolved "https://registry.npmjs.org/@prisma/dev/-/dev-0.13.0.tgz"
@@ -590,12 +595,12 @@
   resolved "https://registry.npmjs.org/@prisma/dmmf/-/dmmf-6.18.0.tgz"
   integrity sha512-x0ItbLDxAnciEMFnGUm90Bkpzx2ja5Lp8Lz+9UkepIClZOMC4WvtMUHaMMfCFqfoBb+KUbxa/xV+FJ6EAaw4wQ==
 
-"@prisma/driver-adapter-utils@7.0.1":
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.0.1.tgz"
-  integrity sha512-sBbxm/yysHLLF2iMAB+qcX/nn3WFgsiC4DQNz0uM6BwGSIs8lIvgo0u8nR9nxe5gvFgKiIH8f4z2fgOEMeXc8w==
+"@prisma/driver-adapter-utils@7.1.0":
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.1.0.tgz#fa6eb6653e90a8ce844e30a9fb762d7f5201e8df"
+  integrity sha512-AlVLzeXkw81+47MvQ9M8DvTiHkRfJ8xzklTbYjpskb0cTTDVHboTI/OVwT6Wcep/bNvfLKJYO0nylBiM5rxgww==
   dependencies:
-    "@prisma/debug" "7.0.1"
+    "@prisma/debug" "7.1.0"
 
 "@prisma/engines-version@7.1.0-2.f09f2815f091dbba658cdcd2264306d88bb5bda6":
   version "7.1.0-2.f09f2815f091dbba658cdcd2264306d88bb5bda6"
@@ -2044,10 +2049,10 @@ graphql-scalars@^1.25.0:
   dependencies:
     tslib "^2.5.0"
 
-graphql-yoga@5.17.0:
-  version "5.17.0"
-  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-5.17.0.tgz#fb3fbc9b66fab201ac62cd3ee4289fd1fdcbe959"
-  integrity sha512-Ta2EmITlGzAJTffSA/BvMA5q2THRWeQrP8+Uc4WnSVTBafnQ2vpXdiNZ7Zsj57cxSw4+WEW2PTgEKGtJ4GcS3A==
+graphql-yoga@5.17.1:
+  version "5.17.1"
+  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-5.17.1.tgz#eea6d6cc178b9b47d147781279d48c8a1b315c26"
+  integrity sha512-Izb2uVWfdoWm+tF4bi39KE6F4uml3r700/EwULPZYOciY8inmy4hw+98c6agy3C+xceXvTkP7Li6mY/EI8XliA==
   dependencies:
     "@envelop/core" "^5.3.0"
     "@envelop/instrumentation" "^1.0.0"
@@ -2057,7 +2062,7 @@ graphql-yoga@5.17.0:
     "@graphql-yoga/logger" "^2.0.1"
     "@graphql-yoga/subscription" "^5.0.5"
     "@whatwg-node/fetch" "^0.10.6"
-    "@whatwg-node/promise-helpers" "^1.2.4"
+    "@whatwg-node/promise-helpers" "^1.3.2"
     "@whatwg-node/server" "^0.10.14"
     lru-cache "^10.0.0"
     tslib "^2.8.1"
