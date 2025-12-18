@@ -36,15 +36,15 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "prisma": "^7.0.1",
+    "prisma": "^7.1.0",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
     "@apollo/server": "^5.2.0",
     "@as-integrations/express5": "^1.1.2",
-    "@gqloom/core": "^0.14.1",
-    "@gqloom/prisma": "^0.12.2",
+    "@gqloom/core": "^0.14.2",
+    "@gqloom/prisma": "^0.14.1",
     "@graphql-yoga/render-graphiql": "^5.17.1",
     "@prisma/adapter-mariadb": "^7.1.0",
     "@prisma/client": "^7.1.0",
