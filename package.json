@@ -45,7 +45,7 @@
     "@as-integrations/express5": "^1.1.2",
     "@gqloom/core": "^0.14.2",
     "@gqloom/prisma": "^0.14.1",
-    "@graphql-yoga/render-graphiql": "^5.17.0",
+    "@graphql-yoga/render-graphiql": "^5.17.1",
     "@prisma/adapter-mariadb": "^7.1.0",
     "@prisma/client": "^7.1.0",
     "express": "^5.2.1",
