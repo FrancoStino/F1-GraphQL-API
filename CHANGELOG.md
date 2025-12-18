@@ -1,3 +1,21 @@
+## v1.6.3 (2025-12-18)
+
+### Database Update
+- Updated F1DB to `v2025.24.1`
+
+### Changes
+- chore(release): v1.6.3 (b0129c7)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.17.0 to 5.17.1 (fb5de74)
+- build(deps): bump @gqloom/prisma from 0.12.2 to 0.14.1 (8228883)
+- build(deps): bump @gqloom/core from 0.14.1 to 0.14.2 (d1e4008)
+- build(deps-dev): bump prisma from 7.0.1 to 7.1.0 (9cd8915)
+- build(deps): bump @prisma/client from 7.0.1 to 7.1.0 (83dd2ac)
+- build(deps): bump @gqloom/core from 0.13.0 to 0.14.1 (7bba60f)
+- build(deps): bump graphql-yoga from 5.17.0 to 5.17.1 (6a2337f)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.16.2 to 5.17.0 (8e591ab)
+- build(deps): bump @prisma/adapter-mariadb from 7.0.1 to 7.1.0 (29b856a)
+- docs: update CHANGELOG for v1.6.2 (ce4e554)
+
 ## v1.6.2 (2025-12-07)
 
 ### Database Update
