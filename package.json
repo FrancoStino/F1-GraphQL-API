@@ -47,7 +47,7 @@
     "@gqloom/prisma": "^0.14.1",
     "@graphql-yoga/render-graphiql": "^5.17.1",
     "@prisma/adapter-mariadb": "^7.2.0",
-    "@prisma/client": "^7.1.0",
+    "@prisma/client": "^7.2.0",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
     "graphql": "^16.12.0",
