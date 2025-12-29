@@ -43,7 +43,7 @@
   "dependencies": {
     "@apollo/server": "^5.2.0",
     "@as-integrations/express5": "^1.1.2",
-    "@gqloom/core": "^0.14.5",
+    "@gqloom/core": "^0.15.0",
     "@gqloom/prisma": "^0.14.1",
     "@graphql-yoga/render-graphiql": "^5.18.0",
     "@prisma/adapter-mariadb": "^7.2.0",
