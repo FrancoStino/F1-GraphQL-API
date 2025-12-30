@@ -1,3 +1,17 @@
+## v1.6.5 (2025-12-30)
+
+### Database Update
+- Updated F1DB to `v2026.0.0.beta2`
+
+### Changes
+- chore(release): v1.6.5 (71a7188)
+- build(deps): bump @prisma/client from 7.1.0 to 7.2.0 (f58eff6)
+- build(deps-dev): bump prisma from 7.1.0 to 7.2.0 (ca30569)
+- build(deps): bump graphql-yoga from 5.17.1 to 5.18.0 (34add47)
+- build(deps): bump @prisma/adapter-mariadb from 7.1.0 to 7.2.0 (ae1de63)
+- build(deps): bump @gqloom/core from 0.14.2 to 0.14.5 (b7a658d)
+- docs: update CHANGELOG for v1.6.4 (320b77f)
+
 ## v1.6.4 (2025-12-19)
 
 ### Database Update
