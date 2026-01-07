@@ -1,3 +1,13 @@
+## v1.6.6 (2026-01-07)
+
+### Database Update
+- Updated F1DB to `v2026.0.0.beta3`
+
+### Changes
+- chore(release): v1.6.6 (963aa60)
+- build(deps): bump qs in the npm_and_yarn group across 1 directory (16f53f4)
+- docs: update CHANGELOG for v1.6.5 (deb7e97)
+
 ## v1.6.5 (2025-12-30)
 
 ### Database Update
