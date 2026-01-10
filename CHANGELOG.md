@@ -1,3 +1,12 @@
+## v1.6.8 (2026-01-10)
+
+### Database Update
+- Updated F1DB to `v2026.0.0.beta3`
+
+### Changes
+- chore(release): v1.6.8 (252b7c8)
+- docs: update CHANGELOG for v1.6.7 (7c4f1e1)
+
 ## v1.6.7 (2026-01-10)
 
 ### Database Update
