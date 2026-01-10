@@ -1,3 +1,12 @@
+## v1.6.7 (2026-01-10)
+
+### Database Update
+- Updated F1DB to `null`
+
+### Changes
+- chore(release): v1.6.7 (2efbc1d)
+- docs: update CHANGELOG for v1.6.6 (4515946)
+
 ## v1.6.6 (2026-01-07)
 
 ### Database Update
