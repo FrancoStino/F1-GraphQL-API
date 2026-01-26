@@ -370,10 +370,10 @@
   resolved "https://registry.npmjs.org/@fastify/busboy/-/busboy-3.1.1.tgz"
   integrity sha512-5DGmA8FTdB2XbDeEwc/5ZXBl6UbBAyBOOLlPuBnZ/N1SwdH9Ii+cOX3tBROlDgcTXxjOYnLMVoKk9+FXAw0CJw==
 
-"@gqloom/core@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.15.0.tgz#6b1925a60ddade5b8b67817ee05d3744973eb24a"
-  integrity sha512-iYsL296HczSA9tbLctEHqna8ohEwJsjX1lvIxLjdm9nkIaCqdVFSzh0WDHYNEHCiHHmZDsvgo66nvHyoMGUxzA==
+"@gqloom/core@^0.15.1":
+  version "0.15.1"
+  resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.15.1.tgz#825e4ba91ea181bc5df858cf9162c9ff0b1c08db"
+  integrity sha512-wd/gn3MThpv5u0NgLOZOETTuR9Q+gIPnVfUs4CIm3qmkUXCDsJs+gJCupTihmK236n+q8ffuNllB+oyzuhsLUA==
 
 "@gqloom/prisma@^0.14.1":
   version "0.14.1"
