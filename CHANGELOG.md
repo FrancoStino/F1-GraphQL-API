@@ -1,3 +1,13 @@
+## v1.6.9 (2026-02-10)
+
+### Database Update
+- Updated F1DB to `v2026.0.0`
+
+### Changes
+- chore(release): v1.6.9 (47eef15)
+- build(deps): bump @isaacs/brace-expansion (671d7a1)
+- docs: update CHANGELOG for v1.6.8 (680041d)
+
 ## v1.6.8 (2026-01-10)
 
 ### Database Update
