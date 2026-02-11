@@ -375,10 +375,10 @@
   resolved "https://registry.yarnpkg.com/@gqloom/core/-/core-0.15.1.tgz#825e4ba91ea181bc5df858cf9162c9ff0b1c08db"
   integrity sha512-wd/gn3MThpv5u0NgLOZOETTuR9Q+gIPnVfUs4CIm3qmkUXCDsJs+gJCupTihmK236n+q8ffuNllB+oyzuhsLUA==
 
-"@gqloom/prisma@^0.15.3":
-  version "0.15.3"
-  resolved "https://registry.yarnpkg.com/@gqloom/prisma/-/prisma-0.15.3.tgz#d1fea9e6fc5a1fc728486b7d20f4b0db7c73a01f"
-  integrity sha512-vqrw2pGn4HOjZalyJuZtF6k42pf1wFqWlN+bZb94eahR5sA7BlFVfaP02xv75hlIwXbsrZIGq1QMesA/LG6NKw==
+"@gqloom/prisma@^0.15.4":
+  version "0.15.4"
+  resolved "https://registry.yarnpkg.com/@gqloom/prisma/-/prisma-0.15.4.tgz#a8dfddb80b73a9dccaad29ecb359f2d1c14cbb56"
+  integrity sha512-v+C4zDDwTZWHO0+dIBXkSiSUgXxCHzgQqVvUJliYAOaWHAxWi2aExpHp54D//KStvSsyYAfaHHPZngcD+5LDSQ==
   dependencies:
     "@prisma/generator-helper" "^7.1.0"
     ts-morph "^27.0.2"
