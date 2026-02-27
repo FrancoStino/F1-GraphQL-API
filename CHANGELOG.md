@@ -1,3 +1,13 @@
+## v1.6.10 (2026-02-27)
+
+### Database Update
+- Updated F1DB to `v2026.0.1`
+
+### Changes
+- chore(release): v1.6.10 (7810a96)
+- docs: update CHANGELOG for v1.6.9 (a06a787)
+- build(deps): bump @apollo/server (9d8f581)
+
 ## v1.6.9 (2026-02-10)
 
 ### Database Update
