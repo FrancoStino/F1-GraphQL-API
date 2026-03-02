@@ -36,7 +36,7 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
-    "prisma": "^7.3.0",
+    "prisma": "^7.4.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
@@ -46,8 +46,8 @@
     "@gqloom/core": "^0.16.1",
     "@gqloom/prisma": "^0.15.4",
     "@graphql-yoga/render-graphiql": "^5.18.0",
-    "@prisma/adapter-mariadb": "^7.3.0",
-    "@prisma/client": "^7.3.0",
+    "@prisma/adapter-mariadb": "^7.4.2",
+    "@prisma/client": "^7.4.2",
     "express": "^5.2.1",
     "express-rate-limit": "^8.2.1",
     "graphql": "^16.12.0",
