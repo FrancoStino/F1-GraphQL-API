@@ -509,12 +509,12 @@
   resolved "https://registry.npmjs.org/@opentelemetry/api/-/api-1.4.1.tgz"
   integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
 
-"@prisma/adapter-mariadb@^7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@prisma/adapter-mariadb/-/adapter-mariadb-7.3.0.tgz#56aebbc8ebb1fcbf246cdd2e53b5d484169971a9"
-  integrity sha512-cZaNZqdnm255Di8+0ztWDVdg40zRburNEMqHN2AIP98SO0Xbo9UDqHKC7sYkmm5Rqy9fNVxMjBJnoiZJ4Ae+tw==
+"@prisma/adapter-mariadb@^7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@prisma/adapter-mariadb/-/adapter-mariadb-7.4.2.tgz#541ffa29dc8777e00b3b91a9a0dc4ee53777ffe7"
+  integrity sha512-s9iIan8UDce47Mdsqzm/JnFK/c2vmTXAtKYvBuE4zOockjxLZCB487AMPLx9CgUknqBsGlVqad7AY4QkznSYkA==
   dependencies:
-    "@prisma/driver-adapter-utils" "7.3.0"
+    "@prisma/driver-adapter-utils" "7.4.2"
     mariadb "3.4.5"
 
 "@prisma/client-runtime-utils@7.3.0":
@@ -563,6 +563,11 @@
   resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.3.0.tgz#b953ee8263b26af54ddb2c1799953009d51ec814"
   integrity sha512-yh/tHhraCzYkffsI1/3a7SHX8tpgbJu1NPnuxS4rEpJdWAUDHUH25F1EDo6PPzirpyLNkgPPZdhojQK804BGtg==
 
+"@prisma/debug@7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.4.2.tgz#9fd2b4bd210384c74000843683953c38d2165656"
+  integrity sha512-aP7qzu+g/JnbF6U69LMwHoUkELiserKmWsE2shYuEpNUJ4GrtxBCvZwCyCBHFSH2kLTF2l1goBlBh4wuvRq62w==
+
 "@prisma/dev@0.20.0":
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/@prisma/dev/-/dev-0.20.0.tgz#cdcb1d7f707818b0245d53d98cec4c998fb8ba47"
@@ -591,12 +596,12 @@
   resolved "https://registry.yarnpkg.com/@prisma/dmmf/-/dmmf-7.1.0.tgz#9572f6b78bfbcef4d5808e447ff0e42a313b6cf6"
   integrity sha512-O4F5aaACdqpJKDEUOhArLfqaIJmiR3DtZ9gT0aMw+em+CBYD9z+mj6u1RQDdb4FJu60TN9ABDiVZLh4Nbf+stw==
 
-"@prisma/driver-adapter-utils@7.3.0":
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.3.0.tgz#3242f206a8749846db1c611a5cb283c547da7c0f"
-  integrity sha512-Wdlezh1ck0Rq2dDINkfSkwbR53q53//Eo1vVqVLwtiZ0I6fuWDGNPxwq+SNAIHnsU+FD/m3aIJKevH3vF13U3w==
+"@prisma/driver-adapter-utils@7.4.2":
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.4.2.tgz#286c02d5fe73f79706f6fb0d01013c17f8b9940e"
+  integrity sha512-REdjFpT/ye9KdDs+CXAXPIbMQkVLhne9G5Pe97sNY4Ovx4r2DAbWM9hOFvvB1Oq8H8bOCdu0Ri3AoGALquQqVw==
   dependencies:
-    "@prisma/debug" "7.3.0"
+    "@prisma/debug" "7.4.2"
 
 "@prisma/engines-version@7.3.0-16.9d6ad21cbbceab97458517b147a6a09ff43aa735":
   version "7.3.0-16.9d6ad21cbbceab97458517b147a6a09ff43aa735"
