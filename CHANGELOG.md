@@ -1,3 +1,27 @@
+## v1.6.11 (2026-03-08)
+
+### Database Update
+- Updated F1DB to `v2026.1.0`
+
+### Changes
+- chore(release): v1.6.11 (e63dd26)
+- build(deps): bump @prisma/client from 7.3.0 to 7.4.0 (8955edd)
+- build(deps-dev): bump prisma from 7.3.0 to 7.4.0 (2b17af0)
+- build(deps): bump @prisma/adapter-mariadb from 7.3.0 to 7.4.0 (931d80d)
+- docs: update CHANGELOG for v1.6.10 (ca45602)
+- build(deps): bump qs in the npm_and_yarn group across 1 directory (c691c55)
+- build(deps): bump @apollo/server from 5.3.0 to 5.4.0 (eac9d07)
+- build(deps): bump @gqloom/core from 0.15.1 to 0.16.1 (8bfe5c0)
+- build(deps): bump @gqloom/prisma from 0.15.3 to 0.15.4 (008ebb2)
+- build(deps): bump @gqloom/prisma from 0.14.1 to 0.15.3 (497c050)
+- build(deps): bump @prisma/adapter-mariadb from 7.2.0 to 7.3.0 (8bccf79)
+- build(deps): bump @apollo/server from 5.2.0 to 5.3.0 (7c0bb69)
+- build(deps): bump @prisma/client from 7.2.0 to 7.3.0 (e75a33c)
+- build(deps-dev): bump prisma from 7.2.0 to 7.3.0 (fd32075)
+- build(deps): bump @gqloom/core from 0.15.0 to 0.15.1 (dbef0dd)
+- build(deps): bump @gqloom/core from 0.14.5 to 0.15.0 (2096f7a)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.17.1 to 5.18.0 (e3ca448)
+
 ## v1.6.10 (2026-02-27)
 
 ### Database Update
