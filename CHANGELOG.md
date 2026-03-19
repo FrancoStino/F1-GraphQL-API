@@ -1,3 +1,13 @@
+## v1.6.13 (2026-03-19)
+
+### Database Update
+- Updated F1DB to `v2026.2.2`
+
+### Changes
+- chore(release): v1.6.13 (8a32d05)
+- docs: update CHANGELOG for v1.6.12 (f8fcb2a)
+- build(deps): bump express-rate-limit (c6d8e52)
+
 ## v1.6.12 (2026-03-15)
 
 ### Database Update
