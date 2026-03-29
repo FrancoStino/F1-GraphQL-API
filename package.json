@@ -43,7 +43,7 @@
     "typescript": "^6.0.2"
   },
   "dependencies": {
-    "@apollo/server": "^5.4.0",
+    "@apollo/server": "^5.5.0",
     "@as-integrations/express5": "^1.1.2",
     "@gqloom/core": "^0.16.1",
     "@gqloom/prisma": "^0.16.0",
