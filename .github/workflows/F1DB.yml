@@ -22,7 +22,7 @@ jobs:
           node-version: "24"
       - name: Install dependencies
         run: |
-          sudo apt-get update && sudo apt-get install -y mariadb-client unzip curl jq pv
+          sudo apt-get update && sudo apt-get install -y postgresql-client unzip curl jq pv
           yarn install
       - name: Configure Git
         run: |
@@ -31,7 +31,7 @@ jobs:
       - name: Get latest F1DB release
         id: get_latest_release
         run: |
-          LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.assets[] | select(.name == "f1db-sql-mysql-single-inserts.zip") | .browser_download_url')
+          LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.assets[] | select(.name == "f1db-sql-postgresql-single-inserts.zip") | .browser_download_url')
           LATEST_RELEASE_TAG=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.tag_name')
           echo "download_url=$LATEST_RELEASE_URL" >> "$GITHUB_OUTPUT"
           echo "latest_tag=$LATEST_RELEASE_TAG" >> "$GITHUB_OUTPUT"
@@ -71,20 +71,13 @@ jobs:
       - name: Apply SQL to database
         if: steps.check_release.outputs.is_new_release == 'true'
         env:
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-          DB_HOST: davideladisa.it
-          DB_USER: um5i6722_f1_graphql
-          DB_NAME: um5i6722_f1_graphql
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: |
-          echo "👉 Start MARIADB"
-          SQL_FILE=$(find . -name "f1db-sql-mysql-single-inserts.sql")
+          echo "👉 Start DB SYNC"
+          SQL_FILE=$(find . -name "f1db-sql-postgresql-single-inserts.sql")
           echo "Find SQL file: $SQL_FILE"
-          pv "$SQL_FILE" | mariadb --skip-ssl \
-            -h $DB_HOST \
-            -u $DB_USER \
-            -p"$DB_PASSWORD" \
-            $DB_NAME
-          echo "✅ Exit Execution MARIADB"
+          pv "$SQL_FILE" | psql "$DATABASE_URL"
+          echo "✅ Exit Execution POSTGRESQL"
       - name: Update last-release.txt
         if: steps.check_release.outputs.is_new_release == 'true'
         run: |
