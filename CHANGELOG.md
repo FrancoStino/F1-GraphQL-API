@@ -1,3 +1,26 @@
+## v1.7.1 (2026-03-29)
+
+### Database Update
+- Updated F1DB to `v2026.3.0`
+
+### Changes
+- chore(release): v1.7.1 (8cb34b4)
+- fix: update to PostGres (b07d601)
+- v1.7.0 (6732b9e)
+- build(deps): bump path-to-regexp (64bf3f5)
+- build(deps-dev): bump typescript from 5.9.3 to 6.0.2 (64de008)
+- build(deps): bump @prisma/adapter-mariadb from 7.4.2 to 7.5.0 (c3180e1)
+- build(deps): bump @apollo/server (22d8c60)
+- docs: update CHANGELOG for v1.6.14 (ff86472)
+- build(deps-dev): bump prisma from 7.4.2 to 7.5.0 (05cd06f)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.18.0 to 5.18.1 (a08be31)
+- build(deps): bump @prisma/client from 7.4.2 to 7.5.0 (af3a93f)
+- build(deps): bump express-rate-limit from 8.2.1 to 8.3.1 (43450e5)
+- build(deps): bump graphql from 16.13.0 to 16.13.1 (5b1048a)
+- build(deps): bump graphql-yoga from 5.18.0 to 5.18.1 (82c626e)
+- build(deps): bump graphql from 16.12.0 to 16.13.0 (90ad917)
+- build(deps): bump @gqloom/prisma from 0.15.4 to 0.16.0 (5062a44)
+
 ## v1.6.14 (2026-03-19)
 
 ### Database Update
