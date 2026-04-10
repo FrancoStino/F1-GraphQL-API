@@ -2,13 +2,12 @@ name: Aiven Database Keep-Alive
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Esegue ogni giorno alle 12:00 UTC
-  workflow_dispatch: # Permette di avviarlo anche manualmente
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
-    # Aggiungi 'env' qui a livello di job:
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
     steps:
@@ -17,25 +16,20 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
+          node-version: '24' 
           
       - name: Install dependencies
         run: yarn install
         
-      - name: Generate Prisma Client
-        # Ora funzionerà perché eredita l'env dal job
-        run: npx prisma generate
+      - name: Build Prisma Schema
+        run: yarn build 
         
       - name: Ping Database
-        # Non serve più dichiarare 'env' qui dentro
         run: |
-          node -e "
-            const { PrismaClient } = require('@prisma/client');
+          npx tsx -e "
+            import { PrismaClient } from '@prisma/client';
             const prisma = new PrismaClient();
-            async function ping() {
-              await prisma.\$queryRawUnsafe('SELECT 1');
-              console.log('Ping eseguito con successo!');
-              await prisma.\$disconnect();
-            }
-            ping().catch(console.error);
+            await prisma.\$queryRawUnsafe('SELECT 1');
+            console.log('Ping al database eseguito con successo!');
+            await prisma.\$disconnect();
           "
