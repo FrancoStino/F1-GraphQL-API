@@ -1,0 +1,38 @@
+name: Aiven Database Keep-Alive
+
+on:
+  schedule:
+    - cron: '0 12 * * *' # Esegue ogni giorno alle 12:00 UTC
+  workflow_dispatch: # Permette di avviarlo anche manualmente
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          
+      - name: Install dependencies
+        run: yarn install
+        
+      - name: Generate Prisma Client
+        run: npx prisma generate
+        
+      - name: Ping Database
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+        run: |
+          node -e "
+            const { PrismaClient } = require('@prisma/client');
+            const prisma = new PrismaClient();
+            async function ping() {
+              await prisma.\$queryRawUnsafe('SELECT 1');
+              console.log('Ping eseguito con successo!');
+              await prisma.\$disconnect();
+            }
+            ping().catch(console.error);
+          "
