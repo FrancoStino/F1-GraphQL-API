@@ -16,28 +16,31 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24' 
+          node-version: '24'
           
       - name: Install dependencies
+        # Installiamo solo le dipendenze, senza buildare Prisma
         run: yarn install
         
-      - name: Build Prisma Schema
-        run: yarn build 
-        
       - name: Ping Database
+        # Usiamo il driver "pg" nativo con top-level await di Node.js
         run: |
-          npx tsx -e "
-            import { PrismaClient } from '@prisma/client';
-            const prisma = new PrismaClient();
+          node --input-type=module -e "
+            import pg from 'pg';
             
-            async function ping() {
-              await prisma.\$queryRawUnsafe('SELECT 1');
-              console.log('Ping al database eseguito con successo!');
-              await prisma.\$disconnect();
-            }
-            
-            ping().catch(e => {
-              console.error(e);
-              process.exit(1);
+            const client = new pg.Client({ 
+              connectionString: process.env.DATABASE_URL,
+              ssl: { rejectUnauthorized: false } // Aiven richiede SSL per le connessioni
             });
+            
+            try {
+              await client.connect();
+              await client.query('SELECT 1');
+              console.log('✅ Ping al database Aiven eseguito con successo!');
+            } catch (err) {
+              console.error('❌ Errore durante il ping:', err);
+              process.exit(1);
+            } finally {
+              await client.end();
+            }
           "
