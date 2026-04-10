@@ -29,7 +29,15 @@ jobs:
           npx tsx -e "
             import { PrismaClient } from '@prisma/client';
             const prisma = new PrismaClient();
-            await prisma.\$queryRawUnsafe('SELECT 1');
-            console.log('Ping al database eseguito con successo!');
-            await prisma.\$disconnect();
+            
+            async function ping() {
+              await prisma.\$queryRawUnsafe('SELECT 1');
+              console.log('Ping al database eseguito con successo!');
+              await prisma.\$disconnect();
+            }
+            
+            ping().catch(e => {
+              console.error(e);
+              process.exit(1);
+            });
           "
