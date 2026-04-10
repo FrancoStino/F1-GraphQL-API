@@ -1,0 +1,46 @@
+name: Aiven Database Keep-Alive
+
+on:
+  schedule:
+    - cron: '0 12 * * *'
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          
+      - name: Install dependencies
+        # Installiamo solo le dipendenze, senza buildare Prisma
+        run: yarn install
+        
+      - name: Ping Database
+        # Usiamo il driver "pg" nativo con top-level await di Node.js
+        run: |
+          node --input-type=module -e "
+            import pg from 'pg';
+            
+            const client = new pg.Client({ 
+              connectionString: process.env.DATABASE_URL,
+              ssl: { rejectUnauthorized: false } // Aiven richiede SSL per le connessioni
+            });
+            
+            try {
+              await client.connect();
+              await client.query('SELECT 1');
+              console.log('✅ Ping al database Aiven eseguito con successo!');
+            } catch (err) {
+              console.error('❌ Errore durante il ping:', err);
+              process.exit(1);
+            } finally {
+              await client.end();
+            }
+          "
