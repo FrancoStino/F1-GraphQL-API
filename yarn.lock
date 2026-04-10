@@ -2141,10 +2141,10 @@ graphql-scalars@^1.25.0:
   dependencies:
     tslib "^2.5.0"
 
-graphql-yoga@5.18.1:
-  version "5.18.1"
-  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-5.18.1.tgz#d1e80526514b79babd12486217744ab8a625fdc6"
-  integrity sha512-GiDSlvibfY/vyurbkBOKMO+adF6bTCzKr80FYWta59s1Lx87oVo8T6Nu/0hrxrGv0SrAUkqUpcpr4Ee7XlYmBw==
+graphql-yoga@5.21.0:
+  version "5.21.0"
+  resolved "https://registry.yarnpkg.com/graphql-yoga/-/graphql-yoga-5.21.0.tgz#25538bc820bcf58097a359fcde303ed118680c96"
+  integrity sha512-PS37UoDihx8209RRl1ogttzWevNYDnGvP7beHkwHzUpUdfZTHsVRTVe1ysGXre1EjwUAePbpez302YSrq70Ngw==
   dependencies:
     "@envelop/core" "^5.5.1"
     "@envelop/instrumentation" "^1.0.0"
