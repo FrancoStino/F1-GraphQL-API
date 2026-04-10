@@ -65,7 +65,7 @@
 
 - Node.js (v22.12+ or v24.0+)
 - Yarn package manager
-- MariaDB/MySQL database
+- PostgreSQL database
 - [Lando](https://lando.dev/)
 
 <!-- TOC --><a name="installation"></a>
