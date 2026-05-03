@@ -1,3 +1,36 @@
+## v1.7.3 (2026-05-03)
+
+### Database Update
+- Updated F1DB to `v2026.4.0`
+
+### Changes
+- chore(release): v1.7.3 (d7b58d4)
+- build(deps): bump @prisma/adapter-pg from 7.6.0 to 7.7.0 (6fac3ad)
+- build(deps): bump hono in the npm_and_yarn group across 1 directory (d80b69f)
+- Delete .github/workflows/aiven-ping.yml (71950a5)
+- Update dependabot.yml (286e023)
+- Update dependabot.yml (c7842db)
+- Delete .genkit/traces_idx directory (e5142d7)
+- build(deps): bump @prisma/client from 7.6.0 to 7.7.0 (9909c73)
+- build(deps-dev): bump @types/node from 25.5.2 to 25.6.0 (80ea770)
+- build(deps-dev): bump prisma from 7.6.0 to 7.7.0 (3e97d5c)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.18.1 to 5.21.0 (c72a95c)
+- Update aiven-ping.yml (eac40ba)
+- Update aiven-ping.yml (c9ccbad)
+- Update aiven-ping.yml (dcc91b2)
+- build(deps): bump graphql-yoga from 5.18.1 to 5.21.0 (477fab2)
+- build(deps): bump dotenv from 17.3.1 to 17.4.1 (e025c55)
+- Update aiven-ping.yml (bed0424)
+- Update aiven-ping.yml (76a07e5)
+- Create aiven-ping.yml (d1516fc)
+- build(deps): bump express-rate-limit from 8.3.1 to 8.3.2 (0cee4f1)
+- build(deps-dev): bump @types/node from 25.5.0 to 25.5.2 (a161755)
+- fix: update database reference from MariaDB/MySQL to PostgreSQL (02d82b6)
+- build(deps): bump defu in the npm_and_yarn group across 1 directory (028a0b9)
+- build(deps): bump graphql from 16.13.1 to 16.13.2 (6baab6b)
+- fix: update db (5262743)
+- docs: update CHANGELOG for v1.7.2 (e2682c5)
+
 ## v1.7.2 (2026-03-30)
 
 ### Database Update
