@@ -1,3 +1,15 @@
+## v1.7.6 (2026-05-25)
+
+### Database Update
+- Updated F1DB to `v2026.5.0`
+
+### Changes
+- chore(release): v1.7.6 (b11b3e7)
+- build(deps): bump qs in the npm_and_yarn group across 1 directory (8acc170)
+- build(deps): bump the npm_and_yarn group across 1 directory with 2 updates (45e91de)
+- build(deps): bump hono in the npm_and_yarn group across 1 directory (1333870)
+- docs: update CHANGELOG for v1.7.5 (13bfcdb)
+
 ## v1.7.5 (2026-05-05)
 
 ### Database Update
