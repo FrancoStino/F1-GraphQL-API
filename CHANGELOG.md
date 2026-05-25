@@ -1,3 +1,12 @@
+## v1.7.7 (2026-05-25)
+
+### Database Update
+- Updated F1DB to `v2026.5.1`
+
+### Changes
+- chore(release): v1.7.7 (557ce67)
+- docs: update CHANGELOG for v1.7.6 (efbb2f5)
+
 ## v1.7.6 (2026-05-25)
 
 ### Database Update
