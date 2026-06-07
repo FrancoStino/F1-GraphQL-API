@@ -1,3 +1,25 @@
+## v1.7.8 (2026-06-07)
+
+### Database Update
+- Updated F1DB to `v2026.6.0`
+
+### Changes
+- chore(release): v1.7.8 (2cba58b)
+- build(deps): bump hono in the npm_and_yarn group across 1 directory (f3339a1)
+- build(deps-dev): bump prisma from 7.7.0 to 7.8.0 (bb7022e)
+- build(deps): bump @apollo/server from 5.5.0 to 5.5.1 (c274da6)
+- docs: update CHANGELOG for v1.7.7 (38a966c)
+- build(deps): bump express-rate-limit from 8.4.1 to 8.5.2 (d17588d)
+- build(deps): bump pg from 8.20.0 to 8.21.0 (cf26531)
+- build(deps-dev): bump tsx from 4.21.0 to 4.22.3 (bfdc722)
+- build(deps-dev): bump @types/node from 25.6.0 to 25.9.1 (6bbe22a)
+- build(deps): bump graphql from 16.13.2 to 16.14.0 (4952c58)
+- build(deps): bump @prisma/client from 7.7.0 to 7.8.0 (b69b809)
+- build(deps): bump express-rate-limit from 8.3.2 to 8.4.1 (b2dffb8)
+- build(deps): bump @prisma/adapter-pg from 7.7.0 to 7.8.0 (de6be29)
+- build(deps): bump dotenv from 17.4.1 to 17.4.2 (2b50e8b)
+- build(deps-dev): bump typescript from 6.0.2 to 6.0.3 (d386e81)
+
 ## v1.7.7 (2026-05-25)
 
 ### Database Update
