@@ -1,3 +1,12 @@
+## v1.7.11 (2026-06-13)
+
+### Database Update
+- Updated F1DB to `v2026.6.3`
+
+### Changes
+- chore(release): v1.7.11 (071c7fc)
+- build(deps): bump esbuild in the npm_and_yarn group across 1 directory (394ee44)
+
 ## v1.7.8 (2026-06-07)
 
 ### Database Update
