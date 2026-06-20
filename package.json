@@ -47,7 +47,7 @@
     "@as-integrations/express5": "^1.1.2",
     "@gqloom/core": "^0.16.1",
     "@gqloom/prisma": "^0.16.0",
-    "@graphql-yoga/render-graphiql": "^5.21.0",
+    "@graphql-yoga/render-graphiql": "^5.21.2",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "dotenv": "^17.4.2",
