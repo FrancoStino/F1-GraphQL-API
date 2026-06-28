@@ -1,3 +1,19 @@
+## v1.7.13 (2026-06-28)
+
+### Database Update
+- Updated F1DB to `v2026.8.0`
+
+### Changes
+- chore(release): v1.7.13 (2a69157)
+- build(deps): bump pg from 8.21.0 to 8.22.0 (7934864)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.21.1 to 5.21.2 (b32b7b9)
+- build(deps-dev): bump @types/node from 25.9.3 to 26.0.0 (306542f)
+- build(deps): bump hono in the npm_and_yarn group across 1 directory (9850651)
+- build(deps): bump graphql-yoga from 5.21.1 to 5.21.2 (d65a40f)
+- build(deps): bump graphql from 16.14.1 to 16.14.2 (641dc82)
+- docs: update CHANGELOG for v1.7.12 (b821248)
+- build(deps-dev): bump @types/node from 24.13.2 to 25.9.3 (ebc5255)
+
 ## v1.7.12 (2026-06-14)
 
 ### Database Update
