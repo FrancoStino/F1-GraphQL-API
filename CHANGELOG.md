@@ -1,3 +1,13 @@
+## v1.7.19 (2026-07-24)
+
+### Database Update
+- Updated F1DB to `v2026.10.1`
+
+### Changes
+- chore(release): v1.7.19 (9ab2e57)
+- build(deps): bump body-parser (a230065)
+- docs: update CHANGELOG for v1.7.18 (d6611d5)
+
 ## v1.7.18 (2026-07-19)
 
 ### Database Update
