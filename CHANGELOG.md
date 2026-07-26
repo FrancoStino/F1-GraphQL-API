@@ -1,3 +1,13 @@
+## v1.7.20 (2026-07-26)
+
+### Database Update
+- Updated F1DB to `v2026.11.0`
+
+### Changes
+- chore(release): v1.7.20 (a08f2c5)
+- build(deps): bump the npm_and_yarn group across 1 directory with 2 updates (8c90a30)
+- docs: update CHANGELOG for v1.7.19 (6e6ebbb)
+
 ## v1.7.19 (2026-07-24)
 
 ### Database Update
