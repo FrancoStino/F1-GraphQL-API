@@ -466,12 +466,12 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.4.1.tgz#ff22eb2e5d476fbc2450a196e40dd243cc20c28f"
   integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
 
-"@prisma/adapter-pg@^7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@prisma/adapter-pg/-/adapter-pg-7.8.0.tgz#8f39dc10ec0fa3d5914e09df385977ce0500fbec"
-  integrity sha512-ygb3UkerK3v8MDpXVgCISdRNDozpxh6+JVJgiIGbSr5KBgz10LLf5ejUskPGoXlsIjxsOu6nuy1JVQr2EKGSlg==
+"@prisma/adapter-pg@^7.9.0":
+  version "7.9.0"
+  resolved "https://registry.yarnpkg.com/@prisma/adapter-pg/-/adapter-pg-7.9.0.tgz#9e1ff572926830cedd1bb74b9d45155c0dfe554e"
+  integrity sha512-kPYuFvNTlqnaFf2UpXBBG3ycTT3PL76uSZtLFBEwDytjMMUW8ZHrsb9cSNIarzdPW5EXWmBOeOq9/MVjMtbWkA==
   dependencies:
-    "@prisma/driver-adapter-utils" "7.8.0"
+    "@prisma/driver-adapter-utils" "7.9.0"
     "@types/pg" "^8.16.0"
     pg "^8.16.3"
     postgres-array "3.0.4"
@@ -548,12 +548,12 @@
   resolved "https://registry.yarnpkg.com/@prisma/dmmf/-/dmmf-7.8.0.tgz#5da438d664879d1a37fb87d14b6114b2e879741b"
   integrity sha512-7xzcSFWO6J+dFUgIX7jL7QqUhEDfaa8GSZGsjjHyZct1Su+6KrvMl3S2+fnRkuKUIoTPg3Mj02oZuUdaNSfsaw==
 
-"@prisma/driver-adapter-utils@7.8.0":
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.8.0.tgz#60f42a5bfb257d01185c27d8022a2a500d71d56b"
-  integrity sha512-/Q13o0ZT0rjc1Xk0Q9KhZYwuq2EW/vSbWUBKfgEKkaCuB/Sg6bqnjmTZqC5cD4d6y1vfFAEwBRzfzoSMIVJ55A==
+"@prisma/driver-adapter-utils@7.9.0":
+  version "7.9.0"
+  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.9.0.tgz#46afd965d1b2c5821e71e0489fa987fbbbdf2a35"
+  integrity sha512-fFXujitfMyjk3kOd1Tbs5FXBm6i2OWwEhaP5lHgkUM99jHpPEQwCWj+z/WKPFq6EDMThE1zGzSlVegtR0Pmu2w==
   dependencies:
-    "@prisma/debug" "7.8.0"
+    "@prisma/debug" "7.9.0"
 
 "@prisma/engines-version@7.9.0-1.e922089b7d7502aff4249d5da3420f6fa55fc6ad":
   version "7.9.0-1.e922089b7d7502aff4249d5da3420f6fa55fc6ad"
