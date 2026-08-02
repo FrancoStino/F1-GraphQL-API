@@ -1,3 +1,12 @@
+## v1.7.21 (2026-08-02)
+
+### Database Update
+- Updated F1DB to `null`
+
+### Changes
+- chore(release): v1.7.21 (c50c698)
+- docs: update CHANGELOG for v1.7.20 (11bdb8b)
+
 ## v1.7.20 (2026-07-26)
 
 ### Database Update
