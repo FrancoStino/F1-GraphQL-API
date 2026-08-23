@@ -1,3 +1,30 @@
+## v1.7.23 (2026-08-23)
+
+### Database Update
+- Updated F1DB to `v2026.12.0`
+
+### Changes
+- chore(release): v1.7.23 (8586920)
+- build(deps-dev): bump @types/pg from 8.20.0 to 8.20.3 (c117ca9)
+- Change Dependabot update interval to monthly (ab8c9f4)
+- build(deps): bump fast-uri in the npm_and_yarn group across 1 directory (79fe646)
+- build(deps): bump ip-address (23106e9)
+- docs: update CHANGELOG for v1.7.22 (ccf444b)
+- build(deps): bump @prisma/client from 7.9.0 to 7.9.1 (8120101)
+- build(deps): bump @prisma/adapter-pg from 7.9.0 to 7.9.1 (814f6d9)
+- build(deps-dev): bump @types/node from 26.1.1 to 26.1.2 (9e94c12)
+- build(deps): bump express-rate-limit from 8.6.0 to 8.6.1 (d6d7595)
+- build(deps-dev): bump prisma from 7.9.0 to 7.9.1 (ff41b7c)
+- build(deps): bump @prisma/adapter-pg from 7.8.0 to 7.9.0 (5d2d14b)
+- build(deps): bump @prisma/client from 7.8.0 to 7.9.0 (4aa89f4)
+- build(deps-dev): bump prisma from 7.8.0 to 7.9.0 (7b0213e)
+- build(deps): bump express-rate-limit from 8.5.2 to 8.6.0 (0e21277)
+- build(deps-dev): bump tsx from 4.23.0 to 4.23.1 (e0a49f0)
+- build(deps-dev): bump @types/node from 26.1.0 to 26.1.1 (4615397)
+- build(deps-dev): bump tsx from 4.22.4 to 4.23.0 (4e3d887)
+- build(deps-dev): bump @types/node from 26.0.1 to 26.1.0 (6f98d4b)
+- build(deps-dev): bump @types/node from 26.0.0 to 26.0.1 (89bb642)
+
 ## v1.7.22 (2026-08-02)
 
 ### Database Update
