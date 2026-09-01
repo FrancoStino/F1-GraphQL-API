@@ -2399,10 +2399,10 @@ graphmatch@^1.1.0:
   resolved "https://registry.yarnpkg.com/graphmatch/-/graphmatch-1.1.1.tgz#dcec68e8cb74de0a372d5252fc06e241daf71c38"
   integrity sha512-5ykVn/EXM1hF0XCaWh05VbYvEiOL2lY1kBxZtaYsyvjp7cmWOU1XsAdfQBwClraEofXDT197lFbXOEVMHpvQOg==
 
-graphql-scalars@^1.25.0:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/graphql-scalars/-/graphql-scalars-1.25.0.tgz#88f2891d60942c420286a2e76a29abfe645ac899"
-  integrity sha512-b0xyXZeRFkne4Eq7NAnL400gStGqG/Sx9VqX0A05nHyEbv57UJnWKsjNnrpVqv5e/8N1MUxkt0wwcRXbiyKcFg==
+graphql-scalars@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/graphql-scalars/-/graphql-scalars-2.0.0.tgz#96de418e8861368a954a2391110d28a0fe032eda"
+  integrity sha512-tCd2ddcxlbz5rG7xsfDbjvIssR9c/5EauDYt272pxfxpUNBjFMpnDwukuA3rm1O/9michQDxFfPPAeoQjZtJVQ==
   dependencies:
     tslib "^2.5.0"
 
