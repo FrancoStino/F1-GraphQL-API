@@ -1,3 +1,15 @@
+## v1.7.24 (2026-09-06)
+
+### Database Update
+- Updated F1DB to `v2026.13.0`
+
+### Changes
+- chore(release): v1.7.24 (7add9de)
+- Refactor F1DB release retrieval in workflow (fc11e24)
+- build(deps): bump qs in the npm_and_yarn group across 1 directory (d99ace8)
+- build(deps): bump fast-uri in the npm_and_yarn group across 1 directory (d1b3857)
+- docs: update CHANGELOG for v1.7.23 (b732568)
+
 ## v1.7.23 (2026-08-23)
 
 ### Database Update
