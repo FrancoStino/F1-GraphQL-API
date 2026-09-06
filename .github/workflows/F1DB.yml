@@ -31,8 +31,18 @@ jobs:
       - name: Get latest F1DB release
         id: get_latest_release
         run: |
-          LATEST_RELEASE_URL=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.assets[] | select(.name == "f1db-sql-postgresql-single-inserts.zip") | .browser_download_url')
-          LATEST_RELEASE_TAG=$(curl -s https://api.github.com/repos/f1db/f1db/releases/latest | jq -r '.tag_name')
+          RESPONSE=$(curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/f1db/f1db/releases/latest)
+
+          LATEST_RELEASE_URL=$(echo "$RESPONSE" | jq -r '.assets[]? | select(.name == "f1db-sql-postgresql-single-inserts.zip") | .browser_download_url')
+          LATEST_RELEASE_TAG=$(echo "$RESPONSE" | jq -r '.tag_name')
+
+          if [ -z "$LATEST_RELEASE_URL" ] || [ "$LATEST_RELEASE_URL" == "null" ]; then
+            echo "::error::Impossibile trovare l'asset richiesto. Risposta API:"
+            echo "$RESPONSE"
+            exit 1
+          fi
+
           echo "download_url=$LATEST_RELEASE_URL" >> "$GITHUB_OUTPUT"
           echo "latest_tag=$LATEST_RELEASE_TAG" >> "$GITHUB_OUTPUT"
           echo "Download URL: $LATEST_RELEASE_URL"
