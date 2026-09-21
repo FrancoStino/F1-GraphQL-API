@@ -1,3 +1,12 @@
+## v1.7.26 (2026-09-21)
+
+### Database Update
+- Updated F1DB to `v2026.14.1`
+
+### Changes
+- chore(release): v1.7.26 (a6f14b5)
+- docs: update CHANGELOG for v1.7.25 (9813748)
+
 ## v1.7.25 (2026-09-13)
 
 ### Database Update
