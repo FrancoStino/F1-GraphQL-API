@@ -3,8 +3,12 @@ name: F1 Sync DB
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/30 * * * *" # At every 30th minute.
+    - cron: "0 3 * * 1" # Ogni lunedì alle 03:00 UTC
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+  
 jobs:
   update-database:
     runs-on: ubuntu-latest
