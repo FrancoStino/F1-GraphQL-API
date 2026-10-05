@@ -1,3 +1,14 @@
+## v1.7.29 (2026-10-05)
+
+### Database Update
+- Updated F1DB to `v2026.16.0`
+
+### Changes
+- chore(release): v1.7.29 (46a450e)
+- build(deps): bump ip-address (7da2f59)
+- Modify workflow schedule and add concurrency (bfaf86f)
+- docs: update CHANGELOG for v1.7.28 (7833dd1)
+
 ## v1.7.28 (2026-09-27)
 
 ### Database Update
