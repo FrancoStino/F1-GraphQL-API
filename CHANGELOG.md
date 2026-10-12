@@ -1,3 +1,13 @@
+## v1.7.30 (2026-10-12)
+
+### Database Update
+- Updated F1DB to `v2026.17.0`
+
+### Changes
+- chore(release): v1.7.30 (557242e)
+- build(deps): bump @fastify/busboy (19ba58b)
+- docs: update CHANGELOG for v1.7.29 (9589ce4)
+
 ## v1.7.29 (2026-10-05)
 
 ### Database Update
