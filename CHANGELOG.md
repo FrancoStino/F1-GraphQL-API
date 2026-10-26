@@ -1,3 +1,13 @@
+## v1.7.31 (2026-10-26)
+
+### Database Update
+- Updated F1DB to `v2026.18.0`
+
+### Changes
+- chore(release): v1.7.31 (084390a)
+- build(deps): bump proxy-addr (6126224)
+- docs: update CHANGELOG for v1.7.30 (c766e68)
+
 ## v1.7.30 (2026-10-12)
 
 ### Database Update
