@@ -466,12 +466,12 @@
   resolved "https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.4.1.tgz#ff22eb2e5d476fbc2450a196e40dd243cc20c28f"
   integrity sha512-O2yRJce1GOc6PAy3QxFM4NzFiWzvScDC1/5ihYBL6BUEVdq0XMWN01sppE+H6bBXbaFYipjwFLEWLg5PaSOThA==
 
-"@prisma/adapter-pg@^7.9.1":
-  version "7.9.1"
-  resolved "https://registry.yarnpkg.com/@prisma/adapter-pg/-/adapter-pg-7.9.1.tgz#85733a142fbcbe100d60b7f3e14084604e19e1e8"
-  integrity sha512-Ho2RK1KanQxLNSC0sR5bpiiVep10sWPLXCcxK+KXfI/Q69TMRbiafSvLPv3V9snimX72rMCqGlyJ4sBO4lKTAw==
+"@prisma/adapter-pg@^7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@prisma/adapter-pg/-/adapter-pg-7.10.1.tgz#7cfcbaa00bb620bc4530df80220de7b5795b90d3"
+  integrity sha512-EP9ruPYHjKP80WZlb5qVaEXKgZjJieBFjAxcBtQnDAHD6+16UN4keVmBh6L/RUpuDQT2FQRbvKNgq5d4Ix+IkQ==
   dependencies:
-    "@prisma/driver-adapter-utils" "7.9.1"
+    "@prisma/driver-adapter-utils" "7.10.1"
     "@types/pg" "^8.16.0"
     pg "^8.16.3"
     postgres-array "3.0.4"
@@ -512,6 +512,11 @@
   resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.10.0.tgz#9ac8ed485699bd08978fe83f97a80993f30d4638"
   integrity sha512-caygJKtltmRIgdJ3jRpkOr7yM4DW6zxo5uOmojKWFb3asnxWoRkQOwZmXBgD8FZp4htrX+nMpcWqDwzlQ1+Y4g==
 
+"@prisma/debug@7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.10.1.tgz#6ef089971593d98668e762c5810ea335461773e8"
+  integrity sha512-eFCAkGZ13D/qPg48JBlG5IWi9cSBBOC7oG3abDPcAkYioDWlIjh0YJJLK2J7qo5S+xWWD8I6egAN/8KbCaiMCA==
+
 "@prisma/debug@7.2.0":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.2.0.tgz#569b1cbc10eb3e8cae798b40075fd11d21f6b533"
@@ -521,11 +526,6 @@
   version "7.8.0"
   resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.8.0.tgz#8e2f70d284b3091c2d713aa093a0f5898487e431"
   integrity sha512-p+QZReysDUqXC+mk17q9a+Y/qzh4c2KYliDK30buYUyfrGeTGSyfmc0AIrJRhZJrLHhRiJa9Au/J72h3C+szvA==
-
-"@prisma/debug@7.9.1":
-  version "7.9.1"
-  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-7.9.1.tgz#e972bb4f13fe53bf08c35c569202551385d37f6e"
-  integrity sha512-/cpVZ4itxtcgB8GHBvZtcmuEjq+lWsLrRJxFMbwZrT1RIdtuKmUm7PPGo/wzfbYpBrk+9WmmBE8CHJw2rybKDQ==
 
 "@prisma/dev@0.24.17":
   version "0.24.17"
@@ -553,12 +553,12 @@
   resolved "https://registry.yarnpkg.com/@prisma/dmmf/-/dmmf-7.8.0.tgz#5da438d664879d1a37fb87d14b6114b2e879741b"
   integrity sha512-7xzcSFWO6J+dFUgIX7jL7QqUhEDfaa8GSZGsjjHyZct1Su+6KrvMl3S2+fnRkuKUIoTPg3Mj02oZuUdaNSfsaw==
 
-"@prisma/driver-adapter-utils@7.9.1":
-  version "7.9.1"
-  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.9.1.tgz#525ddf8f10e045298af6fbc8f1517c66ac02a937"
-  integrity sha512-vmHehG7nn/heW32DXXpp13DxxAxVVe6n250oEt3dOL2E/4bt3olktKZN0mzSuxMMronyMSkbeW2uCOn3F4g8RQ==
+"@prisma/driver-adapter-utils@7.10.1":
+  version "7.10.1"
+  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-7.10.1.tgz#72c9bc9f5a7489e15ca7aefd1c195643924d42a3"
+  integrity sha512-DJ4c6xvVnm3s9ZUyql9nCUicADSqyvH+CjXRCM9L6m5zJxCNmebCElG6X4irICq3rosBwlX+S19Dxq/4IrZk3A==
   dependencies:
-    "@prisma/debug" "7.9.1"
+    "@prisma/debug" "7.10.1"
 
 "@prisma/engines-version@7.10.0-4.0edf323efd1d98336f3f0a68684b56f689b900d3":
   version "7.10.0-4.0edf323efd1d98336f3f0a68684b56f689b900d3"
