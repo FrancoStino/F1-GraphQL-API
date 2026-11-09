@@ -1,3 +1,28 @@
+## v1.7.33 (2026-11-09)
+
+### Database Update
+- Updated F1DB to `v2026.20.0`
+
+### Changes
+- chore(release): v1.7.33 (89d90a0)
+- build(deps): bump graphql-scalars (9b6adc8)
+- docs: update CHANGELOG for v1.7.32 (b008a7a)
+- build(deps): bump @prisma/client from 7.9.1 to 7.10.1 (16f52f4)
+- build(deps-dev): bump prisma from 7.10.0 to 7.10.1 (b619ac7)
+- build(deps): bump pg from 8.23.0 to 8.23.1 (4aa9553)
+- build(deps): bump @prisma/adapter-pg from 7.9.1 to 7.10.1 (27ef57f)
+- build(deps): bump express from 5.2.1 to 5.3.0 (a7da0bf)
+- build(deps-dev): bump tsx from 4.23.12 to 4.23.15 (f2c61a3)
+- build(deps-dev): bump @types/node from 26.4.0 to 26.6.3 (81ff22c)
+- build(deps-dev): bump prisma from 7.9.1 to 7.10.0 (10573f9)
+- build(deps): bump express-rate-limit from 8.6.1 to 8.7.0 (61d71b0)
+- build(deps): bump @graphql-yoga/render-graphiql from 5.21.2 to 5.22.0 (cf9285c)
+- build(deps): bump graphql-yoga from 5.21.2 to 5.22.0 (6092480)
+- build(deps): bump pg and @types/pg (251a8c6)
+- build(deps): bump graphql-scalars from 1.25.0 to 2.0.0 (53b13f2)
+- build(deps-dev): bump tsx from 4.23.1 to 4.23.12 (65bbe23)
+- build(deps-dev): bump @types/node from 26.1.2 to 26.4.0 (e6a57bc)
+
 ## v1.7.32 (2026-11-02)
 
 ### Database Update
